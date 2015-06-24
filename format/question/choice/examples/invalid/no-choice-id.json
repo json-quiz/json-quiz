@@ -1,0 +1,11 @@
+{
+  "choiceType": "text/plain",
+  "choices": [
+    {
+      "text": "True"
+    },
+    {
+      "text": "False"
+    }
+  ]
+}

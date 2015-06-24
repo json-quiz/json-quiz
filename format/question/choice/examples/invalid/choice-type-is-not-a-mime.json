@@ -1,0 +1,13 @@
+{
+  "choiceType": "not-a-mime-type",
+  "choices": [
+    {
+      "id": "1",
+      "text": "True"
+    },
+    {
+      "id": "2",
+      "text": "False"
+    }
+  ]
+}

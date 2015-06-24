@@ -1,0 +1,29 @@
+{
+  "id": "http://liblearn.org/schemas/question/choice/schema.json",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "choiceType": {
+      "type": "string",
+      "pattern": "^[^/]+/[^/]+$"
+    },
+    "choices": {
+      "type": "array",
+      "minItems": 2,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          }
+        },
+        "required": ["id", "text"]
+      }
+    }
+  },
+  "required": ["choiceType", "choices"]
+}

@@ -1,0 +1,7 @@
+{
+  "choiceType": "text/plain.foo",
+  "choices": {
+    "1": "True",
+    "2": "False"
+  }
+}

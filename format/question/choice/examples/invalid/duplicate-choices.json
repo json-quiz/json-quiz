@@ -1,0 +1,19 @@
+{
+  "choiceType": "text/plain",
+  "choices": [
+    {
+      "id": "1",
+      "text": "True"
+    },
+
+    {
+      "id": "2",
+      "text": "False"
+    },
+
+    {
+      "id": "1",
+      "text": "True"
+    }
+  ]
+}
