@@ -1,14 +1,12 @@
 {
   "id": "1",
-  "title": "Question ?",
   "choices": [
     {
       "id": "1",
-      "type": "text/plain",
-      "data": "True"
+      "type": "text/plain"
     },
     {
-      "id": "2",
+      "id": 2,
       "type": "text/plain",
       "data": "False"
     }

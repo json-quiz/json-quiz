@@ -1,11 +1,13 @@
 {
-  "choiceType": "text/plain",
+  "id": "1",
   "choices": [
     {
-      "text": "True"
+      "type": "text/plain",
+      "data": "True"
     },
     {
-      "text": "False"
+      "type": "text/plain",
+      "data": "False"
     }
   ]
 }

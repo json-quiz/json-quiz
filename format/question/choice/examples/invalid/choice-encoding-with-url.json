@@ -1,0 +1,16 @@
+{
+  "id": "1",
+  "choices": [
+    {
+      "id": "1",
+      "type": "image/png",
+      "encoding": "base64",
+      "url": "http://domain.com/image.png"
+    },
+    {
+      "id": "2",
+      "type": "text/plain",
+      "url": "http://domain.com/foo.txt"
+    }
+  ]
+}

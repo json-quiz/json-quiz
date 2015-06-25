@@ -3,27 +3,60 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
-    "choiceType": {
-      "type": "string",
-      "pattern": "^[^/]+/[^/]+$"
+    "id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
     },
     "choices": {
       "type": "array",
       "minItems": 2,
       "uniqueItems": true,
       "items": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
+        "oneOf": [
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string",
+                "pattern": "^[^/]+/[^/]+$"
+              },
+              "encoding": {
+                "type": "string"
+              },
+              "data": {
+                "type": "string"
+              }
+            },
+            "required": ["id", "type", "data"],
+            "additionalProperties": false
           },
-          "text": {
-            "type": "string"
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string",
+                "pattern": "^[^/]+/[^/]+$"
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": ["id", "type", "url"],
+            "additionalProperties": false
           }
-        },
-        "required": ["id", "text"]
+        ]
       }
     }
   },
-  "required": ["choiceType", "choices"]
+  "required": ["id",  "title", "choices"],
+  "additionalProperties": false
 }

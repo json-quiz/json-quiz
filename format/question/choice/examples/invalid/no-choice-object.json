@@ -1,4 +1,4 @@
 {
-  "choiceType": "text/plain",
+  "id": "1",
   "choices": ["True", "False"]
 }

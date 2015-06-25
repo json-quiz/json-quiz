@@ -1,11 +1,11 @@
 {
   "id": "1",
-  "title": "Question ?",
   "choices": [
     {
       "id": "1",
-      "type": "text/plain",
-      "data": "True"
+      "type": "image/png",
+      "encoding": 123,
+      "data": "a1fd123411f"
     },
     {
       "id": "2",

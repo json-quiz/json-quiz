@@ -1,11 +1,10 @@
 {
   "id": "1",
-  "title": "Question ?",
   "choices": [
     {
       "id": "1",
       "type": "text/plain",
-      "data": "True"
+      "data": 123
     },
     {
       "id": "2",

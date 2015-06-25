@@ -1,13 +1,15 @@
 {
-  "choiceType": "not-a-mime-type",
+  "id": "1",
   "choices": [
     {
       "id": "1",
-      "text": "True"
+      "type": "not-a-mime-type",
+      "data": "True"
     },
     {
       "id": "2",
-      "text": "False"
+      "type": "text/plain",
+      "data": "False"
     }
   ]
 }

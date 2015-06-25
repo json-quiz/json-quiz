@@ -1,16 +1,15 @@
 {
   "id": "1",
-  "title": "Question ?",
   "choices": [
     {
       "id": "1",
       "type": "text/plain",
-      "data": "True"
+      "url": "http://domain/com/foo.txt"
     },
     {
       "id": "2",
       "type": "text/plain",
-      "data": "False"
+      "url": 123
     }
   ]
 }

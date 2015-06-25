@@ -1,9 +1,10 @@
 {
-  "choiceType": "text/plain",
+  "id": "1",
   "choices": [
     {
       "id": "1",
-      "text": "True"
+      "type": "text/plain",
+      "data": "True"
     }
   ]
 }

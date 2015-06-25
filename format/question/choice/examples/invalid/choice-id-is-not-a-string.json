@@ -1,6 +1,5 @@
 {
   "id": "1",
-  "title": "Question ?",
   "choices": [
     {
       "id": "1",
@@ -8,7 +7,7 @@
       "data": "True"
     },
     {
-      "id": "2",
+      "id": 2,
       "type": "text/plain",
       "data": "False"
     }
