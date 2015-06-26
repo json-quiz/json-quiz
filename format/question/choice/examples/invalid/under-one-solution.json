@@ -5,14 +5,20 @@
     {
       "id": "1",
       "type": "text/plain",
-      "data": "True"
+      "data": "A"
     },
     {
       "id": "2",
       "type": "text/plain",
-      "data": "False"
+      "data": "B"
+    },
+    {
+      "id": "3",
+      "type": "text/plain",
+      "data": "C"
     }
   ],
   "random": false,
-  "multiple": false
+  "multiple": false,
+  "solutions": []
 }

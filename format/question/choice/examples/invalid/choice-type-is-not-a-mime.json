@@ -11,5 +11,7 @@
       "type": "text/plain",
       "data": "False"
     }
-  ]
+  ],
+  "random": false,
+  "multiple": false
 }

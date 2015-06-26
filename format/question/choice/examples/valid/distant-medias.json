@@ -17,5 +17,7 @@
       "type": "image/png",
       "url": "http://domain.com/image-2.png"
     }
-  ]
+  ],
+  "random": true,
+  "multiple": true
 }

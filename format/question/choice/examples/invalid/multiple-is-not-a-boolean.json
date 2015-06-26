@@ -1,5 +1,6 @@
 {
-  "id": ["not-an-id"],
+  "id": "1",
+  "title": "Question ?",
   "choices": [
     {
       "id": "1",
@@ -11,5 +12,7 @@
       "type": "text/plain",
       "data": "False"
     }
-  ]
+  ],
+  "random": false,
+  "multiple": "false"
 }

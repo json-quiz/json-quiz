@@ -1,6 +1,6 @@
 {
   "id": "1",
-  "title": ["not-a-string"],
+  "title": "Question ?",
   "choices": [
     {
       "id": "1",
@@ -12,5 +12,8 @@
       "type": "text/plain",
       "data": "False"
     }
-  ]
+  ],
+  "random": false,
+  "multiple": false,
+  "hints": "not-an-array"
 }

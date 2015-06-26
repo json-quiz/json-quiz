@@ -11,5 +11,7 @@
       "type": "text/plain",
       "url": 123
     }
-  ]
+  ],
+  "random": false,
+  "multiple": false
 }

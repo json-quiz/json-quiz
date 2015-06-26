@@ -8,5 +8,7 @@
       "id": "2",
       "text": "False"
     }
-  ]
+  ],
+  "random": false,
+  "multiple": false
 }

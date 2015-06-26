@@ -9,6 +9,12 @@
     "title": {
       "type": "string"
     },
+    "random": {
+      "type": "boolean"
+    },
+    "multiple": {
+      "type": "boolean"
+    },
     "choices": {
       "type": "array",
       "minItems": 2,
@@ -55,8 +61,42 @@
           }
         ]
       }
+    },
+    "hints": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "penalty": {
+            "type": "number",
+            "minimum": 0,
+            "exclusiveMinimum": true
+          }
+        },
+        "required": ["id", "text"],
+        "additionalProperties": false
+      }
+    },
+    "solutions": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "feedback": {
+      "type": "string"
     }
   },
-  "required": ["id",  "title", "choices"],
+  "required": ["id",  "title", "random", "multiple", "choices"],
   "additionalProperties": false
 }

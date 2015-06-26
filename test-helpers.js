@@ -33,7 +33,8 @@ function validateAndNormalizeErrors(typeDir, dataFilePath, expectedErrors) {
 
 function assertIsValid(typeDir, dataFilePath) {
   var errors = validateAndNormalizeErrors(typeDir, dataFilePath);
-  assert.deepEqual(errors, [], 'Validation was not supposed to return any errors');
+  var errorsAsString = '(errors: ' + JSON.stringify(errors) + ')';
+  assert.deepEqual(errors, [], 'Validation was not supposed to return any errors ' + errorsAsString);
 }
 
 function assertHasErrors(typeDir, dataFilePath, expectedErrors) {

@@ -9,5 +9,7 @@
       "id": "2",
       "data": "False"
     }
-  ]
+  ],
+  "random": false,
+  "multiple": false
 }

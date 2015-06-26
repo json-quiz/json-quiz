@@ -1,10 +1,11 @@
 {
   "id": "1",
+  "title": "Question ?",
   "choices": [
     {
       "id": "1",
       "type": "text/plain",
-      "data": 123
+      "data": "True"
     },
     {
       "id": "2",
@@ -13,5 +14,15 @@
     }
   ],
   "random": false,
-  "multiple": false
+  "multiple": false,
+  "hints": [
+    {
+      "id": "1",
+      "text": "Lorem"
+    },
+    {
+      "id": "1",
+      "text": "Lorem"
+    }
+  ]
 }

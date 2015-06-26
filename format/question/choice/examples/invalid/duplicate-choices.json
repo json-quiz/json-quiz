@@ -13,5 +13,7 @@
       "id": "1",
       "text": "True"
     }
-  ]
+  ],
+  "random": false,
+  "multiple": false
 }

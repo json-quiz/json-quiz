@@ -14,5 +14,7 @@
       "encoding": "base64",
       "data": "944fc234fdf454a454213"
     }
-  ]
+  ],
+  "random": false,
+  "multiple": true
 }

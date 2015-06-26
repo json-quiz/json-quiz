@@ -6,5 +6,7 @@
       "type": "text/plain",
       "data": "True"
     }
-  ]
+  ],
+  "random": false,
+  "multiple": false
 }

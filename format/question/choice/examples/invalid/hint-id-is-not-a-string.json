@@ -1,17 +1,24 @@
 {
   "id": "1",
+  "title": "Question ?",
   "choices": [
     {
       "id": "1",
       "type": "text/plain",
-      "url": "http://domain/com/foo.txt"
+      "data": "True"
     },
     {
       "id": "2",
       "type": "text/plain",
-      "url": "@:/+**foo:/"
+      "data": "False"
     }
   ],
   "random": false,
-  "multiple": false
+  "multiple": false,
+  "hints": [
+    {
+      "id": 1,
+      "text": "Lorem"
+    }
+  ]
 }
