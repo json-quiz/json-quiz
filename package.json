@@ -7,6 +7,7 @@
     "mocha": "^2.2.5"
   },
   "scripts": {
-    "test": "node_modules/.bin/mocha test --recursive"
+    "test": "node_modules/.bin/mocha test --recursive",
+    "doc": "node_modules/.bin/mocha test --recursive -R doc-reporter.js"
   }
 }
