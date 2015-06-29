@@ -20,5 +20,14 @@
   ],
   "random": false,
   "multiple": false,
-  "solutions": ["1", 3]
+  "solutions": [
+    {
+      "id": "1",
+      "score": "not-a-number"
+    },
+    {
+      "id": "3",
+      "score": 1
+    }
+  ]
 }

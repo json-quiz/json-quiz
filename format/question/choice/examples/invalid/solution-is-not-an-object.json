@@ -20,14 +20,5 @@
   ],
   "random": false,
   "multiple": false,
-  "solutions": [
-    {
-      "id": "1",
-      "score": 2
-    },
-    {
-      "id": "3",
-      "score": 1
-    }
-  ]
+  "solutions": ["not-an-object"]
 }

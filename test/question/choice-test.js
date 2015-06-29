@@ -40,15 +40,15 @@ describe('Choice type', function () {
       });
 
       it('may have a *hints* property', function () {
-        // nothing to test...
+        helpers.assertIsValid('question/choice', 'valid/hints-no-penalty.json');
       });
 
       it('may have a *feedback* property', function () {
-        // nothing to test...
+        helpers.assertIsValid('question/choice', 'valid/global-feedback.json');
       });
 
       it('may have a *solutions* property', function () {
-        // nothing to test...
+        helpers.assertIsValid('question/choice', 'valid/solutions.json');
       });
 
       describe('The *id* property', function () {
@@ -229,7 +229,7 @@ describe('Choice type', function () {
           });
 
           it('may have a *penalty* property', function () {
-            // nothing to test...
+            helpers.assertIsValid('question/choice', 'valid/hints-penalty.json');
           });
 
           describe('The *id* property', function () {
@@ -281,9 +281,43 @@ describe('Choice type', function () {
         });
 
         describe('Each solution', function () {
-          it('must be a string', function () {
-            helpers.assertHasError('question/choice', 'invalid/solution-is-not-a-string.json', {
-              '.solutions[1]': 'should be string'
+          it('must be an object', function () {
+            helpers.assertHasError('question/choice', 'invalid/solution-is-not-an-object.json', {
+              '.solutions[0]': 'should be object'
+            });
+          });
+
+          it('must be unique', function () {
+            helpers.assertHasError('question/choice', 'invalid/duplicate-solutions.json', {
+              '.solutions': 'items ## 0 and 1 are duplicate'
+            });
+          });
+
+          it('must have an *id* property', function () {
+            helpers.assertHasError('question/choice', 'invalid/no-solution-id.json', {
+              '.solutions[0]': 'properties id, score are required'
+            });
+          });
+
+          it('must have a *score* property', function () {
+            helpers.assertHasError('question/choice', 'invalid/no-solution-score.json', {
+              '.solutions[0]': 'properties id, score are required'
+            });
+          });
+
+          describe('The *id* property', function () {
+            it('must be a string', function () {
+              helpers.assertHasError('question/choice', 'invalid/solution-id-is-not-a-string.json', {
+                '.solutions[0].id': 'should be string'
+              });
+            });
+          });
+
+          describe('The *score* property', function () {
+            it('must be a number', function () {
+              helpers.assertHasError('question/choice', 'invalid/solution-score-is-not-a-number.json', {
+                '.solutions[0].score': 'should be number'
+              });
             });
           });
         })
