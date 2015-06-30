@@ -39,10 +39,6 @@ describe('Choice type', function () {
         });
       });
 
-      it('may have a *meta* property', function () {
-        helpers.assertIsValid('question-choice', 'valid/with-metadata.json');
-      });
-
       it('may have an *meta* property', function () {
         helpers.assertIsValid('question-choice', 'valid/with-metadata.json');
       });
