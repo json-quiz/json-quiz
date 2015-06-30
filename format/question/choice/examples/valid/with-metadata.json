@@ -1,10 +1,21 @@
 {
   "id": "1",
+  "meta": {
+    "authors": [
+      {
+        "name": "John Doe",
+        "status": "Tutor"
+      }
+    ],
+    "license": "CC",
+    "created": "2014-06-23"
+  },
+  "title": "Question ?",
   "choices": [
     {
       "id": "1",
       "type": "text/plain",
-      "data": 123
+      "data": "True"
     },
     {
       "id": "2",

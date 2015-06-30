@@ -1,0 +1,16 @@
+{
+  "authors": [
+    {
+      "name": "John Doe",
+      "email": "john@mail.com",
+      "avatar": {
+        "type": "image/png",
+        "url": "http://domain.com/john.png"
+      }
+    }
+  ],
+  "license": "CC",
+  "created": "2015-06-03",
+  "modified": "2015-06-08",
+  "views": 1546
+}

@@ -4,13 +4,15 @@
   "choices": [
     {
       "id": "1",
-      "type": "text/plain",
-      "data": "True"
+      "type": "image/png",
+      "encoding": "base64",
+      "data": "f47544a4211f454e12"
     },
     {
       "id": "2",
-      "type": "text/plain",
-      "data": "False"
+      "type": "image/png",
+      "encoding": "base64",
+      "data": "944fc234fdf454a454213"
     }
   ],
   "random": false,

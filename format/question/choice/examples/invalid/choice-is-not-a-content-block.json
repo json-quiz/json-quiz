@@ -1,6 +1,6 @@
 {
   "id": "1",
-  "choices": ["True", "False"],
+  "choices": ["not-a-content-block"],
   "random": false,
   "multiple": false
 }

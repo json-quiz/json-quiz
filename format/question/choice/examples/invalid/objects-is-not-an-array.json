@@ -1,9 +1,11 @@
 {
   "id": "1",
+  "title": "Question ?",
+  "objects": "not-an-array",
   "choices": [
     {
       "id": "1",
-      "type": "not-a-mime-type",
+      "type": "text/plain",
       "data": "True"
     },
     {

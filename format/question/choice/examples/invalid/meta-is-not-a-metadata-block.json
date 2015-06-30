@@ -1,5 +1,7 @@
 {
   "id": "1",
+  "title": "Question ?",
+  "meta": "not-a-metadata-block",
   "choices": [
     {
       "id": "1",
@@ -7,7 +9,7 @@
       "data": "True"
     },
     {
-      "id": 2,
+      "id": "2",
       "type": "text/plain",
       "data": "False"
     }

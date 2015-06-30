@@ -2,19 +2,16 @@ var assert = require('assert');
 var Ajv = require('ajv');
 var ajv = Ajv({ allErrors: true });
 
-function getValidator(schemaDir) {
-  var schema = require('./format/' + schemaDir + '/schema.json');
+ajv.addSchema([
+  require('./format/metadata/schema.json'),
+  require('./format/content/schema.json'),
+  require('./format/question/choice/schema.json')
+]);
 
-  return ajv.compile(schema); // schema is cached by ajv
-}
-
-function getData(typeDir, dataFilePath) {
-  return require('./format/' + typeDir + '/examples/' + dataFilePath);
-}
-
-function validateAndNormalizeErrors(typeDir, dataFilePath, expectedErrors) {
-  var validate = getValidator(typeDir);
-  var data = getData(typeDir, dataFilePath);
+function validateAndNormalizeErrors(schemaId, dataFilePath) {
+  var validate = ajv.getSchema(schemaId);
+  var schemaDir = schemaId.split('-').join('/');
+  var data = require('./format/' + schemaDir + '/examples/' + dataFilePath);
   var errors = {};
 
   validate(data);

@@ -1,0 +1,6 @@
+{
+  "id": "1",
+  "type": "image/png",
+  "url": "http://domain.com/cat.png",
+  "meta": "not-a-metadata-block"
+}

@@ -1,0 +1,13 @@
+{
+  "authors": [
+    {
+      "name": "John Doe",
+      "email": "john@mail.com"
+    },
+    {
+      "name": "Jane Doe",
+      "email": "jane@mail.com"
+    }
+  ],
+  "license": "CC"
+}

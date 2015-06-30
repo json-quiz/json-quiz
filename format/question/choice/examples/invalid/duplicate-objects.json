@@ -1,0 +1,30 @@
+{
+  "id": "1",
+  "title": "Question ?",
+  "objects": [
+    {
+      "id": "1",
+      "type": "text/plain",
+      "data": "Foo"
+    },
+    {
+      "id": "1",
+      "type": "text/plain",
+      "data": "Foo"
+    }
+  ],
+  "choices": [
+    {
+      "id": "2",
+      "type": "text/plain",
+      "data": "True"
+    },
+    {
+      "id": "3",
+      "type": "text/plain",
+      "data": "False"
+    }
+  ],
+  "random": false,
+  "multiple": false
+}

@@ -1,0 +1,16 @@
+{
+  "id": "1",
+  "type": "image/png",
+  "url": "http://domain.com/cat.png",
+  "meta": {
+    "authors": [
+      {
+        "name": "John Doe",
+        "email": "john@mail.com"
+      }
+    ],
+    "license": "CC",
+    "created": "2012-08-09",
+    "description": "A black cat"
+  }
+}

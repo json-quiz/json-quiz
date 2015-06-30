@@ -1,9 +1,11 @@
 {
   "id": "1",
+  "title": "Question ?",
+  "resources": ["not-a-content-block"],
   "choices": [
     {
       "id": "1",
-      "type": 123,
+      "type": "text/plain",
       "data": "True"
     },
     {
