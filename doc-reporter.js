@@ -60,6 +60,7 @@ function DocReporter(runner) {
       }
 
       fs.writeFileSync(buildDir + '/' + suiteFile, output);
+      output = '';
       console.log('Doc file "build/%s" generated', suiteFile);
     } else if (level >= 2) {
       output += wrapper.otherTitleEnd();
