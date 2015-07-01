@@ -1,0 +1,11 @@
+{
+  "id": "1",
+  "title": "Question ?",
+  "hints": [
+    {
+      "id": "1",
+      "text": "Lorem",
+      "penalty": "not-a-number"
+    }
+  ]
+}

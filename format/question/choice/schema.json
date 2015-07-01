@@ -1,92 +1,47 @@
 {
   "id": "question-choice",
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "type": "object",
-  "properties": {
-    "id": {
-      "type": "string"
+  "allOf": [
+    {
+      "$ref": "question-common"
     },
-    "title": {
-      "type": "string"
-    },
-    "meta": {
-      "$ref": "metadata"
-    },
-    "random": {
-      "type": "boolean"
-    },
-    "multiple": {
-      "type": "boolean"
-    },
-    "objects": {
-      "type": "array",
-      "minItems": 1,
-      "uniqueItems": true,
-      "items": {
-        "$ref": "content"
-      }
-    },
-    "resources": {
-      "type": "array",
-      "minItems": 1,
-      "uniqueItems": true,
-      "items": {
-        "$ref": "content"
-      }
-    },
-    "choices": {
-      "type": "array",
-      "minItems": 2,
-      "uniqueItems": true,
-      "items": {
-        "$ref": "content"
-      }
-    },
-    "hints": {
-      "type": "array",
-      "minItems": 1,
-      "uniqueItems": true,
-      "items": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "text": {
-            "type": "string"
-          },
-          "penalty": {
-            "type": "number",
-            "minimum": 0,
-            "exclusiveMinimum": true
+    {
+      "type": "object",
+      "properties": {
+        "random": {
+          "type": "boolean"
+        },
+        "multiple": {
+          "type": "boolean"
+        },
+         "choices": {
+          "type": "array",
+          "minItems": 2,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "content"
           }
         },
-        "required": ["id", "text"],
-        "additionalProperties": false
-      }
-    },
-    "solutions": {
-      "type": "array",
-      "minItems": 1,
-      "uniqueItems": true,
-      "items": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "score": {
-            "type": "number"
+         "solutions": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "score": {
+                "type": "number"
+              }
+            },
+            "required": ["id", "score"],
+            "additionalProperties": false
           }
-        },
-        "required": ["id", "score"],
-        "additionalProperties": false
-      }
-    },
-    "feedback": {
-      "type": "string"
+        }
+      },
+      "required": ["random", "multiple", "choices"]
     }
-  },
-  "required": ["id",  "title", "random", "multiple", "choices"],
-  "additionalProperties": false
+  ]
 }

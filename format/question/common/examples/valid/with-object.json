@@ -1,0 +1,14 @@
+{
+  "id": "1",
+  "objects": [
+    {
+      "id": "1",
+      "type": "text/html",
+      "data": "<p>Lorem ipsum dolor sit amet</p>",
+      "meta": {
+        "title": "Lorem sample"
+      }
+    }
+  ],
+  "title": "Is the previous text written in english ?"
+}

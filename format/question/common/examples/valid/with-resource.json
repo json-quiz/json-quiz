@@ -1,0 +1,11 @@
+{
+  "id": "1",
+  "title": "Question ?",
+  "resources": [
+    {
+      "id": "1",
+      "type": "application/pdf",
+      "url": "http://domain.com/syllabus.txt"
+    }
+  ]
+}

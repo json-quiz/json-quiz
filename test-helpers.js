@@ -5,6 +5,7 @@ var ajv = Ajv({ allErrors: true });
 ajv.addSchema([
   require('./format/metadata/schema.json'),
   require('./format/content/schema.json'),
+  require('./format/question/common/schema.json'),
   require('./format/question/choice/schema.json')
 ]);
 
