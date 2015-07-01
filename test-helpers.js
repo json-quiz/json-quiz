@@ -29,32 +29,32 @@ function validateAndNormalizeErrors(schemaId, dataFilePath) {
   return errors;
 }
 
-function assertIsValid(typeDir, dataFilePath) {
-  var errors = validateAndNormalizeErrors(typeDir, dataFilePath);
-  var errorsAsString = '(errors: ' + JSON.stringify(errors) + ')';
-  assert.deepEqual(errors, [], 'Validation was not supposed to return any errors ' + errorsAsString);
+function makeHelpers(schemaId) {
+  var _schemaId = schemaId;
+
+  return {
+    assertIsValid: function (dataFilePath) {
+      var errors = validateAndNormalizeErrors(_schemaId, 'valid/' + dataFilePath);
+      var errorsAsString = '(errors: ' + JSON.stringify(errors) + ')';
+      assert.deepEqual(errors, [], 'Validation was not supposed to return any errors ' + errorsAsString);
+    },
+    assertHasErrors: function (dataFilePath, expectedErrors) {
+      var errors = validateAndNormalizeErrors(dataFilePath);
+      assert.deepEqual(errors, expectedErrors, 'Validation result does not match expectations');
+    },
+    assertHasError: function (dataFilePath, expectedError) {
+      var errors = validateAndNormalizeErrors(_schemaId, dataFilePath);
+      var expectedPath = Object.keys(expectedError)[0];
+      var expectedMessage = expectedError[expectedPath];
+      var errorsAsString = '(errors: ' + JSON.stringify(errors) + ')';
+
+      assert(expectedPath in errors, 'No error at expected path ' + errorsAsString);
+      assert(
+        errors[expectedPath].indexOf(expectedMessage) > -1,
+        'The expected error ("' +  expectedMessage+ '") is missing ' + errorsAsString
+      );
+    }
+  };
 }
 
-function assertHasErrors(typeDir, dataFilePath, expectedErrors) {
-  var errors = validateAndNormalizeErrors(typeDir, dataFilePath);
-  assert.deepEqual(errors, expectedErrors, 'Validation result does not match expectations');
-}
-
-function assertHasError(typeDir, dataFilePath, expectedError) {
-  var errors = validateAndNormalizeErrors(typeDir, dataFilePath);
-  var expectedPath = Object.keys(expectedError)[0];
-  var expectedMessage = expectedError[expectedPath];
-  var errorsAsString = '(errors: ' + JSON.stringify(errors) + ')';
-
-  assert(expectedPath in errors, 'No error at expected path ' + errorsAsString);
-  assert(
-    errors[expectedPath].indexOf(expectedMessage) > -1,
-    'The expected error ("' +  expectedMessage+ '") is missing ' + errorsAsString
-  );
-}
-
-module.exports = {
-  assertIsValid: assertIsValid,
-  assertHasErrors: assertHasErrors,
-  assertHasError: assertHasError
-};
+module.exports = makeHelpers;
