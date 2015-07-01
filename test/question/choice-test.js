@@ -11,31 +11,31 @@ describe('Choice type', function () {
 
       it('must have an *id* property', function () {
         helpers.assertHasError('question-choice', 'invalid/no-id-property.json', {
-          '': 'properties id, title, random, multiple, choices are required'
+          '.id': 'property .id is required'
         });
       });
 
       it('must have a *title* property', function () {
         helpers.assertHasError('question-choice', 'invalid/no-title-property.json', {
-          '': 'properties id, title, random, multiple, choices are required'
+          '.title': 'property .title is required'
         });
       });
 
       it('must have a *multiple* property', function () {
         helpers.assertHasError('question-choice', 'invalid/no-multiple-property.json', {
-          '': 'properties id, title, random, multiple, choices are required'
+          '.multiple': 'property .multiple is required'
         });
       });
 
       it('must have a *random* property', function () {
         helpers.assertHasError('question-choice', 'invalid/no-random-property.json', {
-          '': 'properties id, title, random, multiple, choices are required'
+          '.random': 'property .random is required'
         });
       });
 
       it('must have a *choices* property', function () {
         helpers.assertHasError('question-choice', 'invalid/no-choices-property.json', {
-          '': 'properties id, title, random, multiple, choices are required'
+          '.choices': 'property .choices is required'
         });
       });
 
@@ -212,13 +212,13 @@ describe('Choice type', function () {
 
         it('must have an *id* property', function () {
           helpers.assertHasError('question-choice', 'invalid/no-hint-id.json', {
-            '.hints[0]': 'properties id, text are required'
+            '.hints[0].id': 'property .id is required'
           });
         });
 
         it('must have a *text* property', function () {
           helpers.assertHasError('question-choice', 'invalid/no-hint-text.json', {
-            '.hints[0]': 'properties id, text are required'
+            '.hints[0].text': 'property .text is required'
           });
         });
 
@@ -289,13 +289,13 @@ describe('Choice type', function () {
 
         it('must have an *id* property', function () {
           helpers.assertHasError('question-choice', 'invalid/no-solution-id.json', {
-            '.solutions[0]': 'properties id, score are required'
+            '.solutions[0].id': 'property .id is required'
           });
         });
 
         it('must have a *score* property', function () {
           helpers.assertHasError('question-choice', 'invalid/no-solution-score.json', {
-            '.solutions[0]': 'properties id, score are required'
+            '.solutions[0].score': 'property .score is required'
           });
         });
       });

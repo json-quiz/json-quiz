@@ -70,7 +70,7 @@ describe('Metadata', function () {
 
         it('must have a *name* property', function () {
           helpers.assertHasError('metadata', 'invalid/no-author-name.json', {
-            '.authors[0]': 'properties name are required'
+            '.authors[0].name': 'property .name is required'
           });
         });
 

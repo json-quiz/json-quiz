@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Extensible quiz/question JSON format",
   "devDependencies": {
-    "ajv": "^0.6.0",
+    "ajv": "^0.6.1",
     "mocha": "^2.2.5"
   },
   "scripts": {

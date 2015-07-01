@@ -11,22 +11,22 @@ describe('Content', function () {
 
       it('must have an *id* property', function () {
         helpers.assertHasError('content', 'invalid/no-id.json', {
-          '': 'properties id, type are required'
+          '.id': 'property .id is required'
         });
       });
 
       it('must have a *type* property', function () {
         helpers.assertHasError('content', 'invalid/no-type.json', {
-          '': 'properties id, type are required'
+          '.type': 'property .type is required'
         });
       });
 
       it('must have either a *data* or an *url* property', function () {
         helpers.assertHasError('content', 'invalid/no-data-nor-url.json', {
-          '': 'properties data are required'
+          '.data': 'property .data is required'
         });
         helpers.assertHasError('content', 'invalid/no-data-nor-url.json', {
-          '': 'properties url are required'
+          '.url': 'property .url is required'
         });
       });
 
