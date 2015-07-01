@@ -1,0 +1,16 @@
+{
+  "id": "1",
+  "choices": [
+    {
+      "id": "1",
+      "type": "text/html",
+      "data": 123
+    },
+    {
+      "type": "text/html",
+      "data": 123
+    }
+  ],
+  "random": false,
+  "multiple": false
+}

@@ -55,9 +55,12 @@ describe('Common type', function () {
     });
 
     describe('The *meta* property', function () {
-      it('must be a #metadata# block', function () {
-        helpers.assertHasError('question-common', 'invalid/meta-is-not-a-metadata-block.json', {
-          '.meta': 'should be object'
+      it('must satisfy #metadata# schema', function () {
+        helpers.assertHasError('question-common', 'invalid/meta-not-satisfying-metadata-schema.json', {
+          '.meta.authors': 'should be array'
+        });
+        helpers.assertHasError('question-common', 'invalid/meta-not-satisfying-metadata-schema.json', {
+          '.meta.license': 'should be string'
         });
       });
     });
@@ -76,9 +79,9 @@ describe('Common type', function () {
       });
 
       describe('Each object', function () {
-        it('must be a #content# block', function () {
-          helpers.assertHasError('question-common', 'invalid/object-is-not-a-content-block.json', {
-            '.objects[0]': 'should be object'
+        it('must satisfy #content# schema', function () {
+          helpers.assertHasError('question-common', 'invalid/object-not-satisfying-content-schema.json', {
+            '.objects[0].type': 'property .type is required'
           });
         });
 
@@ -104,8 +107,8 @@ describe('Common type', function () {
       });
 
       describe('Each resource', function () {
-        it('must be a #content# block', function () {
-          helpers.assertHasError('question-common', 'invalid/resource-is-not-a-content-block.json', {
+        it('must satisfy #content# schema', function () {
+          helpers.assertHasError('question-common', 'invalid/resource-not-satisfying-content-schema.json', {
             '.resources[0]': 'should be object'
           });
         });

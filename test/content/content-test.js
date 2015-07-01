@@ -30,7 +30,7 @@ describe('Content', function () {
         });
       });
 
-      it('may have a *meta* block', function () {
+      it('may have a *meta* property', function () {
         helpers.assertIsValid('content', 'valid/metadata.json');
       });
     });
@@ -92,9 +92,12 @@ describe('Content', function () {
     });
 
     describe('The *meta* property', function () {
-      it('must be a #metadata# block', function () {
-        helpers.assertHasError('content', 'invalid/meta-is-not-a-metadata-block.json', {
-          '.meta': 'should be object'
+      it('must satisfy #metadata# schema', function () {
+        helpers.assertHasError('content', 'invalid/meta-not-satisfying-metadata-schema.json', {
+          '.meta.authors': 'should be array'
+        });
+        helpers.assertHasError('content', 'invalid/meta-not-satisfying-metadata-schema.json', {
+          '.meta.license': 'should be string'
         });
       });
     });

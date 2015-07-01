@@ -3,7 +3,7 @@ var helpers = require('./../../test-helpers');
 describe('Choice type', function () {
   describe('Structure', function () {
     describe('A choice question', function () {
-      it('must satisfy question-common schema', function () {
+      it('must satisfy #question-common# schema', function () {
         helpers.assertHasError('question-choice', 'invalid/not-satisfying-common-schema.json', {
           '.id': 'property .id is required'
         });
@@ -71,9 +71,12 @@ describe('Choice type', function () {
       });
 
       describe('Each choice', function () {
-        it('must be a #content# block', function () {
-          helpers.assertHasError('question-choice', 'invalid/choice-is-not-a-content-block.json', {
-            '.choices[0]': 'should be object'
+        it('must satisfy #content# schema', function () {
+          helpers.assertHasError('question-choice', 'invalid/choice-not-satisfying-content-schema.json', {
+            '.choices[0].data': 'should be string'
+          });
+          helpers.assertHasError('question-choice', 'invalid/choice-not-satisfying-content-schema.json', {
+            '.choices[1].id': 'property .id is required'
           });
         });
 
