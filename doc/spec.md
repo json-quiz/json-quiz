@@ -2,7 +2,7 @@
 
 ##Structure
 
-A metadata block:
+* A metadata block:
 
   * must be an object
 
@@ -14,21 +14,21 @@ A metadata block:
 
   * may have a *license* property
 
-The *title* property:
+* The *title* property:
 
   * must be a string
 
-The *description* property:
+* The *description* property:
 
   * must be a string
 
-The *authors* property:
+* The *authors* property:
 
   * must be an array
 
   * must contain at least one item
 
-  Each author:
+  * Each author:
 
     * must be an object
 
@@ -38,17 +38,17 @@ The *authors* property:
 
     * may have an *email* property
 
-  The *name* property:
+  * The *name* property:
 
     * must be a string
 
-  The *email* property:
+  * The *email* property:
 
     * must be a string
 
     * must hold an email address
 
-The *license* property:
+* The *license* property:
 
   * must be a string
 
@@ -131,7 +131,7 @@ The *license* property:
 
 ##Structure
 
-A content block:
+* A content block:
 
   * must be an object
 
@@ -143,33 +143,33 @@ A content block:
 
   * may have a *meta* block
 
-The *id* property:
+* The *id* property:
 
   * must be a string
 
-The *type* property:
+* The *type* property:
 
   * must be a string
 
   * must hold a MIME type
 
-The *url* property:
+* The *url* property:
 
   * must be a string
 
   * must hold an URL
 
-The *data* property:
+* The *data* property:
 
   * must be a string
 
   * may have an associated *encoding* property
 
-  The *encoding* property:
+  * The *encoding* property:
 
     * must be a string
 
-The *meta* property:
+* The *meta* property:
 
   * must be a #metadata# block
 
@@ -239,7 +239,7 @@ The *meta* property:
 
 ##Structure
 
-A choice question:
+* A choice question:
 
   * must be an object
 
@@ -263,69 +263,69 @@ A choice question:
 
   * may have a *solutions* property
 
-The *id* property:
+* The *id* property:
 
   * must be a string
 
-The *title* property:
+* The *title* property:
 
   * must be a string
 
-The *multiple* property:
+* The *multiple* property:
 
   * must be a boolean
 
-The *random* property:
+* The *random* property:
 
   * must be a boolean
 
-The *choices* property:
+* The *choices* property:
 
   * must be an array
 
   * must contain at least two choices
 
-  Each choice:
+  * Each choice:
 
     * must be a #content# block
 
     * must be unique
 
-The *meta* property:
+* The *meta* property:
 
   * must be a #metadata# block
 
-The *objects* property:
+* The *objects* property:
 
   * must be an array
 
   * must contain at least one object
 
-  Each object:
+  * Each object:
 
     * must be a #content# block
 
     * must be unique
 
-The *resources* property:
+* The *resources* property:
 
   * must be an array
 
   * must contain at least one resource
 
-  Each resource:
+  * Each resource:
 
     * must be a #content# block
 
     * must be unique
 
-The *hints* property:
+* The *hints* property:
 
   * must be an array
 
   * must contain at least one hint
 
-  Each hint:
+  * Each hint:
 
     * must be an object
 
@@ -337,27 +337,27 @@ The *hints* property:
 
     * may have a *penalty* property
 
-  The *id* property:
+  * The *id* property:
 
     * must be a string
 
-  The *text* property:
+  * The *text* property:
 
     * must be a string
 
-  The *penalty* property:
+  * The *penalty* property:
 
     * must be a number
 
     * must be greater than zero
 
-the *solutions* property:
+* the *solutions* property:
 
   * must be an array
 
   * must contain at least one solution
 
-  Each solution:
+  * Each solution:
 
     * must be an object
 
@@ -367,15 +367,15 @@ the *solutions* property:
 
     * must have a *score* property
 
-  The *id* property:
+  * The *id* property:
 
     * must be a string
 
-  The *score* property:
+  * The *score* property:
 
     * must be a number
 
-The *feedback* property:
+* The *feedback* property:
 
   * must be a string
 

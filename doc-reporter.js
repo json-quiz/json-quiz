@@ -54,7 +54,7 @@ function makeMarkdownWrapper() {
       return '##' + title + '\n\n';
     },
     otherTitle: function (title) {
-      return _getIndent() + title + ':\n\n';
+      return _getIndent() + '* ' + title + ':\n\n';
     },
     otherTitleEnd: function () {
       return '';
