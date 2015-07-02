@@ -1,0 +1,5 @@
+title: JSON Quiz
+description: A specification for building quizzes in JSON
+baseurl: ""
+markdown: redcarpet
+exclude: [build, node_modules]
