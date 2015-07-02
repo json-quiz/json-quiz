@@ -141,9 +141,9 @@ describe('Choice question', function () {
 
   describe('Examples', function () {
     assert.areValid([
-      'true-false',
+      'true-or-false',
       'solutions',
-      'full'
+      'extended'
     ]);
   });
 });
