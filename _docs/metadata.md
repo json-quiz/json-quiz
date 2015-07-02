@@ -3,9 +3,9 @@ title: Metadata
 layout: default
 ---
 
-#Metadata
+# Metadata
 
-##Structure
+## Schema
 
 * A metadata block:
 
@@ -57,11 +57,11 @@ layout: default
 
   * must be a string
 
-##Examples
+## Examples
 
-###author.json
+### Author
 
-```json
+{% highlight json %}
 
 {
   "authors": [
@@ -71,11 +71,11 @@ layout: default
   ]
 }
 
-```
+{% endhighlight %}
 
-###authors-and-license.json
+### Authors and-license
 
-```json
+{% highlight json %}
 
 {
   "authors": [
@@ -91,11 +91,11 @@ layout: default
   "license": "CC"
 }
 
-```
+{% endhighlight %}
 
-###title-and-description.json
+### Title and-description
 
-```json
+{% highlight json %}
 
 {
   "authors": [
@@ -107,11 +107,11 @@ layout: default
   "description": "Lorem ipsum dolor sit amet"
 }
 
-```
+{% endhighlight %}
 
-###extra-data.json
+### Extra data
 
-```json
+{% highlight json %}
 
 {
   "authors": [
@@ -130,5 +130,5 @@ layout: default
   "views": 1546
 }
 
-```
+{% endhighlight %}
 

@@ -1,15 +1,15 @@
 ---
-title: Choice type
+title: Choice question
 layout: default
 ---
 
-#Choice type
+# Choice question
 
-##Structure
+## Schema
 
 * A choice question:
 
-  * must satisfy #question-common# schema
+  * must satisfy the [base-question](base-question.html) schema
 
   * must have a *multiple* property
 
@@ -35,7 +35,7 @@ layout: default
 
   * Each choice:
 
-    * must satisfy #content# schema
+    * must satisfy the [content](content.html) schema
 
     * must be unique
 
@@ -63,11 +63,11 @@ layout: default
 
     * must be a number
 
-##Examples
+## Examples
 
-###true-false.json
+### True false
 
-```json
+{% highlight json %}
 
 {
   "id": "1",
@@ -88,11 +88,11 @@ layout: default
   "multiple": false
 }
 
-```
+{% endhighlight %}
 
-###solutions.json
+### Solutions
 
-```json
+{% highlight json %}
 
 {
   "id": "1",
@@ -137,11 +137,11 @@ layout: default
   ]
 }
 
-```
+{% endhighlight %}
 
-###full.json
+### Full
 
-```json
+{% highlight json %}
 
 {
   "id": "1",
@@ -209,5 +209,5 @@ layout: default
   ]
 }
 
-```
+{% endhighlight %}
 

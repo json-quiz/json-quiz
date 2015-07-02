@@ -3,9 +3,9 @@ title: Content
 layout: default
 ---
 
-#Content
+# Content
 
-##Structure
+## Schema
 
 * A content block:
 
@@ -47,13 +47,13 @@ layout: default
 
 * The *meta* property:
 
-  * must satisfy #metadata# schema
+  * must satisfy the [metadata](metadata.html) schema
 
-##Examples
+## Examples
 
-###html.json
+### Html
 
-```json
+{% highlight json %}
 
 {
   "id": "1",
@@ -61,11 +61,11 @@ layout: default
   "data": "<p>Lorem ipsum dolor sit amet</p>"
 }
 
-```
+{% endhighlight %}
 
-###distant-media.json
+### Distant media
 
-```json
+{% highlight json %}
 
 {
   "id": "1",
@@ -73,11 +73,11 @@ layout: default
   "url": "http://domain.com/image-1.png"
 }
 
-```
+{% endhighlight %}
 
-###embedded-media.json
+### Embedded media
 
-```json
+{% highlight json %}
 
 {
   "id": "1",
@@ -86,11 +86,11 @@ layout: default
   "data": "f47544a4211f454e12"
 }
 
-```
+{% endhighlight %}
 
-###metadata.json
+### Metadata
 
-```json
+{% highlight json %}
 
 {
   "id": "1",
@@ -109,5 +109,5 @@ layout: default
   }
 }
 
-```
+{% endhighlight %}
 

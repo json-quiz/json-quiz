@@ -1,11 +1,11 @@
 ---
-title: Common type
+title: Base question
 layout: default
 ---
 
-#Common type
+# Base question
 
-##Structure
+## Schema
 
 * A question:
 
@@ -33,7 +33,7 @@ layout: default
 
 * The *meta* property:
 
-  * must satisfy #metadata# schema
+  * must satisfy the [metadata](metadata.html) schema
 
 * The *objects* property:
 
@@ -43,7 +43,7 @@ layout: default
 
   * Each object:
 
-    * must satisfy #content# schema
+    * must satisfy the [content](content.html) schema
 
     * must be unique
 
@@ -55,7 +55,7 @@ layout: default
 
   * Each resource:
 
-    * must satisfy #content# schema
+    * must satisfy the [content](content.html) schema
 
     * must be unique
 
@@ -95,11 +95,11 @@ layout: default
 
   * must be a string
 
-##Examples
+## Examples
 
-###with-metadata.json
+### With metadata
 
-```json
+{% highlight json %}
 
 {
   "id": "1",
@@ -116,11 +116,11 @@ layout: default
   "title": "Question ?"
 }
 
-```
+{% endhighlight %}
 
-###with-object.json
+### With object
 
-```json
+{% highlight json %}
 
 {
   "id": "1",
@@ -137,11 +137,11 @@ layout: default
   "title": "Is the previous text written in english ?"
 }
 
-```
+{% endhighlight %}
 
-###with-resource.json
+### With resource
 
-```json
+{% highlight json %}
 
 {
   "id": "1",
@@ -155,11 +155,11 @@ layout: default
   ]
 }
 
-```
+{% endhighlight %}
 
-###global-feedback.json
+### Global feedback
 
-```json
+{% highlight json %}
 
 {
   "id": "1",
@@ -167,11 +167,11 @@ layout: default
   "feedback": "Lorem ipsum dolor sit amet"
 }
 
-```
+{% endhighlight %}
 
-###hints-no-penalty.json
+### Hints no-penalty
 
-```json
+{% highlight json %}
 
 {
   "id": "1",
@@ -188,11 +188,11 @@ layout: default
   ]
 }
 
-```
+{% endhighlight %}
 
-###hints-penalty.json
+### Hints penalty
 
-```json
+{% highlight json %}
 
 {
   "id": "1",
@@ -211,5 +211,5 @@ layout: default
   ]
 }
 
-```
+{% endhighlight %}
 
