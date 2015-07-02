@@ -58,7 +58,8 @@ function makeMarkdownWrapper() {
       // convert file name into plain text title
       var title = (title.charAt(0).toUpperCase() + title.slice(1))
         .slice(0, -5)
-        .replace('-' , ' ');
+        .split('-')
+        .join(' ');
 
       return '### ' + title + '\n\n'
         + '{% highlight json %}\n\n'
