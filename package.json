@@ -7,8 +7,9 @@
     "mocha": "^2.2.5"
   },
   "scripts": {
-    "test": "node_modules/.bin/mocha test --recursive",
-    "doc": "node_modules/.bin/mocha test --recursive -R report.js",
+    "test": "node_modules/.bin/mocha --recursive",
+    "clean": "rm -rf build/*",
+    "doc": "npm run clean && node_modules/.bin/mocha --recursive -R report.js",
     "preview": "npm run doc && git checkout gh-pages && sh build.sh",
     "site": "npm run doc && sh publish.sh"
   }
