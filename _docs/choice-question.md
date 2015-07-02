@@ -65,7 +65,7 @@ layout: default
 
 ## Examples
 
-### True false
+### True or false
 
 {% highlight json %}
 
@@ -139,7 +139,7 @@ layout: default
 
 {% endhighlight %}
 
-### Full
+### Extended
 
 {% highlight json %}
 

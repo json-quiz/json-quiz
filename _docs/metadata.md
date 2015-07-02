@@ -73,7 +73,7 @@ layout: default
 
 {% endhighlight %}
 
-### Authors and-license
+### Authors and license
 
 {% highlight json %}
 
@@ -93,7 +93,7 @@ layout: default
 
 {% endhighlight %}
 
-### Title and-description
+### Title and description
 
 {% highlight json %}
 

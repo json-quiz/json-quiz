@@ -169,7 +169,7 @@ layout: default
 
 {% endhighlight %}
 
-### Hints no-penalty
+### Hints no penalty
 
 {% highlight json %}
 
