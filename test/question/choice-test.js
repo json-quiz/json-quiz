@@ -1,49 +1,43 @@
-var helpers = require('./../../test-helpers')('question-choice');
+var assert = require('./../../assert')('question-choice');
 
 describe('Choice type', function () {
   describe('Structure', function () {
     describe('A choice question', function () {
       it('must satisfy #question-common# schema', function () {
-        helpers.assertHasError('invalid/not-satisfying-common-schema.json', {
-          '.id': 'property .id is required'
-        });
-        helpers.assertHasError('invalid/not-satisfying-common-schema.json', {
-          '.title': 'property .title is required'
-        });
-        helpers.assertHasError('invalid/not-satisfying-common-schema.json', {
-          '.meta': 'should be object'
-        });
-        helpers.assertHasError('invalid/not-satisfying-common-schema.json', {
+        assert.hasErrors('not-satisfying-common-schema', {
+          '.id': 'property .id is required',
+          '.title': 'property .title is required',
+          '.meta': 'should be object',
           '.objects': 'should be array'
         });
       });
 
       it('must have a *multiple* property', function () {
-        helpers.assertHasError('invalid/no-multiple-property.json', {
+        assert.hasError('no-multiple-property', {
           '.multiple': 'property .multiple is required'
         });
       });
 
       it('must have a *random* property', function () {
-        helpers.assertHasError('invalid/no-random-property.json', {
+        assert.hasError('no-random-property', {
           '.random': 'property .random is required'
         });
       });
 
       it('must have a *choices* property', function () {
-        helpers.assertHasError('invalid/no-choices-property.json', {
+        assert.hasError('no-choices-property', {
           '.choices': 'property .choices is required'
         });
       });
 
       it('may have a *solutions* property', function () {
-        helpers.assertIsValid('solutions.json');
+        assert.isValid('solutions');
       });
     });
 
     describe('The *multiple* property', function () {
       it('must be a boolean', function () {
-        helpers.assertHasError('invalid/multiple-is-not-a-boolean.json', {
+        assert.hasError('multiple-is-not-a-boolean', {
           '.multiple': 'should be boolean'
         });
       });
@@ -51,7 +45,7 @@ describe('Choice type', function () {
 
     describe('The *random* property', function () {
       it('must be a boolean', function () {
-        helpers.assertHasError('invalid/random-is-not-a-boolean.json', {
+        assert.hasError('random-is-not-a-boolean', {
           '.random': 'should be boolean'
         });
       });
@@ -59,29 +53,29 @@ describe('Choice type', function () {
 
     describe('The *choices* property', function () {
       it('must be an array', function () {
-        helpers.assertHasError('invalid/choices-is-not-an-array.json', {
+        assert.hasError('choices-is-not-an-array', {
           '.choices': 'should be array'
         });
       });
 
       it('must contain at least two choices', function () {
-        helpers.assertHasError('invalid/under-two-choices.json', {
+        assert.hasError('under-two-choices', {
           '.choices': 'should NOT have less than 2 items'
         });
       });
 
       describe('Each choice', function () {
         it('must satisfy #content# schema', function () {
-          helpers.assertHasError('invalid/choice-not-satisfying-content-schema.json', {
+          assert.hasError('choice-not-satisfying-content-schema', {
             '.choices[0].data': 'should be string'
           });
-          helpers.assertHasError('invalid/choice-not-satisfying-content-schema.json', {
+          assert.hasError('choice-not-satisfying-content-schema', {
             '.choices[1].id': 'property .id is required'
           });
         });
 
         it('must be unique', function () {
-          helpers.assertHasError('invalid/duplicate-choices.json', {
+          assert.hasError('duplicate-choices', {
             '.choices': 'items ## 0 and 2 are duplicate'
           });
         });
@@ -90,38 +84,38 @@ describe('Choice type', function () {
 
     describe('the *solutions* property', function () {
       it('must be an array', function () {
-        helpers.assertHasError('invalid/solutions-is-not-an-array.json', {
+        assert.hasError('solutions-is-not-an-array', {
           '.solutions': 'should be array'
         });
       });
 
       it('must contain at least one solution', function () {
-        helpers.assertHasError('invalid/under-one-solution.json', {
+        assert.hasError('under-one-solution', {
           '.solutions': 'should NOT have less than 1 items'
         });
       });
 
       describe('Each solution', function () {
         it('must be an object', function () {
-          helpers.assertHasError('invalid/solution-is-not-an-object.json', {
+          assert.hasError('solution-is-not-an-object', {
             '.solutions[0]': 'should be object'
           });
         });
 
         it('must be unique', function () {
-          helpers.assertHasError('invalid/duplicate-solutions.json', {
+          assert.hasError('duplicate-solutions', {
             '.solutions': 'items ## 0 and 1 are duplicate'
           });
         });
 
         it('must have an *id* property', function () {
-          helpers.assertHasError('invalid/no-solution-id.json', {
+          assert.hasError('no-solution-id', {
             '.solutions[0].id': 'property .id is required'
           });
         });
 
         it('must have a *score* property', function () {
-          helpers.assertHasError('invalid/no-solution-score.json', {
+          assert.hasError('no-solution-score', {
             '.solutions[0].score': 'property .score is required'
           });
         });
@@ -129,7 +123,7 @@ describe('Choice type', function () {
 
       describe('The *id* property', function () {
         it('must be a string', function () {
-          helpers.assertHasError('invalid/solution-id-is-not-a-string.json', {
+          assert.hasError('solution-id-is-not-a-string', {
             '.solutions[0].id': 'should be string'
           });
         });
@@ -137,7 +131,7 @@ describe('Choice type', function () {
 
       describe('The *score* property', function () {
         it('must be a number', function () {
-          helpers.assertHasError('invalid/solution-score-is-not-a-number.json', {
+          assert.hasError('solution-score-is-not-a-number', {
             '.solutions[0].score': 'should be number'
           });
         });
@@ -146,16 +140,10 @@ describe('Choice type', function () {
   });
 
   describe('Examples', function () {
-    var examples = [
+    assert.areValid([
       'true-false',
       'solutions',
       'full'
-    ];
-
-    examples.forEach(function (example) {
-      it('format/question/choice/examples/valid/' + example + '.json', function () {
-        helpers.assertIsValid(example + '.json', []);
-      });
-    });
+    ]);
   });
 });

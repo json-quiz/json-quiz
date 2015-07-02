@@ -1,3 +1,8 @@
+/**
+ * Custom reporter for Mocha, generating a markdown or html
+ * spec from the test suite.
+ */
+
 var fs = require('fs');
 var buildDir = __dirname + '/build';
 

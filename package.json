@@ -8,6 +8,6 @@
   },
   "scripts": {
     "test": "node_modules/.bin/mocha test --recursive",
-    "doc": "node_modules/.bin/mocha test --recursive -R doc-reporter.js"
+    "doc": "node_modules/.bin/mocha test --recursive -R report.js"
   }
 }

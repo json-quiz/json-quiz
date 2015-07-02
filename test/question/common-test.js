@@ -1,46 +1,46 @@
-var helpers = require('./../../test-helpers')('question-common');
+var assert = require('./../../assert')('question-common');
 
 describe('Common type', function () {
   describe('Structure', function () {
     describe('A question', function () {
       it('must be an object', function () {
-        helpers.assertHasError('invalid/not-an-object.json', {
+        assert.hasError('not-an-object', {
           '': 'should be object'
         });
       });
 
       it('must have an *id* property', function () {
-        helpers.assertHasError('invalid/no-id.json', {
+        assert.hasError('no-id', {
           '.id': 'property .id is required'
         });
       });
 
       it('must have a *title* property', function () {
-        helpers.assertHasError('invalid/no-title.json', {
+        assert.hasError('no-title', {
           '.title': 'property .title is required'
         });
       });
 
       it('may have an *meta* property', function () {
-        helpers.assertIsValid('with-metadata.json');
+        assert.isValid('with-metadata');
       });
 
       it('may have an *objects* property', function () {
-        helpers.assertIsValid('with-object.json');
+        assert.isValid('with-object');
       });
 
       it('may have a *resources* property', function () {
-        helpers.assertIsValid('with-resource.json');
+        assert.isValid('with-resource');
       });
 
       it('may have a *feedback* property', function () {
-        helpers.assertIsValid('global-feedback.json');
+        assert.isValid('global-feedback');
       });
     });
 
     describe('The *id* property', function () {
       it('must be a string', function () {
-        helpers.assertHasError('invalid/id-is-not-a-string.json', {
+        assert.hasError('id-is-not-a-string', {
           '.id': 'should be string'
         });
       });
@@ -48,7 +48,7 @@ describe('Common type', function () {
 
     describe('The *title* property', function () {
       it('must be a string', function () {
-        helpers.assertHasError('invalid/title-is-not-a-string.json', {
+        assert.hasError('title-is-not-a-string', {
           '.title': 'should be string'
         });
       });
@@ -56,10 +56,8 @@ describe('Common type', function () {
 
     describe('The *meta* property', function () {
       it('must satisfy #metadata# schema', function () {
-        helpers.assertHasError('invalid/meta-not-satisfying-metadata-schema.json', {
-          '.meta.authors': 'should be array'
-        });
-        helpers.assertHasError('invalid/meta-not-satisfying-metadata-schema.json', {
+        assert.hasErrors('meta-not-satisfying-metadata-schema', {
+          '.meta.authors': 'should be array',
           '.meta.license': 'should be string'
         });
       });
@@ -67,26 +65,26 @@ describe('Common type', function () {
 
     describe('The *objects* property', function () {
       it('must be an array', function () {
-        helpers.assertHasError('invalid/objects-is-not-an-array.json', {
+        assert.hasError('objects-is-not-an-array', {
           '.objects': 'should be array'
         });
       });
 
       it('must contain at least one object', function () {
-        helpers.assertHasError('invalid/under-one-object.json', {
+        assert.hasError('under-one-object', {
           '.objects': 'should NOT have less than 1 items'
         });
       });
 
       describe('Each object', function () {
         it('must satisfy #content# schema', function () {
-          helpers.assertHasError('invalid/object-not-satisfying-content-schema.json', {
+          assert.hasError('object-not-satisfying-content-schema', {
             '.objects[0].type': 'property .type is required'
           });
         });
 
         it('must be unique', function () {
-          helpers.assertHasError('invalid/duplicate-objects.json', {
+          assert.hasError('duplicate-objects', {
             '.objects': 'items ## 0 and 1 are duplicate'
           });
         });
@@ -95,26 +93,26 @@ describe('Common type', function () {
 
     describe('The *resources* property', function () {
       it('must be an array', function () {
-        helpers.assertHasError('invalid/resources-is-not-an-array.json', {
+        assert.hasError('resources-is-not-an-array', {
           '.resources': 'should be array'
         });
       });
 
       it('must contain at least one resource', function () {
-        helpers.assertHasError('invalid/under-one-resource.json', {
+        assert.hasError('under-one-resource', {
           '.resources': 'should NOT have less than 1 items'
         });
       });
 
       describe('Each resource', function () {
         it('must satisfy #content# schema', function () {
-          helpers.assertHasError('invalid/resource-not-satisfying-content-schema.json', {
+          assert.hasError('resource-not-satisfying-content-schema', {
             '.resources[0]': 'should be object'
           });
         });
 
         it('must be unique', function () {
-          helpers.assertHasError('invalid/duplicate-resources.json', {
+          assert.hasError('duplicate-resources', {
             '.resources': 'items ## 0 and 1 are duplicate'
           });
         });
@@ -123,50 +121,50 @@ describe('Common type', function () {
 
     describe('The *hints* property', function () {
       it('must be an array', function () {
-        helpers.assertHasError('invalid/hints-is-not-an-array.json', {
+        assert.hasError('hints-is-not-an-array', {
           '.hints': 'should be array'
         });
       });
 
       it('must contain at least one hint', function () {
-        helpers.assertHasError('invalid/under-one-hint.json', {
+        assert.hasError('under-one-hint', {
           '.hints': 'should NOT have less than 1 items'
         });
       });
 
       describe('Each hint', function () {
         it('must be an object', function () {
-          helpers.assertHasError('invalid/hint-is-not-an-object.json', {
+          assert.hasError('hint-is-not-an-object', {
             '.hints[0]': 'should be object'
           });
         });
 
         it('must be unique', function () {
-          helpers.assertHasError('invalid/duplicate-hints.json', {
+          assert.hasError('duplicate-hints', {
             '.hints': 'items ## 0 and 1 are duplicate'
           });
         });
 
         it('must have an *id* property', function () {
-          helpers.assertHasError('invalid/no-hint-id.json', {
+          assert.hasError('no-hint-id', {
             '.hints[0].id': 'property .id is required'
           });
         });
 
         it('must have a *text* property', function () {
-          helpers.assertHasError('invalid/no-hint-text.json', {
+          assert.hasError('no-hint-text', {
             '.hints[0].text': 'property .text is required'
           });
         });
 
         it('may have a *penalty* property', function () {
-          helpers.assertIsValid('hints-penalty.json');
+          assert.isValid('hints-penalty');
         });
       });
 
       describe('The *id* property', function () {
         it('must be a string', function () {
-          helpers.assertHasError('invalid/hint-id-is-not-a-string.json', {
+          assert.hasError('hint-id-is-not-a-string', {
             '.hints[0].id': 'should be string'
           });
         });
@@ -174,7 +172,7 @@ describe('Common type', function () {
 
       describe('The *text* property', function () {
         it('must be a string', function () {
-          helpers.assertHasError('invalid/hint-text-is-not-a-string.json', {
+          assert.hasError('hint-text-is-not-a-string', {
             '.hints[0].text': 'should be string'
           });
         });
@@ -182,16 +180,14 @@ describe('Common type', function () {
 
       describe('The *penalty* property', function () {
         it('must be a number', function () {
-          helpers.assertHasError('invalid/hint-penalty-is-not-a-number.json', {
+          assert.hasError('hint-penalty-is-not-a-number', {
             '.hints[0].penalty': 'should be number'
           });
         });
 
         it('must be greater than zero', function () {
-          helpers.assertHasError('invalid/hint-penalty-is-less-than-zero.json', {
-            '.hints[0].penalty': 'should be > 0'
-          });
-          helpers.assertHasError('invalid/hint-penalty-equals-zero.json', {
+          assert.hasErrors('hint-penalty-is-less-than-zero', {
+            '.hints[0].penalty': 'should be > 0',
             '.hints[0].penalty': 'should be > 0'
           });
         });
@@ -200,7 +196,7 @@ describe('Common type', function () {
 
     describe('The *feedback* property', function () {
       it('must be a string', function () {
-        helpers.assertHasError('invalid/feedback-is-not-a-string.json', {
+        assert.hasError('feedback-is-not-a-string', {
           '.feedback': 'should be string'
         });
       });
@@ -208,19 +204,13 @@ describe('Common type', function () {
   });
 
   describe('Examples', function () {
-    var examples = [
+    assert.areValid([
       'with-metadata',
       'with-object',
       'with-resource',
       'global-feedback',
       'hints-no-penalty',
       'hints-penalty'
-    ];
-
-    examples.forEach(function (example) {
-      it('format/question/common/examples/valid/' + example + '.json', function () {
-        helpers.assertIsValid(example + '.json', []);
-      });
-    });
+    ]);
   });
 });
