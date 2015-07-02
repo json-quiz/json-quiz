@@ -1,40 +1,10 @@
 /**
- * Custom reporter for Mocha, generating a markdown or html
- * spec from the test suite.
+ * Custom reporter for Mocha, generating from the test suite
+ * a markdown spec to be rendered by jekyll.
  */
 
 var fs = require('fs');
 var buildDir = __dirname + '/build';
-
-function makeHtmlWrapper() {
-  return {
-    setLevel: function (level) {
-      // noop
-    },
-    fileName: function (suiteTitle) {
-      return suiteTitle.replace(' ', '-').toLowerCase() + '.html';
-    },
-    firstLevelTitle: function (title) {
-      return '<h1>' + title + '</h1>';
-    },
-    secondLevelTitle: function (title) {
-      return '<h2>' + title + '</h2>';
-    },
-    otherTitle: function (title) {
-      return '<p>' + title + ':</p><ul>';
-    },
-    otherTitleEnd: function () {
-      return '</ul>';
-    },
-    spec: function (text) {
-      return '<li>' + text + '</li>';
-    },
-    example: function (title, content) {
-      return '<h3>' + title + '</h3>'
-        + '<pre>' + content + '</pre>';
-    }
-  };
-}
 
 function makeMarkdownWrapper() {
   var _level = 0;
@@ -51,6 +21,12 @@ function makeMarkdownWrapper() {
     },
     fileName: function (suiteTitle) {
       return suiteTitle.replace(' ', '-').toLowerCase() + '.md';
+    },
+    fileHeader: function (suiteTitle) {
+      return '---\n'
+        + 'title: ' + suiteTitle + '\n'
+        + 'layout: default\n'
+        + '---\n\n';
     },
     firstLevelTitle: function (title) {
       return '#' + title + '\n\n';
@@ -91,7 +67,8 @@ function DocReporter(runner) {
 
     if (level === 1) {
       suiteFile = wrapper.fileName(suite.title);
-      output += wrapper.firstLevelTitle(suite.title);
+      output += wrapper.fileHeader(suite.title)
+        + wrapper.firstLevelTitle(suite.title);
     } else if (level === 2) {
       output += wrapper.secondLevelTitle(suite.title);
     } else {
