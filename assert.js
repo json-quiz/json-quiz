@@ -5,11 +5,17 @@
 var assert = require('assert');
 var Ajv = require('ajv');
 var ajv = Ajv({ allErrors: true });
+var resolved = {
+  'metadata': 'metadata',
+  'content': 'content',
+  'base-question': 'question/base',
+  'choice-question': 'question/choice'
+};
 
 ajv.addSchema([
   require('./format/metadata/schema.json'),
   require('./format/content/schema.json'),
-  require('./format/question/common/schema.json'),
+  require('./format/question/base/schema.json'),
   require('./format/question/choice/schema.json')
 ]);
 
@@ -17,7 +23,11 @@ ajv.addSchema([
  * Returns the directory of a schema.
  */
 function getSchemaDir(schemaId) {
-  return 'format/' + schemaId.split('-').join('/');
+  if (!resolved[schemaId]) {
+    throw new Error('Cannot resolve directory of schema ' + schemaId);
+  }
+
+  return 'format/' + resolved[schemaId];
 }
 
 /**

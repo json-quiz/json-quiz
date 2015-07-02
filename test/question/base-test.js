@@ -1,7 +1,7 @@
-var assert = require('./../../assert')('question-common');
+var assert = require('./../../assert')('base-question');
 
-describe('Common type', function () {
-  describe('Structure', function () {
+describe('Base question', function () {
+  describe('Schema', function () {
     describe('A question', function () {
       it('must be an object', function () {
         assert.hasError('not-an-object', {
@@ -55,7 +55,7 @@ describe('Common type', function () {
     });
 
     describe('The *meta* property', function () {
-      it('must satisfy #metadata# schema', function () {
+      it('must satisfy the #metadata# schema', function () {
         assert.hasErrors('meta-not-satisfying-metadata-schema', {
           '.meta.authors': 'should be array',
           '.meta.license': 'should be string'
@@ -77,7 +77,7 @@ describe('Common type', function () {
       });
 
       describe('Each object', function () {
-        it('must satisfy #content# schema', function () {
+        it('must satisfy the #content# schema', function () {
           assert.hasError('object-not-satisfying-content-schema', {
             '.objects[0].type': 'property .type is required'
           });
@@ -105,7 +105,7 @@ describe('Common type', function () {
       });
 
       describe('Each resource', function () {
-        it('must satisfy #content# schema', function () {
+        it('must satisfy the #content# schema', function () {
           assert.hasError('resource-not-satisfying-content-schema', {
             '.resources[0]': 'should be object'
           });

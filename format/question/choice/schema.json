@@ -1,9 +1,9 @@
 {
-  "id": "question-choice",
+  "id": "choice-question",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "allOf": [
     {
-      "$ref": "question-common"
+      "$ref": "base-question"
     },
     {
       "type": "object",

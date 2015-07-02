@@ -1,7 +1,7 @@
 var assert = require('./../../assert')('metadata');
 
 describe('Metadata', function () {
-  describe('Structure', function () {
+  describe('Schema', function () {
     describe('A metadata block', function () {
       it('must be an object', function () {
         assert.hasError('not-an-object', {

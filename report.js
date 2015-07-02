@@ -29,7 +29,7 @@ function makeMarkdownWrapper() {
         + '---\n\n';
     },
     firstLevelTitle: function (title) {
-      return '# FOOOOO' + title + '\n\n';
+      return '# ' + title + '\n\n';
     },
     secondLevelTitle: function (title) {
       return '## ' + title + '\n\n';

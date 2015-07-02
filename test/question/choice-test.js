@@ -1,9 +1,9 @@
-var assert = require('./../../assert')('question-choice');
+var assert = require('./../../assert')('choice-question');
 
-describe('Choice type', function () {
-  describe('Structure', function () {
+describe('Choice question', function () {
+  describe('Schema', function () {
     describe('A choice question', function () {
-      it('must satisfy #question-common# schema', function () {
+      it('must satisfy the #base-question# schema', function () {
         assert.hasErrors('not-satisfying-common-schema', {
           '.id': 'property .id is required',
           '.title': 'property .title is required',
@@ -65,7 +65,7 @@ describe('Choice type', function () {
       });
 
       describe('Each choice', function () {
-        it('must satisfy #content# schema', function () {
+        it('must satisfy the #content# schema', function () {
           assert.hasError('choice-not-satisfying-content-schema', {
             '.choices[0].data': 'should be string'
           });

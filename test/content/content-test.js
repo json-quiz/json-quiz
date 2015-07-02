@@ -1,7 +1,7 @@
 var assert = require('./../../assert')('content');
 
 describe('Content', function () {
-  describe('Structure', function () {
+  describe('Schema', function () {
     describe('A content block', function () {
       it('must be an object', function () {
         assert.hasError('not-an-object', {
@@ -90,7 +90,7 @@ describe('Content', function () {
     });
 
     describe('The *meta* property', function () {
-      it('must satisfy #metadata# schema', function () {
+      it('must satisfy the #metadata# schema', function () {
         assert.hasErrors('meta-not-satisfying-metadata-schema', {
           '.meta.authors': 'should be array',
           '.meta.license': 'should be string'
