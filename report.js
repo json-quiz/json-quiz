@@ -29,10 +29,10 @@ function makeMarkdownWrapper() {
         + '---\n\n';
     },
     firstLevelTitle: function (title) {
-      return '#' + title + '\n\n';
+      return '# FOOOOO' + title + '\n\n';
     },
     secondLevelTitle: function (title) {
-      return '##' + title + '\n\n';
+      return '## ' + title + '\n\n';
     },
     otherTitle: function (title) {
       return _getIndent() + '* ' + title + ':\n\n';
@@ -41,13 +41,29 @@ function makeMarkdownWrapper() {
       return '';
     },
     spec: function (text) {
+      var matches = text.match(/#([a-zA-Z\-0-9_]+)#/);
+
+      if (matches) {
+        // make link to another schema
+        var schemaId = matches[1];
+        text = text.replace(
+          '#' + schemaId + '#',
+          '[' + schemaId + '](' + schemaId + '.html)'
+        );
+      }
+
       return _getIndent() + '* ' + text + '\n\n';
     },
     example: function (title, content) {
-      return '###' + title + '\n\n'
-        + '```json\n\n'
+      // convert file name into plain text title
+      var title = (title.charAt(0).toUpperCase() + title.slice(1))
+        .slice(0, -5)
+        .replace('-' , ' ');
+
+      return '### ' + title + '\n\n'
+        + '{% highlight json %}\n\n'
         + content + '\n\n'
-        + '```\n\n';
+        + '{% endhighlight %}\n\n';
     }
   };
 }
@@ -102,7 +118,7 @@ function DocReporter(runner) {
     var exampleFile, exampleTitle, exampleContent;
 
     wrapper.setLevel(++level);
-    
+
     if (parentSuite === 'Examples') {
       exampleFile = __dirname + '/' + test.title;
       exampleTitle = test.title.split('/').pop();
@@ -111,7 +127,7 @@ function DocReporter(runner) {
     } else {
       output += wrapper.spec(test.title);
     }
-   
+
     wrapper.setLevel(--level);
   });
 
