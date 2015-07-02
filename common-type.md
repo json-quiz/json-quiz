@@ -1,3 +1,8 @@
+---
+title: Common type
+layout: default
+---
+
 #Common type
 
 ##Structure

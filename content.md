@@ -1,3 +1,8 @@
+---
+title: Content
+layout: default
+---
+
 #Content
 
 ##Structure

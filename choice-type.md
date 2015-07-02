@@ -1,3 +1,8 @@
+---
+title: Choice type
+layout: default
+---
+
 #Choice type
 
 ##Structure

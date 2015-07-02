@@ -1,3 +1,8 @@
+---
+title: Metadata
+layout: default
+---
+
 #Metadata
 
 ##Structure
