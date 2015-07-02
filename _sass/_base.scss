@@ -37,10 +37,14 @@ ul, ol, dl, figure,
 
 
 /**
- * Nested list vertical spacing
+ * Nested lists
  */
 ul > li:last-of-type {
     margin-bottom: $spacing-unit;
+}
+
+ul {
+  list-style-type: disc;
 }
 
 
