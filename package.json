@@ -9,6 +9,6 @@
   "scripts": {
     "test": "node_modules/.bin/mocha test --recursive",
     "doc": "node_modules/.bin/mocha test --recursive -R report.js",
-    "site": "npm doc && sh publish.sh"
+    "site": "npm run doc && sh publish.sh"
   }
 }
