@@ -1,0 +1,10 @@
+- title: Metadata
+  doc: metadata
+- title: Content
+  doc: content
+- title: Questions
+  docs:
+    - title: Base question
+      doc: base-question
+    - title: Choice question
+      doc: choice-question

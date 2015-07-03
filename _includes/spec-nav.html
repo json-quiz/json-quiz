@@ -1,0 +1,22 @@
+<aside>
+  <nav>
+    <ol>
+      {% for section in site.data.docs %}
+        <li>
+          {% if section.doc %}
+            <a href="{{ site.url }}{{ section.doc }}.html">{{ section.title }}</a>
+          {% else %}
+            {{ section.title }}
+            <ol>
+              {% for subSection in section.docs %}
+                <li>
+                  <a href="{{ site.url }}{{ subSection.doc }}.html">{{ subSection.title }}</a>
+                </li>
+              {% endfor %}
+            </ol>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ol>
+  </nav>
+</aside>
