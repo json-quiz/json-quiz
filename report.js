@@ -3,8 +3,11 @@
  * a markdown spec to be rendered by jekyll.
  */
 
-var fs = require('fs');
+var fs = require('fs-extra');
+var formatDir = __dirname + '/format';
 var buildDir = __dirname + '/build';
+var specDir = buildDir + '/_spec';
+var dataDir = buildDir + '/_data';
 
 function makeMarkdownWrapper() {
   var _level = 0;
@@ -37,9 +40,6 @@ function makeMarkdownWrapper() {
     otherTitle: function (title) {
       return _getIndent() + '* ' + title + ':\n\n';
     },
-    otherTitleEnd: function () {
-      return '';
-    },
     spec: function (text) {
       var matches = text.match(/#([a-zA-Z\-0-9_]+)#/);
 
@@ -56,7 +56,7 @@ function makeMarkdownWrapper() {
     },
     example: function (title, content) {
       // convert file name into plain text title
-      var title = (title.charAt(0).toUpperCase() + title.slice(1))
+      title = (title.charAt(0).toUpperCase() + title.slice(1))
         .slice(0, -5)
         .split('-')
         .join(' ');
@@ -97,21 +97,20 @@ function DocReporter(runner) {
 
   runner.on('suite end', function (suite) {
     if (suite.root) {
+      fs.mkdirsSync(dataDir);
+      fs.copySync(formatDir + '/spec.yml', dataDir + '/spec.yml');
+      console.log('Spec plan copied');
+
       return;
     }
 
     wrapper.setLevel(--level);
 
     if (level === 0) {
-      if (!fs.existsSync(buildDir)) {
-        fs.mkdirSync(buildDir);
-      }
-
-      fs.writeFileSync(buildDir + '/' + suiteFile, output);
+      fs.mkdirsSync(specDir);
+      fs.writeFileSync(specDir + '/' + suiteFile, output);
       output = '';
-      console.log('Doc file "build/%s" generated', suiteFile);
-    } else if (level >= 2) {
-      output += wrapper.otherTitleEnd();
+      console.log('Doc file "%s" generated', suiteFile);
     }
   });
 

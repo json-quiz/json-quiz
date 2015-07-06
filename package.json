@@ -4,6 +4,7 @@
   "description": "Extensible quiz/question JSON format",
   "devDependencies": {
     "ajv": "^0.6.1",
+    "fs-extra": "^0.21.0",
     "mocha": "^2.2.5"
   },
   "scripts": {
