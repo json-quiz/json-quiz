@@ -66,10 +66,8 @@ describe('Choice question', function () {
 
       describe('Each choice', function () {
         it('must satisfy the #content# schema', function () {
-          assert.hasError('choice-not-satisfying-content-schema', {
-            '.choices[0].data': 'should be string'
-          });
-          assert.hasError('choice-not-satisfying-content-schema', {
+          assert.hasErrors('choice-not-satisfying-content-schema', {
+            '.choices[0].data': 'should be string',
             '.choices[1].id': 'property .id is required'
           });
         });

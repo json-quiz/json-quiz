@@ -9,22 +9,37 @@ var resolved = {
   'metadata': 'metadata',
   'content': 'content',
   'base-question': 'question/base',
-  'choice-question': 'question/choice'
+  'choice-question': 'question/choice',
+  'match-question': 'question/match'
 };
 
 ajv.addSchema([
   require('./format/metadata/schema.json'),
   require('./format/content/schema.json'),
   require('./format/question/base/schema.json'),
-  require('./format/question/choice/schema.json')
+  require('./format/question/choice/schema.json'),
+  require('./format/question/match/schema.json')
 ]);
+
+/**
+ * Returns the validator function for a given schema.
+ */
+function getSchema(schemaId) {
+  var validate = ajv.getSchema(schemaId);
+
+  if (!validate) {
+    throw new Error('Unknown schema "' + schemaId + '"');
+  }
+
+  return validate;
+}
 
 /**
  * Returns the directory of a schema.
  */
 function getSchemaDir(schemaId) {
   if (!resolved[schemaId]) {
-    throw new Error('Cannot resolve directory of schema ' + schemaId);
+    throw new Error('Cannot resolve directory of schema "' + schemaId + "'");
   }
 
   return 'format/' + resolved[schemaId];
@@ -36,7 +51,7 @@ function getSchemaDir(schemaId) {
  * messages.
  */
 function validateAndNormalizeErrors(schemaId, dataFilePath) {
-  var validate = ajv.getSchema(schemaId);
+  var validate = getSchema(schemaId);
   var data = require('./' + getSchemaDir(schemaId) + '/examples/' + dataFilePath);
   var errors = {};
 

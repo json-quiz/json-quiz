@@ -1,0 +1,30 @@
+{
+  "objects": "not-an-array",
+  "meta": "not-an-object",
+  "firstSet": [
+    {
+      "id": "1",
+      "type": "text/plain",
+      "data": "A"
+    },
+    {
+      "id": "2",
+      "type": "text/plain",
+      "data": "B"
+    }
+  ],
+  "secondSet": [
+    {
+      "id": "3",
+      "type": "text/plain",
+      "data": "C"
+    },
+    {
+      "id": "4",
+      "type": "text/plain",
+      "data": "D"
+    }
+  ],
+  "random": false,
+  "multiple": false
+}
