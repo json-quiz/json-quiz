@@ -156,7 +156,7 @@ describe('Match question', function () {
     assert.areValid([
       'basic',
       'solutions',
-      'text-and-medias'
+      'text-and-images'
     ]);
   });
 });
