@@ -1,0 +1,40 @@
+{
+  "id": "sort-question",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "allOf": [
+    {
+      "$ref": "base-question"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array",
+          "minItems": 2,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "content"
+          }
+        },
+        "solution": {
+          "type": "object",
+          "properties": {
+            "itemIds": {
+              "type": "array",
+              "minItems": 2,
+              "uniqueItems": true,
+              "items": {
+                "type": "string"
+              }
+            },
+            "itemScore": {
+              "type": "number"
+            }
+          },
+          "required": ["itemIds", "itemScore"]
+        }
+      },
+      "required": ["items"]
+    }
+  ]
+}

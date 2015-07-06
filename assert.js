@@ -10,7 +10,8 @@ var resolved = {
   'content': 'content',
   'base-question': 'question/base',
   'choice-question': 'question/choice',
-  'match-question': 'question/match'
+  'match-question': 'question/match',
+  'sort-question': 'question/sort'
 };
 
 ajv.addSchema([
@@ -18,7 +19,8 @@ ajv.addSchema([
   require('./format/content/schema.json'),
   require('./format/question/base/schema.json'),
   require('./format/question/choice/schema.json'),
-  require('./format/question/match/schema.json')
+  require('./format/question/match/schema.json'),
+  require('./format/question/sort/schema.json')
 ]);
 
 /**

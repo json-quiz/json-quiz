@@ -1,0 +1,25 @@
+{
+  "id": "1",
+  "title": "Question ?",
+  "items": [
+    {
+      "id": "2",
+      "type": "text/plain",
+      "data": "Item A"
+    },
+    {
+      "id": "3",
+      "type": "text/plain",
+      "data": "Item B"
+    },
+    {
+      "id": "4",
+      "type": "text/plain",
+      "data": "Item B"
+    }
+  ],
+  "solution": {
+    "itemIds": ["3", "4", "3"],
+    "itemScore": 1.5
+  }
+}

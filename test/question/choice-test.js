@@ -4,7 +4,7 @@ describe('Choice question', function () {
   describe('Schema', function () {
     describe('A choice question', function () {
       it('must satisfy the #base-question# schema', function () {
-        assert.hasErrors('not-satisfying-common-schema', {
+        assert.hasErrors('not-satisfying-base-schema', {
           '.id': 'property .id is required',
           '.title': 'property .title is required',
           '.meta': 'should be object',

@@ -14,7 +14,7 @@ function makeMarkdownWrapper() {
 
   function _getIndent() {
     return Array.apply(null, new Array(_level - 3))
-      .map(function (a) { return '  '; })
+      .map(function () { return '  '; })
       .join('');
   }
 

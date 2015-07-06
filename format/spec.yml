@@ -10,3 +10,5 @@
       doc: choice-question
     - title: Match question
       doc: match-question
+    - title: Sort question
+      doc: sort-question
