@@ -1,3 +1,6 @@
+echo "Regenerating spec and data directories..."
+
 cd `dirname $0`
-rm -rf _docs/*
-cp build/* _docs
+rm -rf _spec _data
+cp -R build/_spec .
+cp -R build/_data .

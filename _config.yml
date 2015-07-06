@@ -6,5 +6,5 @@ markdown: kramdown
 kramdown:
   input: GFM
 collections:
-  docs:
+  spec:
     output: true
