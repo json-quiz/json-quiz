@@ -28,7 +28,7 @@ function makeMarkdownWrapper() {
     fileHeader: function (suiteTitle) {
       return '---\n'
         + 'title: ' + suiteTitle + '\n'
-        + 'layout: default\n'
+        + 'layout: spec\n'
         + '---\n\n';
     },
     firstLevelTitle: function (title) {
