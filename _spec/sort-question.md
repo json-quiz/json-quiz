@@ -1,6 +1,6 @@
 ---
 title: Sort question
-layout: default
+layout: spec
 ---
 
 # Sort question

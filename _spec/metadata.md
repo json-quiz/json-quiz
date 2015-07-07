@@ -1,6 +1,6 @@
 ---
 title: Metadata
-layout: default
+layout: spec
 ---
 
 # Metadata

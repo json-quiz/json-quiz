@@ -1,6 +1,6 @@
 ---
 title: Content
-layout: default
+layout: spec
 ---
 
 # Content

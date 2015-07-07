@@ -1,11 +1,26 @@
+.site-header {
+  padding: 0 30px;
+}
+
+.spec-page {
+  display: flex;
+}
+
 .spec-nav, .spec-content {
-  float: left;
-  padding: 20px;
+  padding: 24px 20px;
 }
 
 .spec-nav {
-  min-width: 220px;
-  padding: 40px 14px;
+  flex: 2;
+  margin-top: 16px;
+}
+
+.spec-content {
+  flex: 5;
+}
+
+.spec-right-border {
+  flex: 1;
 }
 
 .spec-content ul > li:last-of-type {

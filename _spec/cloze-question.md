@@ -1,6 +1,6 @@
 ---
 title: Cloze question
-layout: default
+layout: spec
 ---
 
 # Cloze question

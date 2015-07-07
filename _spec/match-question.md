@@ -1,6 +1,6 @@
 ---
 title: Match question
-layout: default
+layout: spec
 ---
 
 # Match question

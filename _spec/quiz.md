@@ -1,6 +1,6 @@
 ---
 title: Quiz
-layout: default
+layout: spec
 ---
 
 # Quiz
