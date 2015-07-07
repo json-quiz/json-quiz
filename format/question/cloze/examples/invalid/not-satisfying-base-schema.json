@@ -1,5 +1,5 @@
 {
   "meta": "not-an-object",
   "objects": "not-an-array",
-  "text": "Lorem ipsum {{1}} sit amet."
+  "text": "Lorem ipsum [[1]] sit amet."
 }

@@ -1,6 +1,6 @@
 {
   "id": "1",
   "title": "Question ?",
-  "text": "Lorem ipsum {{1}} sit amet.",
+  "text": "Lorem ipsum [[1]] sit amet.",
   "solutions": "not-an-array"
 }
