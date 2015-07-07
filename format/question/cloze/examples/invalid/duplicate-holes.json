@@ -1,0 +1,15 @@
+{
+  "id": "1",
+  "title": "Question ?",
+  "text": "Lorem {{1}} dolor sit {{2}}.",
+  "holes": [
+    {
+      "id": "1",
+      "size": 20
+    },
+    {
+      "id": "1",
+      "size": 20
+    }
+  ]
+}

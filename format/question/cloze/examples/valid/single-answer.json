@@ -1,0 +1,12 @@
+{
+  "id": "1",
+  "title": "Question ?",
+  "text": "Lorem ipsum {{1}} sit amet.",
+  "solutions": [
+    {
+      "holeId": "1",
+      "answers": ["dolor"],
+      "score": 2
+    }
+  ]
+}

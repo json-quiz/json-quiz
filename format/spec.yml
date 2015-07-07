@@ -12,3 +12,5 @@
       doc: match-question
     - title: Sort question
       doc: sort-question
+    - title: Cloze question
+      doc: cloze-question

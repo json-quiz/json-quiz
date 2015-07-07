@@ -11,7 +11,8 @@ var resolved = {
   'base-question': 'question/base',
   'choice-question': 'question/choice',
   'match-question': 'question/match',
-  'sort-question': 'question/sort'
+  'sort-question': 'question/sort',
+  'cloze-question': 'question/cloze'
 };
 
 ajv.addSchema([
@@ -20,7 +21,8 @@ ajv.addSchema([
   require('./format/question/base/schema.json'),
   require('./format/question/choice/schema.json'),
   require('./format/question/match/schema.json'),
-  require('./format/question/sort/schema.json')
+  require('./format/question/sort/schema.json'),
+  require('./format/question/cloze/schema.json')
 ]);
 
 /**

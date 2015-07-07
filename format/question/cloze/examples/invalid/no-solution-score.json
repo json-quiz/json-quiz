@@ -1,0 +1,26 @@
+{
+  "id": "1",
+  "title": "Question ?",
+  "text": "Lorem {{1}} dolor sit {{2}}.",
+  "holes": [
+    {
+      "id": "1",
+      "choices": ["foo", "ipsum", "bar"]
+    },
+    {
+      "id": "2",
+      "size": 10
+    }
+  ],
+  "solutions": [
+    {
+      "holeId": "1",
+      "answers": ["ipsum"]
+    },
+    {
+      "holeId": "2",
+      "answers": ["amet", "consecitur", "nunc"],
+      "score": 3.5
+    }
+  ]
+}
