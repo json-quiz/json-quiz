@@ -59,6 +59,7 @@ layout: default
 
 {
   "id": "1",
+  "type": "application/x.sort+json",
   "title": "Question ?",
   "items": [
     {
@@ -82,6 +83,7 @@ layout: default
 
 {
   "id": "1",
+  "type": "application/x.sort+json",
   "title": "Question ?",
   "items": [
     {
@@ -114,6 +116,7 @@ layout: default
 
 {
   "id": "1",
+  "type": "application/x.sort+json",
   "meta": {
     "authors": [
       {

@@ -77,6 +77,7 @@ layout: default
 
 {
   "id": "1",
+  "type": "application/x.match+json",
   "title": "Question ?",
   "firstSet": [
     {
@@ -112,6 +113,7 @@ layout: default
 
 {
   "id": "1",
+  "type": "application/x.match+json",
   "title": "Question ?",
   "firstSet": [
     {
@@ -159,6 +161,7 @@ layout: default
 
 {
   "id": "1",
+  "type": "application/x.match+json",
   "meta": {
     "authors": [
       {

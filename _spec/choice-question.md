@@ -71,6 +71,7 @@ layout: default
 
 {
   "id": "1",
+  "type": "application/x.choice+json",
   "title": "Question ?",
   "choices": [
     {
@@ -96,6 +97,7 @@ layout: default
 
 {
   "id": "1",
+  "type": "application/x.choice+json",
   "title": "Question ?",
   "choices": [
     {
@@ -145,6 +147,7 @@ layout: default
 
 {
   "id": "1",
+  "type": "application/x.choice+json",
   "meta": {
     "authors": [
       {

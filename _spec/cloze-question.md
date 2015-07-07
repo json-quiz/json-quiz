@@ -111,6 +111,7 @@ layout: default
 
 {
   "id": "1",
+  "type": "application/x.cloze+json",
   "title": "Question ?",
   "text": "Lorem ipsum [[1]] sit amet."
 }
@@ -123,6 +124,7 @@ layout: default
 
 {
   "id": "1",
+  "type": "application/x.cloze+json",
   "title": "Question ?",
   "text": "Lorem [[1]] dolor sit [[2]].",
   "holes": [
@@ -146,6 +148,7 @@ layout: default
 
 {
   "id": "1",
+  "type": "application/x.cloze+json",
   "title": "Question ?",
   "text": "Lorem [[1]] dolor sit [[2]].",
   "holes": [
@@ -168,6 +171,7 @@ layout: default
 
 {
   "id": "1",
+  "type": "application/x.cloze+json",
   "title": "Question ?",
   "text": "Lorem ipsum [[1]] sit amet.",
   "solutions": [
@@ -187,6 +191,7 @@ layout: default
 
 {
   "id": "1",
+  "type": "application/x.cloze+json",
   "title": "Question ?",
   "text": "Lorem [[1]] dolor sit [[2]].",
   "holes": [

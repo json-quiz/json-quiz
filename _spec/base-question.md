@@ -13,9 +13,11 @@ layout: default
 
   * must have an *id* property
 
+  * must have a *type* property
+
   * must have a *title* property
 
-  * may have an *meta* property
+  * may have a *meta* property
 
   * may have an *objects* property
 
@@ -26,6 +28,12 @@ layout: default
 * The *id* property:
 
   * must be a string
+
+* The *type* property:
+
+  * must be a string
+
+  * must hold a custom JSON MIME type
 
 * The *title* property:
 
@@ -103,6 +111,7 @@ layout: default
 
 {
   "id": "1",
+  "type": "application/x.type+json",
   "meta": {
     "authors": [
       {
@@ -124,6 +133,7 @@ layout: default
 
 {
   "id": "1",
+  "type": "application/x.type+json",
   "objects": [
     {
       "id": "1",
@@ -145,6 +155,7 @@ layout: default
 
 {
   "id": "1",
+  "type": "application/x.type+json",
   "title": "Question ?",
   "resources": [
     {
@@ -163,6 +174,7 @@ layout: default
 
 {
   "id": "1",
+  "type": "application/x.type+json",
   "title": "Question ?",
   "feedback": "Lorem ipsum dolor sit amet"
 }
@@ -175,6 +187,7 @@ layout: default
 
 {
   "id": "1",
+  "type": "application/x.type+json",
   "title": "Question ?",
   "hints": [
     {
@@ -196,6 +209,7 @@ layout: default
 
 {
   "id": "1",
+  "type": "application/x.type+json",
   "title": "Question ?",
   "hints": [
     {
