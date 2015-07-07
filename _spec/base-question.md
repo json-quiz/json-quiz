@@ -1,6 +1,6 @@
 ---
 title: Base question
-layout: default
+layout: spec
 ---
 
 # Base question

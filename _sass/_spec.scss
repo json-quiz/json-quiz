@@ -1,0 +1,25 @@
+.spec-nav, .spec-content {
+  float: left;
+  padding: 20px;
+}
+
+.spec-nav {
+  min-width: 220px;
+  padding: 40px 14px;
+}
+
+.spec-content ul > li:last-of-type {
+    margin-bottom: $spacing-unit - 10;
+}
+
+.spec-content ul {
+    list-style-type: disc;
+}
+
+.spec-nav ol {
+    list-style-type: decimal;
+}
+
+.spec-nav ol > li > ol {
+    list-style-type: lower-latin;
+}

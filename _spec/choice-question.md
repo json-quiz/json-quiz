@@ -1,6 +1,6 @@
 ---
 title: Choice question
-layout: default
+layout: spec
 ---
 
 # Choice question

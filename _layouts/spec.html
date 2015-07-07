@@ -9,12 +9,13 @@
 
     <div class="page-content">
 
-      <div class="wrapper">
+        {% include spec-nav.html %}
 
+        <main class="spec-content">
           {{ content }}
+        </main>
 
-      </div>
-
+        <div style="clear: both"></div>
     </div>
 
     {% include footer.html %}
