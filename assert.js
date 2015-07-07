@@ -12,7 +12,8 @@ var resolved = {
   'choice-question': 'question/choice',
   'match-question': 'question/match',
   'sort-question': 'question/sort',
-  'cloze-question': 'question/cloze'
+  'cloze-question': 'question/cloze',
+  'quiz': 'quiz'
 };
 
 ajv.addSchema([
@@ -22,7 +23,8 @@ ajv.addSchema([
   require('./format/question/choice/schema.json'),
   require('./format/question/match/schema.json'),
   require('./format/question/sort/schema.json'),
-  require('./format/question/cloze/schema.json')
+  require('./format/question/cloze/schema.json'),
+  require('./format/quiz/schema.json')
 ]);
 
 /**
@@ -76,12 +78,11 @@ function validateAndNormalizeErrors(schemaId, dataFilePath) {
 /**
  * Returns a set of assertion helpers for a given schema.
  *
- * The schema file must be named *schema.json* and must live in
- * the *format/[schemaId]* directory (if the id contains hyphens,
- * each part will be split into distinct directories).
+ * The schema file must be included above in the *resolved* and
+ * *ajv.addSchema* statements.
  *
  * Assert functions will assume that the examples passed in are
- * located the *format/[schemaId]/examples/[valid|invalid]*
+ * located the *format/[schemaDir]/examples/[valid|invalid]*
  * directory.
  */
 function makeAsserters(schemaId) {
