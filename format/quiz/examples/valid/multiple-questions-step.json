@@ -1,0 +1,65 @@
+{
+  "id": "1",
+  "steps": [
+    {
+      "id": "1",
+      "items": [
+        {
+          "id": "1",
+          "type": "application/x.choice+json",
+          "title": "Question 1 ?",
+          "objects": [
+            {
+              "id": "1",
+              "type": "image/png",
+              "url": "http://domain.com/image.png"
+            }
+          ],
+          "choices": [
+            {
+              "id": "2",
+              "type": "text/plain",
+              "data": "True"
+            },
+            {
+              "id": "3",
+              "type": "text/plain",
+              "data": "False"
+            }
+          ],
+          "random": false,
+          "multiple": false
+        },
+        {
+          "id": "2",
+          "type": "application/x.match+json",
+          "title": "Question 2 ?",
+          "firstSet": [
+            {
+              "id": "4",
+              "type": "text/plain",
+              "data": "Item A"
+            },
+            {
+              "id": "5",
+              "type": "text/plain",
+              "data": "Item B"
+            }
+          ],
+          "secondSet": [
+            {
+              "id": "6",
+              "type": "text/plain",
+              "data": "Item C"
+            },
+            {
+              "id": "7",
+              "type": "text/plain",
+              "data": "Item D"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

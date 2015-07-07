@@ -1,0 +1,39 @@
+{
+  "id": "1",
+  "steps": [
+    {
+      "id": "1",
+      "items": [
+        {
+          "id": "1",
+          "type": "text/html",
+          "data": "<p>Lorem ipsum dolor <em>sit</em> amet."
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "items": [
+        {
+          "id": "2",
+          "type": "application/x.choice+json",
+          "title": "Question ?",
+          "choices": [
+            {
+              "id": "3",
+              "type": "text/plain",
+              "data": "True"
+            },
+            {
+              "id": "4",
+              "type": "text/plain",
+              "data": "False"
+            }
+          ],
+          "random": false,
+          "multiple": false
+        }
+      ]
+    }
+  ]
+}
