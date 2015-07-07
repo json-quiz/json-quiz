@@ -207,7 +207,6 @@ describe('Base question', function () {
 
         it('must be greater than zero', function () {
           assert.hasErrors('hint-penalty-is-less-than-zero', {
-            '.hints[0].penalty': 'should be > 0',
             '.hints[0].penalty': 'should be > 0'
           });
         });
