@@ -8,6 +8,9 @@
     {
       "type": "object",
       "properties": {
+        "type": {
+          "enum": ["application/x.cloze+json"]
+        },
         "text": {
           "type": "string"
         },

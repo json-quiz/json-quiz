@@ -1,5 +1,6 @@
 {
   "id": "1",
+  "type": "application/x.type+json",
   "title": "Question ?",
   "feedback": ["not-a-string"]
 }

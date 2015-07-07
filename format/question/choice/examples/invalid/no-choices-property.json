@@ -1,1 +1,7 @@
-{}
+{
+  "id": "1",
+  "type": "application/x.choice+json",
+  "title": "Question ?",
+  "random": false,
+  "multiple": false
+}

@@ -6,6 +6,7 @@ describe('Match question', function () {
       it('must satisfy the #base-question# schema', function () {
         assert.hasErrors('not-satisfying-base-schema', {
           '.id': 'property .id is required',
+          '.type': 'property .type is required',
           '.title': 'property .title is required',
           '.meta': 'should be object',
           '.objects': 'should be array'

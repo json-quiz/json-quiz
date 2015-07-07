@@ -15,6 +15,12 @@ describe('Base question', function () {
         });
       });
 
+      it('must have a *type* property', function () {
+        assert.hasError('no-type', {
+          '.type': 'property .type is required'
+        });
+      });
+
       it('must have a *title* property', function () {
         assert.hasError('no-title', {
           '.title': 'property .title is required'
@@ -44,6 +50,20 @@ describe('Base question', function () {
           '.id': 'should be string'
         });
       });
+    });
+
+    describe('The *type* property', function () {
+      it('must be a string', function () {
+        assert.hasError('type-is-not-a-string', {
+          '.type': 'should be string'
+        });
+      });
+
+      it('must hold a custom JSON MIME type', function () {
+        assert.hasError('type-is-not-a-valid-json-mime', {
+          '.type': 'should match pattern \"^application/x.[^/]++json$\"'
+        });
+      })
     });
 
     describe('The *title* property', function () {

@@ -8,6 +8,9 @@
     {
       "type": "object",
       "properties": {
+        "type": {
+          "enum": ["application/x.choice+json"]
+        },
         "random": {
           "type": "boolean"
         },

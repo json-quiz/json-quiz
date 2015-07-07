@@ -8,6 +8,9 @@
     {
       "type": "object",
       "properties": {
+        "type": {
+          "enum": ["application/x.match+json"]
+        },
         "firstSet": {
           "type": "array",
           "minItems": 2,

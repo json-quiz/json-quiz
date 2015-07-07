@@ -1,5 +1,6 @@
 {
   "id": "1",
+  "type": "application/x.choice+json",
   "choices": {
     "1": "True",
     "2": "False"

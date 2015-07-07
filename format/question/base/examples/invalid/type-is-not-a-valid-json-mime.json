@@ -1,6 +1,6 @@
 {
   "id": "1",
-  "type": "application/x.type+json",
+  "type": "application/not-valid",
   "title": "Question ?",
   "feedback": "Lorem ipsum dolor sit amet"
 }
