@@ -112,7 +112,7 @@ layout: default
 {
   "id": "1",
   "title": "Question ?",
-  "text": "Lorem ipsum {{1}} sit amet."
+  "text": "Lorem ipsum [[1]] sit amet."
 }
 
 {% endhighlight %}
@@ -124,7 +124,7 @@ layout: default
 {
   "id": "1",
   "title": "Question ?",
-  "text": "Lorem {{1}} dolor sit {{2}}.",
+  "text": "Lorem [[1]] dolor sit [[2]].",
   "holes": [
     {
       "id": "1",
@@ -147,7 +147,7 @@ layout: default
 {
   "id": "1",
   "title": "Question ?",
-  "text": "Lorem {{1}} dolor sit {{2}}.",
+  "text": "Lorem [[1]] dolor sit [[2]].",
   "holes": [
     {
       "id": "1",
@@ -169,7 +169,7 @@ layout: default
 {
   "id": "1",
   "title": "Question ?",
-  "text": "Lorem ipsum {{1}} sit amet.",
+  "text": "Lorem ipsum [[1]] sit amet.",
   "solutions": [
     {
       "holeId": "1",
@@ -188,7 +188,7 @@ layout: default
 {
   "id": "1",
   "title": "Question ?",
-  "text": "Lorem {{1}} dolor sit {{2}}.",
+  "text": "Lorem [[1]] dolor sit [[2]].",
   "holes": [
     {
       "id": "1",
