@@ -8,3 +8,5 @@ kramdown:
 collections:
   spec:
     output: true
+gems:
+  - jekyll-redirect-from
