@@ -21,7 +21,7 @@ describe('Quiz', function () {
         });
       });
 
-      it('may have an *meta* property', function () {
+      it('may have a *meta* property', function () {
         assert.isValid('quiz-metadata');
       });
     });
