@@ -1,6 +1,6 @@
 title: JSON Quiz
 description: A specification for building quizzes in JSON
-baseurl: /quiz-format
+baseurl: /json-quiz
 exclude: [build, node_modules, README.md]
 markdown: kramdown
 kramdown:
