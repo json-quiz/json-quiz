@@ -8,6 +8,7 @@ var formatDir = __dirname + '/format';
 var buildDir = __dirname + '/build';
 var specDir = buildDir + '/_spec';
 var dataDir = buildDir + '/_data';
+var schemaDir = buildDir + '/schemas';
 
 function makeMarkdownWrapper() {
   var _level = 0;
@@ -97,11 +98,7 @@ function DocReporter(runner) {
 
   runner.on('suite end', function (suite) {
     if (suite.root) {
-      fs.mkdirsSync(dataDir);
-      fs.copySync(formatDir + '/spec.yml', dataDir + '/spec.yml');
-      console.log('Spec plan copied');
-
-      return;
+      return postReportActions();
     }
 
     wrapper.setLevel(--level);
@@ -136,6 +133,19 @@ function DocReporter(runner) {
     console.log('Aborting doc generation');
     process.exit(1);
   });
+}
+
+function postReportActions() {
+  fs.mkdirsSync(dataDir);
+  fs.copySync(formatDir + '/spec.yml', dataDir + '/spec.yml');
+  console.log('Spec plan copied');
+
+  fs.copySync(formatDir, schemaDir, {
+    filter: function (path) {
+      return path.indexOf('/examples') === -1;
+    }
+  });
+  console.log('Json schemas copied');
 }
 
 module.exports = DocReporter;
