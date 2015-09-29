@@ -1,0 +1,18 @@
+- title: Metadata
+  doc: metadata
+- title: Content
+  doc: content
+- title: Questions
+  docs:
+    - title: Base question
+      doc: base-question
+    - title: Choice question
+      doc: choice-question
+    - title: Match question
+      doc: match-question
+    - title: Sort question
+      doc: sort-question
+    - title: Cloze question
+      doc: cloze-question
+- title: Quiz
+  doc: quiz

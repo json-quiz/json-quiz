@@ -1,0 +1,59 @@
+{
+  "id": "content",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "base": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "pattern": "^[^/]+/[^/]+$"
+        },
+        "meta": {
+          "$ref": "metadata"
+        }
+      },
+      "required": ["id", "type"]
+    },
+    "embedded": {
+      "type": "object",
+      "properties": {
+        "encoding": {
+          "type": "string"
+        },
+        "data": {
+          "type": "string"
+        }
+      },
+      "required": ["data"]
+    },
+    "distant": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": ["url"]
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/base"
+    },
+    {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/embedded"
+        },
+        {
+          "$ref": "#/definitions/distant"
+        }
+      ]
+    }
+  ]
+}
