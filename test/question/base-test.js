@@ -61,7 +61,7 @@ describe('Base question', function () {
 
       it('must hold a custom JSON MIME type', function () {
         assert.hasError('type-is-not-a-valid-json-mime', {
-          '.type': 'should match pattern \"^application/x.[^/]++json$\"'
+          '.type': 'should match pattern \"^application/x\\.[^/]+\\+json$\"'
         });
       })
     });

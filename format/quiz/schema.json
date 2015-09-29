@@ -7,7 +7,7 @@
       "type": "string"
     },
     "meta": {
-      "$ref": "metadata"
+      "$ref": "http://json-quiz.github.io/json-quiz/schemas/metadata/schema.json"
     },
     "steps": {
       "type": "array",
@@ -26,19 +26,19 @@
             "items": {
               "oneOf": [
                 {
-                  "$ref": "content"
+                  "$ref": "http://json-quiz.github.io/json-quiz/schemas/content/schema.json"
                 },
                 {
-                  "$ref": "choice-question"
+                  "$ref": "http://json-quiz.github.io/json-quiz/schemas/question/choice/schema.json"
                 },
                 {
-                  "$ref": "match-question"
+                  "$ref": "http://json-quiz.github.io/json-quiz/schemas/question/match/schema.json"
                 },
                 {
-                  "$ref": "sort-question"
+                  "$ref": "http://json-quiz.github.io/json-quiz/schemas/question/sort/schema.json"
                 },
                 {
-                  "$ref": "cloze-question"
+                  "$ref": "http://json-quiz.github.io/json-quiz/schemas/question/cloze/schema.json"
                 }
               ]
             }

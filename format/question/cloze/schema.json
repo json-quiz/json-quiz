@@ -1,9 +1,8 @@
 {
-  "id": "cloze-question",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "allOf": [
     {
-      "$ref": "base-question"
+      "$ref": "http://json-quiz.github.io/json-quiz/schemas/question/base/schema.json"
     },
     {
       "type": "object",

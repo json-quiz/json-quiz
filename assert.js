@@ -5,6 +5,7 @@
 var assert = require('assert');
 var Ajv = require('ajv');
 var ajv = Ajv({ allErrors: true });
+
 var resolved = {
   'metadata': 'metadata',
   'content': 'content',
@@ -16,22 +17,26 @@ var resolved = {
   'quiz': 'quiz'
 };
 
-ajv.addSchema([
-  require('./format/metadata/schema.json'),
-  require('./format/content/schema.json'),
-  require('./format/question/base/schema.json'),
-  require('./format/question/choice/schema.json'),
-  require('./format/question/match/schema.json'),
-  require('./format/question/sort/schema.json'),
-  require('./format/question/cloze/schema.json'),
-  require('./format/quiz/schema.json')
-]);
+Object.keys(resolved).forEach(function (id) {
+  var schema = require('./format/' + resolved[id] + '/schema.json');
+  var uri = getSchemaUri(id);
+  ajv.addSchema(schema, uri);
+});
+
+/**
+ * Returns the URI corresponding to a short schema identifier.
+ */
+function getSchemaUri(schemaId) {
+  return 'http://json-quiz.github.io/json-quiz/schemas/'
+    + resolved[schemaId]
+    + '/schema.json';
+}
 
 /**
  * Returns the validator function for a given schema.
  */
 function getSchema(schemaId) {
-  var validate = ajv.getSchema(schemaId);
+  var validate = ajv.getSchema(getSchemaUri(schemaId));
 
   if (!validate) {
     throw new Error('Unknown schema "' + schemaId + '"');

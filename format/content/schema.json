@@ -1,5 +1,4 @@
 {
-  "id": "content",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "definitions": {
     "base": {
@@ -13,7 +12,7 @@
           "pattern": "^[^/]+/[^/]+$"
         },
         "meta": {
-          "$ref": "metadata"
+          "$ref": "http://json-quiz.github.io/json-quiz/schemas/metadata/schema.json"
         }
       },
       "required": ["id", "type"]
@@ -43,15 +42,15 @@
   },
   "allOf": [
     {
-      "$ref": "#/definitions/base"
+      "$ref": "http://json-quiz.github.io/json-quiz/schemas/content/schema.json#/definitions/base"
     },
     {
       "oneOf": [
         {
-          "$ref": "#/definitions/embedded"
+          "$ref": "http://json-quiz.github.io/json-quiz/schemas/content/schema.json#/definitions/embedded"
         },
         {
-          "$ref": "#/definitions/distant"
+          "$ref": "http://json-quiz.github.io/json-quiz/schemas/content/schema.json#/definitions/distant"
         }
       ]
     }
