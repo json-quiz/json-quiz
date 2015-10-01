@@ -1,9 +1,8 @@
 {
-  "id": "choice-question",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "allOf": [
     {
-      "$ref": "base-question"
+      "$ref": "http://json-quiz.github.io/json-quiz/schemas/question/base/schema.json"
     },
     {
       "type": "object",
@@ -22,7 +21,7 @@
           "minItems": 2,
           "uniqueItems": true,
           "items": {
-            "$ref": "content"
+            "$ref": "http://json-quiz.github.io/json-quiz/schemas/content/schema.json"
           }
         },
          "solutions": {
@@ -37,6 +36,9 @@
               },
               "score": {
                 "type": "number"
+              },
+              "feedback": {
+                "type": "string"
               }
             },
             "required": ["id", "score"],

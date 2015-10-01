@@ -55,6 +55,8 @@ layout: spec
 
     * must have a *score* property
 
+    * may have a *feedback* property
+
   * The *id* property:
 
     * must be a string
@@ -62,6 +64,10 @@ layout: spec
   * The *score* property:
 
     * must be a number
+
+  * The *feedback* property:
+
+    * must be a string
 
 ## Examples
 
@@ -135,6 +141,44 @@ layout: spec
     {
       "id": "3",
       "score": 1
+    }
+  ]
+}
+
+{% endhighlight %}
+
+### Choice feedback
+
+{% highlight json %}
+
+{
+  "id": "1",
+  "type": "application/x.choice+json",
+  "title": "Question ?",
+  "choices": [
+    {
+      "id": "1",
+      "type": "text/html",
+      "data": "Item <em>A</em>"
+    },
+    {
+      "id": "2",
+      "type": "text/html",
+      "data": "Item <em>B</em>"
+    }
+  ],
+  "random": true,
+  "multiple": false,
+  "solutions": [
+    {
+      "id": "1",
+      "score": 2,
+      "feedback": "This is the correct answer because [...]"
+    },
+    {
+      "id": "2",
+      "score": 0,
+      "feedback": "No, this answer is not correct because [...]"
     }
   ]
 }
