@@ -1,0 +1,31 @@
+{
+  "id": "1",
+  "type": "application/x.choice+json",
+  "title": "Question ?",
+  "choices": [
+    {
+      "id": "1",
+      "type": "text/html",
+      "data": "Item <em>A</em>"
+    },
+    {
+      "id": "2",
+      "type": "text/html",
+      "data": "Item <em>B</em>"
+    }
+  ],
+  "random": true,
+  "multiple": false,
+  "solutions": [
+    {
+      "id": "1",
+      "score": 2,
+      "feedback": "This is the correct answer because [...]"
+    },
+    {
+      "id": "2",
+      "score": 0,
+      "feedback": "No, this answer is not correct because [...]"
+    }
+  ]
+}

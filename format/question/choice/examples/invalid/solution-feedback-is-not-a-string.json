@@ -1,0 +1,36 @@
+{
+  "id": "1",
+  "type": "application/x.choice+json",
+  "title": "Question ?",
+  "choices": [
+    {
+      "id": "1",
+      "type": "text/plain",
+      "data": "A"
+    },
+    {
+      "id": "2",
+      "type": "text/plain",
+      "data": "B"
+    },
+    {
+      "id": "3",
+      "type": "text/plain",
+      "data": "C"
+    }
+  ],
+  "random": false,
+  "multiple": false,
+  "solutions": [
+    {
+      "id": "1",
+      "score": 2,
+      "feedback": 123
+    },
+    {
+      "id": "3",
+      "score": 1,
+      "feedback": "Foo"
+    }
+  ]
+}

@@ -118,6 +118,10 @@ describe('Choice question', function () {
             '.solutions[0].score': 'property .score is required'
           });
         });
+
+        it('may have a *feedback* property', function () {
+          assert.isValid('choice-feedback');
+        });
       });
 
       describe('The *id* property', function () {
@@ -135,6 +139,14 @@ describe('Choice question', function () {
           });
         });
       });
+
+      describe('The *feedback* property', function () {
+        it('must be a string', function () {
+          assert.hasError('solution-feedback-is-not-a-string', {
+            '.solutions[0].feedback': 'should be string'
+          });
+        });
+      });
     });
   });
 
@@ -142,6 +154,7 @@ describe('Choice question', function () {
     assert.areValid([
       'true-or-false',
       'solutions',
+      'choice-feedback',
       'extended'
     ]);
   });

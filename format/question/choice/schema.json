@@ -36,6 +36,9 @@
               },
               "score": {
                 "type": "number"
+              },
+              "feedback": {
+                "type": "string"
               }
             },
             "required": ["id", "score"],
