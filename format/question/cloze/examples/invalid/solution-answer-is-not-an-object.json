@@ -6,12 +6,7 @@
   "solutions": [
     {
       "holeId": "1",
-      "answers": [
-        {
-          "text": "dolor",
-          "score": 2
-        }
-      ]
+      "answers": ["not-an-object"]
     }
   ]
 }

@@ -16,13 +16,21 @@
   "solutions": [
     {
       "holeId": "1",
-      "answers": ["ipsum"],
-      "score": 1.5
+      "answers": [
+        {
+          "text": "ipsum",
+          "score": 1
+        }
+      ]
     },
     {
       "holeId": "1",
-      "answers": ["ipsum"],
-      "score": 1.5
+      "answers": [
+        {
+          "text": "ipsum",
+          "score": 1
+        }
+      ]
     }
   ]
 }
