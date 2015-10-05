@@ -5,22 +5,32 @@
   "items": [
     {
       "id": "2",
-      "type": "text/plain",
-      "data": "Item A"
+      "type": "image/jpg",
+      "url": "http://domain.com/image-1.jpg"
     },
     {
       "id": "3",
-      "type": "text/plain",
-      "data": "Item B"
+      "type": "image/jpg",
+      "url": "http://domain.com/image-2.jpg"
     },
     {
       "id": "4",
-      "type": "text/plain",
-      "data": "Item B"
+      "type": "image/jpg",
+      "url": "http://domain.com/image-3.jpg"
     }
   ],
-  "solution": {
-    "itemIds": ["3", [], "2"],
-    "itemScore": 1.5
-  }
+  "solution": [
+    {
+      "itemId": 123456,
+      "score": 1.5
+    },
+    {
+      "itemId": "4",
+      "score": 1
+    },
+    {
+      "itemId": "2",
+      "score": 0.5
+    }
+  ]
 }

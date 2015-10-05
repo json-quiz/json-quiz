@@ -19,8 +19,11 @@
       "data": "Item B"
     }
   ],
-  "solution": {
-    "itemIds": "not-an-array",
-    "itemScore": 1.5
-  }
+  "solution": [
+    "not-an-object",
+    {
+      "itemId": "4",
+      "score": 1
+    }
+  ]
 }

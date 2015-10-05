@@ -33,9 +33,19 @@
       "url": "http://domain.com/image-3.jpg"
     }
   ],
-  "solution": {
-    "itemIds": ["3", "4", "2"],
-    "itemScore": 1.5
-  },
+  "solution": [
+    {
+      "itemId": "3",
+      "score": 1.5
+    },
+    {
+      "itemId": "4",
+      "score": 1
+    },
+    {
+      "itemId": "2",
+      "score": 0.5
+    }
+  ],
   "feedback": "Lorem ipsum dolor sit amet"
 }
