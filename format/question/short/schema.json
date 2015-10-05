@@ -10,40 +10,24 @@
         "type": {
           "enum": ["application/x.short+json"]
         },
-        "text": {
-          "type": "string"
-        },
         "solutions": {
           "type": "array",
           "minItems": 1,
-          "maxItems": 1,
           "uniqueItems": true,
           "items": {
             "type": "object",
-            "properties": {
-              "answers": {
-                "type": "array",
-                "minItems": 1,
-                "uniqueItems": true,
-                "items": {
-                  "type": "object",
-                  "properties" : {
-                    "score": {
-                      "type": "number"
-                    },
-                    "value": {
-                      "type": "string"
-                    }
-                  },
-                  "required": ["score", "value"]
-                }
+            "properties" : {
+              "score": {
+                "type": "number"
+              },
+              "value": {
+                "type": "string"
               }
             },
-            "required": ["answers"]
+            "required": ["score", "value"]
           }
         }
-      },
-      "required": ["text"]
+      }
     }
   ]
 }

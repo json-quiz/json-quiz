@@ -13,20 +13,6 @@ describe('Short question', function () {
         });
       });
 
-      it('must have a *text* property', function () {
-        assert.hasError('no-text', {
-          '.text': 'property .text is required'
-        });
-      });
-
-    });
-
-    describe('The *text* property', function () {
-      it('must be a string', function () {
-        assert.hasError('text-is-not-a-string', {
-          '.text': 'should be string'
-        });
-      });
     });
 
     describe('The *solutions* property', function () {
@@ -36,12 +22,9 @@ describe('Short question', function () {
         });
       });
 
-      it('must contain one solution', function () {
-        assert.hasError('not-one-solution', {
+      it('must contain at least one solution', function () {
+        assert.hasError('under-one-solution', {
           '.solutions': 'should NOT have less than 1 items'
-        });
-        assert.hasError('not-one-solution2', {
-          '.solutions': 'should NOT have more than 1 items'
         });
       });
 
@@ -51,65 +34,33 @@ describe('Short question', function () {
             '.solutions[0]': 'should be object'
           });
         });
-      });
 
-      it('must have an *answers* property', function () {
-        assert.hasError('no-solution-answers', {
-          '.solutions[0].answers': 'property .answers is required'
-        });
-      });
 
-      describe('The *answers* property', function () {
-        it('must be an array', function () {
-          assert.hasError('solution-answers-is-not-an-array', {
-            '.solutions[0].answers': 'should be array'
-          });
-        });
-
-        it('must contain at least one item', function () {
-          assert.hasError('under-one-solution-answer', {
-            '.solutions[0].answers': 'should NOT have less than 1 items'
-          });
-        });
-
-        describe('Each answer', function () {
-          it('must be an object', function () {
-            assert.hasError('solution-answer-is-not-an-object', {
-              '.solutions[0].answers[0]': 'should be object'
-            });
-          });
-
-          it('must be unique', function () {
-            assert.hasError('duplicate-solution-answer', {
-              '.solutions[0].answers': 'items ## 0 and 1 are duplicate'
-            });
-          });
           
-          it('must have a *score* property', function () {
-            assert.hasError('no-solution-answer-score', {
-              '.solutions[0].answers[0].score': 'property .score is required'
-            });
+        it('must have a *score* property', function () {
+          assert.hasError('no-solution-score', {
+            '.solutions[0].score': 'property .score is required'
           });
+        });
 
-          it('must have a *value* property', function () {
-            assert.hasError('no-solution-answer-value', {
-              '.solutions[0].answers[0].value': 'property .value is required'
-            });
+        it('must have a *value* property', function () {
+          assert.hasError('no-solution-value', {
+            '.solutions[0].value': 'property .value is required'
           });
+        });
 
-          describe('The value property', function () {
-            it('must be a string', function () {
-              assert.hasError('solution-answer-value-is-not-a-string', {
-                '.solutions[0].answers[0].value': 'should be string'
-              });
+        describe('The value property', function () {
+          it('must be a string', function () {
+            assert.hasError('solution-value-is-not-a-string', {
+              '.solutions[0].value': 'should be string'
             });
           });
-          
-          describe('The score property', function () {
-            it('must be a number', function () {
-              assert.hasError('solution-answer-score-is-not-a-number', {
-                '.solutions[0].answers[0].score': 'should be number'
-              });
+        });
+
+        describe('The score property', function () {
+          it('must be a number', function () {
+            assert.hasError('solution-score-is-not-a-number', {
+              '.solutions[0].score': 'should be number'
             });
           });
         });

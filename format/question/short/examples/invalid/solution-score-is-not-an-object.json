@@ -3,9 +3,5 @@
   "type": "application/x.short+json",
   "title": "Question ?",
   "text": "Lorem [[1]] dolor sit.",
-  "solutions": [
-    {
-      "answers": ["1","2"]
-    }
-  ]
+  "solutions": ["1","2"]
 }

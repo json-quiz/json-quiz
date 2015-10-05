@@ -5,16 +5,12 @@
   "text": "Lorem [[1]] dolor sit.",
   "solutions": [
     {
-      "answers": [ 
-          {
-              "value" : "val",
-              "score" : 8
-          },
-          {
-              "value" : "val",
-              "score" : 8
-          }
-       ]
+        "value" : "val",
+        "score" : 8
+    },
+    {
+        "value" : "val",
+        "score" : 8
     }
   ]
 }

@@ -5,11 +5,7 @@
   "text": "Lorem [[1]] dolor sit.",
   "solutions": [
     {
-      "answers": [
-          {
-              "value" : "5"
-          }
-      ]
+        "score" : 5
     }
   ]
 }
