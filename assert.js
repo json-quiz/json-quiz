@@ -13,6 +13,7 @@ var resolved = {
   'choice-question': 'question/choice',
   'match-question': 'question/match',
   'sort-question': 'question/sort',
+  'short-question': 'question/short',
   'cloze-question': 'question/cloze',
   'quiz': 'quiz'
 };

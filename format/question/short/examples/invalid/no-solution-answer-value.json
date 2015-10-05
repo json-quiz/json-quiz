@@ -1,0 +1,15 @@
+{
+  "id": "1",
+  "type": "application/x.short+json",
+  "title": "Question ?",
+  "text": "Lorem [[1]] dolor sit.",
+  "solutions": [
+    {
+      "answers": [
+          {
+              "score" : 5
+          }
+      ]
+    }
+  ]
+}
