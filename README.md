@@ -7,7 +7,7 @@ Setup
 Synchronize with the *build* directory (generated in master branch):
 
 ```
-sh build.sh
+node make build
 ```
 
 Install dependencies:
