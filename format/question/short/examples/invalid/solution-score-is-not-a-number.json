@@ -4,7 +4,8 @@
   "title": "Question ?",
   "solutions": [
     {
-      "value" : "5"
+      "value": "ipsum",
+      "score": "not-a-number"
     }
   ]
 }

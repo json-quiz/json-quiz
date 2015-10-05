@@ -13,6 +13,9 @@ describe('Short question', function () {
         });
       });
 
+      it('may have a *solutions* property', function () {
+        assert.isValid('single-answer');
+      });
     });
 
     describe('The *solutions* property', function () {
@@ -35,17 +38,21 @@ describe('Short question', function () {
           });
         });
 
-
-          
-        it('must have a *score* property', function () {
-          assert.hasError('no-solution-score', {
-            '.solutions[0].score': 'property .score is required'
+        it('must be unique', function () {
+          assert.hasError('duplicate-solution', {
+            '.solutions': 'items ## 0 and 1 are duplicate'
           });
         });
 
         it('must have a *value* property', function () {
           assert.hasError('no-solution-value', {
             '.solutions[0].value': 'property .value is required'
+          });
+        });
+
+        it('must have a *score* property', function () {
+          assert.hasError('no-solution-score', {
+            '.solutions[0].score': 'property .score is required'
           });
         });
 
@@ -65,7 +72,6 @@ describe('Short question', function () {
           });
         });
       });
-
     });
   });
 

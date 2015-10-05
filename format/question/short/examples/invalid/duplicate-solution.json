@@ -4,7 +4,12 @@
   "title": "Question ?",
   "solutions": [
     {
-      "value" : "5"
+      "value" : "val",
+      "score" : 8
+    },
+    {
+      "value" : "val",
+      "score" : 8
     }
   ]
 }
