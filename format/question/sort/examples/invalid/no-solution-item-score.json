@@ -19,7 +19,17 @@
       "data": "Item B"
     }
   ],
-  "solution": {
-    "itemIds": ["3", "4", "2"]
-  }
+  "solution": [
+    {
+      "itemId": "3"
+    },
+    {
+      "itemId": "4",
+      "score": 1
+    },
+    {
+      "itemId": "2",
+      "score": 0.5
+    }
+  ]
 }

@@ -54,56 +54,56 @@ describe('Sort question', function () {
     });
 
     describe('The *solution* property', function () {
-      it('must be an object', function () {
-        assert.hasError('solution-is-not-an-object', {
-          '.solution': 'should be object'
+      it('must be an array', function () {
+        assert.hasError('solution-is-not-an-array', {
+          '.solution': 'should be array'
         });
       });
 
-      it('must have an *itemIds* property', function () {
-        assert.hasError('no-solution-item-ids', {
-          '.solution.itemIds': 'property .itemIds is required'
+      it('must contain at least two items', function () {
+        assert.hasError('under-two-solution-items', {
+          '.solution': 'should NOT have less than 2 items'
         });
       });
 
-      it('must have a *itemScore* property', function () {
-        assert.hasError('no-solution-item-score', {
-          '.solution.itemScore': 'property .itemScore is required'
-        });
-      });
-
-      describe('The *itemIds* property', function () {
-        it('must be an array', function () {
-          assert.hasError('solution-item-ids-is-not-an-array', {
-            '.solution.itemIds': 'should be array'
-          });
-        });
-
-        it('must contain at least two item ids', function () {
-          assert.hasError('under-two-solution-item-ids', {
-            '.solution.itemIds': 'should NOT have less than 2 items'
-          });
-        });
-      });
-
-      describe('Each item id', function () {
+      describe('Each solution item', function () {
         it('must be unique', function () {
-          assert.hasError('duplicate-solution-item-id', {
-            '.solution.itemIds': 'items ## 0 and 2 are duplicate'
+          assert.hasError('duplicate-solution-items', {
+            '.solution': 'items ## 0 and 1 are duplicate'
           });
         });
 
-        it('must be a string', function () {
-          assert.hasError('solution-item-id-is-not-a-string', {
-            '.solution.itemIds[1]': 'should be string'
+        it('must be an object', function () {
+          assert.hasError('solution-item-is-not-an-object', {
+            '.solution[0]': 'should be object'
           });
         });
-      });
 
-      describe('The *itemScore* property', function () {
-        it('must be a number', function () {
-          assert.hasError('solution-item-score-is-not-a-number', {
-            '.solution.itemScore': 'should be number'
+        it('must have an *itemId* property', function () {
+          assert.hasError('no-solution-item-id', {
+            '.solution[0].itemId': 'property .itemId is required'
+          });
+        });
+
+        it('must have a *score* property', function () {
+          assert.hasError('no-solution-item-score', {
+            '.solution[0].score': 'property .score is required'
+          });
+        });
+
+        describe('The *itemId* property', function () {
+          it('must be a string', function () {
+            assert.hasError('solution-item-id-is-not-a-string', {
+              '.solution[0].itemId': 'should be string'
+            });
+          });
+        });
+
+        describe('The *score* property', function () {
+          it('must be a number', function () {
+            assert.hasError('solution-item-score-is-not-a-number', {
+              '.solution[0].score': 'should be number'
+            });
           });
         });
       });

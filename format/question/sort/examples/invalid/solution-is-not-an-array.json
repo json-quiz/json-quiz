@@ -19,7 +19,5 @@
       "data": "Item B"
     }
   ],
-  "solution": {
-    "itemScore": 1.5
-  }
+  "solution": "not-an-array"
 }

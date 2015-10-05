@@ -19,8 +19,10 @@
       "data": "Item B"
     }
   ],
-  "solution": {
-    "itemIds": ["3"],
-    "itemScore": 1.5
-  }
+  "solution": [
+    {
+      "itemId": "3",
+      "score": 1.5
+    }
+  ]
 }

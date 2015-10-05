@@ -19,21 +19,21 @@
           }
         },
         "solution": {
-          "type": "object",
-          "properties": {
-            "itemIds": {
-              "type": "array",
-              "minItems": 2,
-              "uniqueItems": true,
-              "items": {
+          "type": "array",
+          "minItems": 2,
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "properties": {
+              "itemId": {
                 "type": "string"
+              },
+              "score": {
+                "type": "number"
               }
             },
-            "itemScore": {
-              "type": "number"
-            }
-          },
-          "required": ["itemIds", "itemScore"]
+            "required": ["itemId", "score"]
+          }
         }
       },
       "required": ["items"]
