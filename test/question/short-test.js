@@ -12,7 +12,6 @@ describe('Short question', function () {
           '.objects': 'should be array'
         });
       });
-
     });
 
     describe('The *solutions* property', function () {
@@ -35,8 +34,6 @@ describe('Short question', function () {
           });
         });
 
-
-          
         it('must have a *score* property', function () {
           assert.hasError('no-solution-score', {
             '.solutions[0].score': 'property .score is required'

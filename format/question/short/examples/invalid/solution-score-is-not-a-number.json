@@ -1,0 +1,11 @@
+{
+  "id": "1",
+  "type": "application/x.short+json",
+  "title": "Question ?",
+  "solutions": [
+    {
+      "value": "ipsum",
+      "score": "not-a-number"
+    }
+  ]
+}
