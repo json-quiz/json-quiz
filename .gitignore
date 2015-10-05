@@ -3,5 +3,4 @@ _site
 build
 node_modules
 npm-debug.log
-rollback.sh
 /nbproject/

@@ -57,14 +57,20 @@
                 "minItems": 1,
                 "uniqueItems": true,
                 "items": {
-                  "type": "string"
+                  "type": "object",
+                  "properties": {
+                    "text": {
+                      "type": "string"
+                    },
+                    "score": {
+                      "type": "number"
+                    }
+                  },
+                  "required": ["text", "score"]
                 }
-              },
-              "score": {
-                "type": "number"
               }
             },
-            "required": ["holeId", "answers", "score"]
+            "required": ["holeId", "answers"]
           }
         }
       },

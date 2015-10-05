@@ -9,7 +9,7 @@
       "answers": [
         {
           "text": "dolor",
-          "score": 2
+          "score": "not-a-number"
         }
       ]
     }

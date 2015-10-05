@@ -173,12 +173,6 @@ describe('Cloze question', function () {
         });
       });
 
-      it('must have a *score* property', function () {
-        assert.hasError('no-solution-score', {
-          '.solutions[0].score': 'property .score is required'
-        });
-      });
-
       describe('The *holeId* property', function () {
         it('must be a string', function () {
           assert.hasError('solution-hole-id-is-not-a-string', {
@@ -201,9 +195,9 @@ describe('Cloze question', function () {
         });
 
         describe('Each answer', function () {
-          it('must be a string', function () {
-            assert.hasError('solution-answer-is-not-a-string', {
-              '.solutions[0].answers[0]': 'should be string'
+          it('must be an object', function () {
+            assert.hasError('solution-answer-is-not-an-object', {
+              '.solutions[0].answers[0]': 'should be object'
             });
           });
 
@@ -212,13 +206,33 @@ describe('Cloze question', function () {
               '.solutions[0].answers': 'items ## 0 and 1 are duplicate'
             });
           });
-        });
-      });
 
-      describe('The score property', function () {
-        it('must be a number', function () {
-          assert.hasError('solution-score-is-not-a-number', {
-            '.solutions[0].score': 'should be number'
+          it('must have a *text* property', function () {
+            assert.hasError('no-solution-answer-text', {
+              '.solutions[0].answers[0].text': 'property .text is required'
+            });
+          });
+
+          it('must have a *score* property', function () {
+            assert.hasError('no-solution-answer-score', {
+              '.solutions[0].answers[0].score': 'property .score is required'
+            });
+          });
+
+          describe('The text property', function () {
+            it('must be a string', function () {
+              assert.hasError('solution-answer-text-is-not-a-string', {
+                '.solutions[0].answers[0].text': 'should be string'
+              });
+            });
+          });
+
+          describe('The score property', function () {
+            it('must be a number', function () {
+              assert.hasError('solution-answer-score-is-not-a-number', {
+                '.solutions[0].answers[0].score': 'should be number'
+              });
+            });
           });
         });
       });
