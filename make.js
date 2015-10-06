@@ -24,10 +24,11 @@ target.preview = function () {
 
 target.publish = function () {
   echo('Publishing on github pages...');
-  var sha = exec('git rev-parse HEAD').output;
+  var sha = exec('git rev-parse HEAD', { silent: true }).output;
+  var msg = 'Update from ' + sha.slice(0, sha.length - 2);
   target.preview();
   exec('git add --all');
-  exec('git commit -m "Update from ' + sha + '"');
+  exec('git commit -m "' + msg + '"');
   exec('git push origin gh-pages');
   exec('git checkout master');
 };
