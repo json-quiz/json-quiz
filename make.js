@@ -8,6 +8,7 @@ target.build = function () {
 
 target.rollback = function () {
   echo('Reverting changes and leaving branch...');
+  exec('git reset HEAD');
   exec('git checkout .');
   exec('git checkout master');
 };
