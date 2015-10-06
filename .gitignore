@@ -1,6 +1,8 @@
 .sass-cache
 _site
+_spec
 build
+nbproject
 node_modules
 npm-debug.log
-/nbproject/
+schemas
