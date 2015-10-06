@@ -29,27 +29,27 @@ layout: spec
 
 * The *solution* property:
 
-  * must be an object
+  * must be an array
 
-  * must have an *itemIds* property
+  * must contain at least two items
 
-  * must have a *itemScore* property
-
-  * The *itemIds* property:
-
-    * must be an array
-
-    * must contain at least two item ids
-
-  * Each item id:
+  * Each solution item:
 
     * must be unique
 
-    * must be a string
+    * must be an object
 
-  * The *itemScore* property:
+    * must have an *itemId* property
 
-    * must be a number
+    * must have a *score* property
+
+    * The *itemId* property:
+
+      * must be a string
+
+    * The *score* property:
+
+      * must be a number
 
 ## Examples
 
@@ -102,10 +102,20 @@ layout: spec
       "url": "http://domain.com/image-3.jpg"
     }
   ],
-  "solution": {
-    "itemIds": ["3", "4", "2"],
-    "itemScore": 1.5
-  }
+  "solution": [
+    {
+      "itemId": "3",
+      "score": 1.5
+    },
+    {
+      "itemId": "4",
+      "score": 1
+    },
+    {
+      "itemId": "2",
+      "score": 0.5
+    }
+  ]
 }
 
 {% endhighlight %}
@@ -149,10 +159,20 @@ layout: spec
       "url": "http://domain.com/image-3.jpg"
     }
   ],
-  "solution": {
-    "itemIds": ["3", "4", "2"],
-    "itemScore": 1.5
-  },
+  "solution": [
+    {
+      "itemId": "3",
+      "score": 1.5
+    },
+    {
+      "itemId": "4",
+      "score": 1
+    },
+    {
+      "itemId": "2",
+      "score": 0.5
+    }
+  ],
   "feedback": "Lorem ipsum dolor sit amet"
 }
 

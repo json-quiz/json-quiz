@@ -75,8 +75,6 @@ layout: spec
 
   * must have an *answers* property
 
-  * must have a *score* property
-
   * Each solution:
 
     * must be an object
@@ -95,13 +93,21 @@ layout: spec
 
     * Each answer:
 
-      * must be a string
+      * must be an object
 
       * must be unique
 
-  * The score property:
+      * must have a *text* property
 
-    * must be a number
+      * must have a *score* property
+
+      * The text property:
+
+        * must be a string
+
+      * The score property:
+
+        * must be a number
 
 ## Examples
 
@@ -177,8 +183,12 @@ layout: spec
   "solutions": [
     {
       "holeId": "1",
-      "answers": ["dolor"],
-      "score": 2
+      "answers": [
+        {
+          "text": "dolor",
+          "score": 2
+        }
+      ]
     }
   ]
 }
@@ -207,13 +217,29 @@ layout: spec
   "solutions": [
     {
       "holeId": "1",
-      "answers": ["ipsum"],
-      "score": 1.5
+      "answers": [
+        {
+          "text": "ipsum",
+          "score": 1.5
+        }
+      ]
     },
     {
       "holeId": "2",
-      "answers": ["amet", "consecitur", "nunc"],
-      "score": 3.5
+      "answers": [
+        {
+          "text": "amet",
+          "score": 1.5
+        },
+        {
+          "text": "consecitur",
+          "score": 2
+        },
+        {
+          "text": "nunc",
+          "score": 0.5
+        }
+      ]
     }
   ]
 }

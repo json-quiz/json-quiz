@@ -14,5 +14,7 @@
       doc: sort-question
     - title: Cloze question
       doc: cloze-question
+    - title: Short question
+      doc: short-question
 - title: Quiz
   doc: quiz

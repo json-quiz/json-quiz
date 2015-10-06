@@ -160,7 +160,7 @@ layout: spec
   "resources": [
     {
       "id": "1",
-      "type": "application/pdf",
+      "type": "application/pdf", 
       "url": "http://domain.com/syllabus.txt"
     }
   ]
