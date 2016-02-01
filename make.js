@@ -6,7 +6,7 @@ target.test = function () {
 
 target.clean = function () {
   echo('Cleaning build directory...');
-  rm('-rf', './build/*');
+  rm('-rf', './build');
 };
 
 target.doc = function () {
