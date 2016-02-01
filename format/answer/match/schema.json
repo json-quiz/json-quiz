@@ -1,16 +1,15 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "array",
-  "minItems": 1,
   "uniqueItems": true,
   "items": {
     "type": "object",
     "properties": {
       "firstSetId": {
-          "type": "string"
+        "type": "string"
       },
       "secondSetId": {
-          "type": "string"
+        "type": "string"
       }
     },
     "required": ["firstSetId","secondSetId"]

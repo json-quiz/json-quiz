@@ -1,16 +1,15 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "array",
-  "minItems": 1,
   "uniqueItems": true,
   "items": {
     "type": "object",
     "properties": {
-        "holeId": {
-          "type": "string"
-        },
-        "answerText": {
-          "type": "string"
+      "holeId": {
+        "type": "string"
+      },
+      "answerText": {
+        "type": "string"
       }
     },
     "required": ["holeId","answerText"]
