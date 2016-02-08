@@ -8,6 +8,8 @@
       doc: base-question
     - title: Choice question
       doc: choice-question
+    - title: Graphic question
+      doc: graphic-question
     - title: Match question
       doc: match-question
     - title: Sort question

@@ -1,0 +1,56 @@
+{
+  "id": "1",
+  "type": "application/x.graphic+json",
+  "title": "Question ?",
+  "description":"Question description...",
+  "meta": {
+    "authors": [
+      {
+        "name": "Dr Bunny",
+        "status": "Tutor"
+      }
+    ],
+    "license": "CC",
+    "created": "2014-06-23"
+  },
+  "objects": [
+    {
+      "id": "1",
+      "type": "text/html",
+      "data": "<p>Lorem ipsum dolor sit amet</p>",
+      "meta": {
+        "title": "Lorem sample"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "id": "2",
+      "type": "application/pdf",
+      "url": "http://domain.com/syllabus.txt"
+    }
+  ],
+  "image": {
+    "id": "12",
+    "type": "image/jpeg",
+    "meta": {
+      "label": "Charlie"
+    },
+    "url": "images/charlie_01.jpg",
+    "width":800,
+    "height":400
+  },
+  "pointers": 2,
+  "hints": [
+    {
+      "id": "21",
+      "text": "Lorem",
+      "penalty": 0.5
+    },
+    {
+      "id": "12",
+      "text": "Ipsum",
+      "penalty": 1.5
+    }
+  ]
+}

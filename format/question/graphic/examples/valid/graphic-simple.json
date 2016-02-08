@@ -1,0 +1,17 @@
+{
+  "id": "1",
+  "type": "application/x.graphic+json",
+  "title": "Question ?",
+  "description":"Question description...",
+  "image": {
+    "id": "12",
+    "type": "image/jpeg",
+    "meta": {
+      "label": "Charlie"
+    },
+    "url": "images/charlie_01.jpg",
+    "width":800,
+    "height":400
+  },
+  "pointers": 2
+}

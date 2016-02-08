@@ -1,0 +1,24 @@
+{
+  "id": "1",
+  "type": "application/x.graphic+json",
+  "title": "Where is Charlie ?",
+  "description":"Find Charlie in the image below...",
+  "width":800,
+  "height":400,
+  "image": {
+    "id": "12",
+    "label": "Charlie",
+    "url": "images/charlie_01.jpg"
+  },
+  "solutions":[
+    {
+      "id":"7",
+      "value":"577,117",
+      "shape":"circle",
+      "color":"red",
+      "size": 26,
+      "score": 2,
+      "feedback": ["not a string feedback"]
+    }
+  ]
+}

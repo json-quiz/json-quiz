@@ -63,7 +63,7 @@ describe('Base question', function () {
         assert.hasError('type-is-not-a-valid-json-mime', {
           '.type': 'should match pattern \"^application/x\\.[^/]+\\+json$\"'
         });
-      })
+      });
     });
 
     describe('The *title* property', function () {
