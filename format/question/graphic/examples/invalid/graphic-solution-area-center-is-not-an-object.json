@@ -18,10 +18,7 @@
     {
       "area": {
         "id":"7",
-        "center": {
-          "x":144,
-          "y":727
-        },
+        "center": "not an object",
         "shape":"circle",
         "color":"red",
         "radius": 26

@@ -36,7 +36,7 @@
     "meta": {
       "label": "Charlie"
     },
-    "url": "images/charlie_01.jpg",
+    "data": "images/charlie_01.jpg",
     "width":800,
     "height":400
   },
