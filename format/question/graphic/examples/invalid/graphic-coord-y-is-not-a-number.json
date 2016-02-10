@@ -9,7 +9,7 @@
       "label": "Charlie"
     },
     "type": "image/jpeg",
-    "url": "images/charlie_01.jpg",
+    "data": "images/charlie_01.jpg",
     "width":800,
     "height":400
   },
@@ -18,18 +18,32 @@
     {
       "area": {
         "id":"7",
+        "center": {
+          "x":15,
+          "y":"not number"
+        },
         "shape":"circle",
         "color":"red",
-        "coords": [
+        "radius": 26
+      },
+      "score": 2,
+      "feedback": "you should have known..."
+    },
+    {
+      "area": {
+        "id":"7",
+        "coords":[
           {
-            "x":50,
-            "y":60
+            "x":16,
+            "y":"not number"
           },
           {
-            "x":50,
-            "y":60
+            "x":36,
+            "y":"not number"
           }
-        ]
+        ],
+        "shape":"rect",
+        "color":"red"
       },
       "score": 2,
       "feedback": "you should have known..."

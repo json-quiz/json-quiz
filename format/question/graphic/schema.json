@@ -6,7 +6,8 @@
       "properties": {
         "x": {"type" : "number"},
         "y": {"type" : "number"}
-      }
+      },
+      "required": ["x", "y"]
     },
     "area":{
       "type": "object",
@@ -40,6 +41,7 @@
               "type": "array",
               "minItems": 2,
               "maxItems": 2,
+              "uniqueItems": true,
               "items": {
                 "$ref": "#/definitions/coord"
               }
@@ -58,6 +60,7 @@
             "coords": {
               "type": "array",
               "minItems": 3,
+              "uniqueItems": true,
               "items": {
                 "$ref": "#/definitions/coord"
               }

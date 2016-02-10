@@ -17,12 +17,23 @@
   "solutions":[
     {
       "area": {
-        "center": [
-          144,727
-        ],
+        "id":"7",
         "shape":"circle",
         "color":"red",
-        "radius": 26
+        "coords": [
+          {
+            "x":1,
+            "y":2
+          },
+          {
+            "x":2,
+            "y":3
+          },
+          {
+            "x":3,
+            "y":4
+          }
+        ]
       },
       "score": 2,
       "feedback": "you should have known..."

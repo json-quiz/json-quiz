@@ -1,8 +1,153 @@
 var assert = require('./../../assert')('graphic-question');
 
 describe('Graphic question', function () {
+  describe('Definitions', function () {
+    describe('The *coord* type', function () {
+      it('must be an object', function () {
+        assert.hasErrors('graphic-coord-is-not-an-object', {
+          '.solutions[0].area.center': 'should be object',
+          '.solutions[1].area.coords[0]': 'should be object'
+        });
+      });
+      it('must have an *x* property', function () {
+        assert.hasError('graphic-coord-no-x', {
+          '.solutions[0].area.center.x': 'property .x is required',
+          '.solutions[1].area.coords[0].x': 'property .x is required'
+        });
+      });
+      describe('The *x* property', function () {
+        it('must be a number', function () {
+          assert.hasError('graphic-coord-x-is-not-a-number', {
+            '.solutions[0].area.center.x': 'should be number',
+            '.solutions[1].area.coords[0].x': 'should be number'
+          });
+        });
+      });
+      it('must have an *y* property', function () {
+        assert.hasError('graphic-coord-no-y', {
+          '.solutions[0].area.center.y': 'property .y is required',
+          '.solutions[1].area.coords[0].y': 'property .y is required'
+        });
+      });
+      describe('The *y* property', function () {
+        it('must be a number', function () {
+          assert.hasError('graphic-coord-y-is-not-a-number', {
+            '.solutions[0].area.center.y': 'should be number',
+            '.solutions[1].area.coords[0].y': 'should be number'
+          });
+        });
+      });
+    });
+    
+    describe('The *area* property', function () {
+      it('must be an object', function () {
+        assert.hasError('graphic-area-is-not-an-object', {
+          '.solutions[0].area': 'should be object'
+        });
+      });
+      it('must have an *id* property', function () {
+        assert.hasError('graphic-area-no-id', {
+          '.solutions[0].area.id': 'property .id is required'
+        });
+      });
+      describe('The *id* property', function () {
+        it('must be a string', function () {
+          assert.hasError('graphic-area-id-is-not-a-string', {
+            '.solutions[0].area.id': 'should be string'
+          });
+        });
+      });
+      it('must have a *shape* property', function () {
+        assert.hasError('graphic-area-no-shape', {
+          '.solutions[0].area.shape': 'property .shape is required'
+        });
+      });
+      describe('The *shape* property', function () {
+        it('must be either "circle", "rect" or "poly"', function () {
+          assert.hasError('graphic-area-shape-not-enum', {
+            '.solutions[0].area.shape': 'should be equal to one of values'
+          });
+        });
+      });
+      describe('A "circle" area', function () {
+        it('must have a *center* property', function () {
+          assert.hasError('graphic-area-circle-no-center', {
+            '.solutions[0].area.center': 'property .center is required'
+          });
+        });
+        describe('The *center* property', function () {
+          it('must be of type *coord*', function () {
+            assert.hasError('graphic-area-circle-center-is-not-a-coord', {
+              '.solutions[0].area.center': 'should be object'
+            });
+          });
+        });
+        it('must have a *radius* property', function () {
+          assert.hasError('graphic-area-circle-no-radius', {
+            '.solutions[0].area.radius': 'property .radius is required'
+          });
+        });
+        describe('The *radius* property', function () {
+          it('must be a number', function () {
+            assert.hasError('graphic-area-circle-radius-is-not-a-number', {
+              '.solutions[0].area.radius': 'should be number'
+            });
+          });
+        });
+      });
+      describe('A "rect" or "poly" area', function () {
+        it('must have a *coords* property', function () {
+          assert.hasError('graphic-area-no-coords', {
+            '.solutions[0].area.coords': 'property .coords is required'
+          });
+        });
+        describe('The *coords* property', function () {
+          it('must be an array', function () {
+            assert.hasError('graphic-area-coords-is-not-an-array', {
+              '.solutions[0].area.coords': 'should be array'
+            });
+          });
+          describe('Each coord', function () {
+            it('must be an object', function () {
+              assert.hasError('graphic-area-coord-is-not-an-object', {
+                '.solutions[0].area.coords[0]': 'should be object'
+              });
+            });
+            it('must be unique', function () {
+              assert.hasError('graphic-area-duplicate-coords', {
+                '.solutions[0].area.coords': 'items ## 0 and 1 are duplicate'
+              });
+            });
+          });
+        });
+      });
+      describe('A "rect" area', function () {
+        describe('The *coords* property', function () {
+          it('must not have less than 2 items', function () {
+            assert.hasError('graphic-area-rect-coords-less-2-items', {
+              '.solutions[0].area.coords': 'should NOT have less than 2 items'
+            });
+          });
+          it('must not have more than 2 items', function () {
+            assert.hasError('graphic-area-rect-coords-more-2-items', {
+              '.solutions[0].area.coords': 'should NOT have more than 2 items'
+            });
+          });
+        });
+      });
+      describe('A "poly" area', function () {
+        describe('The *coords* property', function () {
+          it('must not have less than 3 items', function () {
+            assert.hasError('graphic-area-poly-coords-less-3-items', {
+              '.solutions[0].area.coords': 'should NOT have less than 3 items'
+            });
+          });
+        });
+      });
+    });
+  });
+    
   describe('Schema', function () {
-
     describe('A graphic question', function () {
       it('must satisfy the #base-question# schema', function () {
         assert.hasErrors('graphic-not-satisfying-base-schema', {
@@ -13,24 +158,20 @@ describe('Graphic question', function () {
           '.objects': 'should be array'
         });
       });
-
       it('must have a *image* property', function () {
         assert.hasError('graphic-no-image', {
           '.image': 'property .image is required'
         });
       });
-      
       it('must have a *pointers* property', function () {
         assert.hasError('graphic-no-pointers', {
           '.pointers': 'property .pointers is required'
         });
       });
-
       it('may have a *solutions* property', function () {
         assert.isValid('graphic-solutions');
       });
     });
-    
     describe('The *image* property', function () {
       it('must have an *id* property', function () {
         assert.hasError('graphic-image-no-id', {
@@ -58,7 +199,6 @@ describe('Graphic question', function () {
         });
       });
     });
-
     describe('the *solutions* property', function () {
       it('must be an array', function () {
         assert.hasError('graphic-solutions-is-not-an-array', {
@@ -70,7 +210,6 @@ describe('Graphic question', function () {
           '.solutions': 'should NOT have less than 1 items'
         });
       });
-
       describe('Each solution', function () {
         it('must be an object', function () {
           assert.hasError('graphic-solution-is-not-an-object', {
@@ -92,95 +231,6 @@ describe('Graphic question', function () {
             '.solutions[0].area': 'property .area is required'
           });
         });
-        
-        describe('The *area* property', function () {
-          it('must have an *id* property', function () {
-            assert.hasError('graphic-solution-area-no-id', {
-              '.solutions[0].area.id': 'property .id is required'
-            });
-          });
-          describe('The *id* property', function () {
-            it('must be a string', function () {
-              assert.hasError('graphic-solution-area-id-is-not-a-string', {
-                '.solutions[0].area.id': 'should be string'
-              });
-            });
-          });
-          
-          it('must fit only one schema', function () {
-            assert.hasError('graphic-solution-area-should-match-one-schema', {
-              '.solutions[0].area': "should match exactly one schema in oneOf"
-            });
-          });
-          
-          it('must have a *shape* property', function () {
-            assert.hasError('graphic-solution-area-no-shape', {
-              '.solutions[0].area.shape': 'property .shape is required'
-            });
-          });
-          describe('The *shape* property', function () {
-            it('must be a circle, rect or poly', function () {
-              assert.hasError('graphic-solution-area-shape-no-enum', {
-                '.solutions[0].area.shape': 'should be equal to one of values'
-              });
-            });
-          });
-          
-          it('must have a *coords* property', function () {
-            assert.hasError('graphic-solution-area-no-coords', {
-              '.solutions[0].area.coords': 'property .coords is required'
-            });
-          });
-          describe('The *coords* property', function () {
-            it('must be an array', function () {
-              assert.hasError('graphic-solution-area-coords-is-not-an-array', {
-                '.solutions[0].area.coords': 'should be array'
-              });
-            });
-            it('must contain at least one coord id', function () {
-              assert.hasError('graphic-solution-area-coords-empty', {
-                '.solutions[0].area.coords': 'should NOT have less than 2 items'
-              });
-            });
-            
-            describe('Each coord', function () {
-              it('must be an object', function () {
-                assert.hasError('graphic-solution-area-coords-is-not-an-object', {
-                  '.solutions[0].area.coords[0]': 'should be object'
-                });
-              });
-            /*  it('must be unique', function () {
-                assert.hasError('graphic-solution-area-duplicate-coords', {
-                  '.solutions[0].area.coords': 'items ## 0 and 1 are duplicate'
-                });
-              });*/
-            });
-          });
-          
-          it('must have a *radius* property', function () {
-            assert.hasError('graphic-solution-area-no-radius', {
-              '.solutions[0].area.radius': 'property .radius is required'
-            });
-          });
-          describe('The *radius* property', function () {
-            assert.hasError('graphic-solution-area-radius-is-not-a-number', {
-              '.solutions[0].area.radius': 'should be number'
-            });
-          });
-          
-          it('must have a *center* property', function () {
-            assert.hasError('graphic-solution-area-no-center', {
-              '.solutions[0].area.center': 'property .center is required'
-            });
-          });
-          describe('The *center* property', function () {
-            assert.hasError('graphic-solution-area-center-is-not-an-object', {
-              '.solutions[0].area.center': 'should be object'
-            });
-          });
-          
-        });
-
         describe('The *score* property', function () {
           it('must be a number', function () {
             assert.hasError('graphic-solution-score-is-not-a-number', {
@@ -188,7 +238,6 @@ describe('Graphic question', function () {
             });
           });
         });
-
         describe('The *feedback* property', function () {
           it('must be a string', function () {
             assert.hasError('graphic-solution-feedback-is-not-a-string', {
@@ -196,11 +245,8 @@ describe('Graphic question', function () {
             });
           });
         });
-        
       });
-      
     });
-    
   });
 
   describe('Examples', function () {

@@ -10,6 +10,7 @@ var resolved = {
   'metadata': 'metadata',
   'content': 'content',
   'base-question': 'question/base',
+  'choice-answer': 'answer/choice',
   'choice-question': 'question/choice',
   'graphic-question': 'question/graphic',
   'match-question': 'question/match',

@@ -1,0 +1,32 @@
+{
+  "id": "1",
+  "type": "application/x.graphic+json",
+  "title": "Where is Charlie ?",
+  "description":"Find Charlie in the image below...",
+  "image": {
+    "id": "12",
+    "meta": {
+      "label": "Charlie"
+    },
+    "type": "image/jpeg",
+    "data": "images/charlie_01.jpg",
+    "width":800,
+    "height":400
+  },
+  "pointers": 1,
+  "solutions":[
+    {
+      "area": {
+        "center": {
+          "x":10,
+          "y":15
+        },
+        "shape":"circle",
+        "color":"red",
+        "radius": 26
+      },
+      "score": 2,
+      "feedback": "you should have known..."
+    }
+  ]
+}
