@@ -12,10 +12,15 @@ var resolved = {
   'base-question': 'question/base',
   'choice-answer': 'answer/choice',
   'choice-question': 'question/choice',
+//  'graphic-answer': 'answer/graphic',
   'graphic-question': 'question/graphic',
+  'match-answer': 'answer/match',
   'match-question': 'question/match',
+//  'sort-answer': 'answer/sort',
   'sort-question': 'question/sort',
+  'short-answer': 'answer/short',
   'short-question': 'question/short',
+  'cloze-answer': 'answer/cloze',
   'cloze-question': 'question/cloze',
   'quiz': 'quiz'
 };
