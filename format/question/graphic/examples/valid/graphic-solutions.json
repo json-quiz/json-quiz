@@ -9,21 +9,21 @@
       "label": "Charlie"
     },
     "type": "image/jpeg",
-    "data": "images/charlie_01.jpg",
-    "width":800,
-    "height":400
+    "url": "http://domain.com/images/charlie_01.jpg",
+    "width": 800,
+    "height": 400
   },
   "pointers": 1,
-  "solutions":[
+  "solutions": [
     {
       "area": {
-        "id":"7",
+        "id": "7",
         "center": {
-          "x":144,
-          "y":727
+          "x": 144,
+          "y": 727
         },
-        "shape":"circle",
-        "color":"red",
+        "shape": "circle",
+        "color": "red",
         "radius": 26
       },
       "score": 2,

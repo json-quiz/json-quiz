@@ -36,9 +36,9 @@
     "meta": {
       "label": "Charlie"
     },
-    "data": "images/charlie_01.jpg",
-    "width":800,
-    "height":400
+    "url": "http://domain.com/images/charlie_01.jpg",
+    "width": 800,
+    "height": 400
   },
   "pointers": 2,
   "hints": [

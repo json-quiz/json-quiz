@@ -12,6 +12,6 @@
         "type": "string"
       }
     },
-    "required": ["holeId","answerText"]
+    "required": ["holeId", "answerText"]
   }
 }

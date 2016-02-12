@@ -12,6 +12,6 @@
         "type": "string"
       }
     },
-    "required": ["firstSetId","secondSetId"]
+    "required": ["firstSetId", "secondSetId"]
   }
 }

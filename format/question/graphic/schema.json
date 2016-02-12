@@ -86,7 +86,7 @@
         "image": {
           "allOf": [
             {
-            "$ref": "http://json-quiz.github.io/json-quiz/schemas/content/schema.json"
+              "$ref": "http://json-quiz.github.io/json-quiz/schemas/content/schema.json"
             },
             {
               "type": "object",
