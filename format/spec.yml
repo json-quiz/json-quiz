@@ -24,13 +24,9 @@
       doc: choice-answer
     - title: Cloze answer
       doc: cloze-answer
-    - title: Graphic answer
-      doc: graphic-answer
     - title: Match answer
       doc: match-answer
     - title: Short answer
       doc: short-answer
-    - title: Sort answer
-      doc: sort-answer
 - title: Quiz
   doc: quiz
