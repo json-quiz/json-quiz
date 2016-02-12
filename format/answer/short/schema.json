@@ -1,15 +1,10 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "type": "array",
-  "minItems": 1,
-  "maxItems": 1,
-  "items": {
-    "type": "object",
-    "properties": {
-      "text": {
-        "type": "string"
-      }
-    },
-    "required": ["text"]
-  }
+  "type": "object",
+  "properties": {
+    "text": {
+      "type": "string"
+    }
+  },
+  "required": ["text"]
 }
