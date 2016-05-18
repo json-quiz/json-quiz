@@ -1,0 +1,10 @@
+{
+  "id": "1",
+  "type": "application/x.type+json",
+  "title": "Question ?",
+  "score": {
+    "type": "fixed",
+    "success": "not-a-number",
+    "failure": -1.5
+  }
+}

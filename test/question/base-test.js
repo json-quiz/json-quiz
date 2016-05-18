@@ -42,6 +42,10 @@ describe('Base question', function () {
       it('may have a *feedback* property', function () {
         assert.isValid('global-feedback');
       });
+
+      it('may have a *score* property', function () {
+        assert.isValid('with-fixed-score');
+      });
     });
 
     describe('The *id* property', function () {
@@ -220,6 +224,58 @@ describe('Base question', function () {
         });
       });
     });
+
+    describe('The *score* property', function () {
+      it('must be an object', function () {
+        assert.hasError('score-is-not-an-object', {
+          '.score': 'should be object'
+        });
+      });
+
+      it('must have a *type* property', function () {
+        assert.hasError('no-score-type', {
+          '.score.type': 'property .type is required'
+        });
+      });
+
+      describe('The *type* property', function () {
+        it ('must be either "sum" or "fixed"', function () {
+          assert.hasError('unknown-score-type', {
+            '.score.type': 'should be equal to one of values'
+          });
+        });
+      });
+
+      describe('Scores of type "fixed"', function () {
+        it('must have a *success* property', function () {
+          assert.hasError('no-sum-score-success', {
+            '.score.success': 'property .success is required'
+          });
+        });
+
+        it('must have a *failure* property', function () {
+          assert.hasError('no-sum-score-failure', {
+            '.score.failure': 'property .failure is required'
+          });
+        });
+
+        describe('The *success* property', function () {
+          it('must be a number', function () {
+            assert.hasError('score-success-is-not-a-number', {
+              '.score.success': 'should be number'
+            });
+          });
+        })
+
+        describe('The *feedback* property', function () {
+          it('must be a string', function () {
+            assert.hasError('score-failure-is-not-a-number', {
+              '.score.failure': 'should be number'
+            });
+          });
+        })
+      })
+    });
   });
 
   describe('Examples', function () {
@@ -227,6 +283,8 @@ describe('Base question', function () {
       'with-metadata',
       'with-object',
       'with-resource',
+      'with-fixed-score',
+      'with-sum-score',
       'global-feedback',
       'hints-no-penalty',
       'hints-penalty'
