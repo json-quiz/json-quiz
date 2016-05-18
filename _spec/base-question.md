@@ -25,6 +25,8 @@ layout: spec
 
   * may have a *feedback* property
 
+  * may have a *score* property
+
 * The *id* property:
 
   * must be a string
@@ -103,6 +105,30 @@ layout: spec
 
   * must be a string
 
+* The *score* property:
+
+  * must be an object
+
+  * must have a *type* property
+
+  * The *type* property:
+
+    * must be either "sum" or "fixed"
+
+  * Scores of type "fixed":
+
+    * must have a *success* property
+
+    * must have a *failure* property
+
+    * The *success* property:
+
+      * must be a number
+
+    * The *feedback* property:
+
+      * must be a string
+
 ## Examples
 
 ### With metadata
@@ -165,6 +191,40 @@ layout: spec
     }
   ]
 }
+
+{% endhighlight %}
+
+### With fixed score
+
+{% highlight json %}
+
+{
+  "id": "1",
+  "type": "application/x.type+json",
+  "title": "Question ?",
+  "score": {
+    "type": "fixed",
+    "success": 5,
+    "failure": -1.5
+  }
+}
+
+
+{% endhighlight %}
+
+### With sum score
+
+{% highlight json %}
+
+{
+  "id": "1",
+  "type": "application/x.type+json",
+  "title": "Question ?",
+  "score": {
+    "type": "sum"
+  }
+}
+
 
 {% endhighlight %}
 

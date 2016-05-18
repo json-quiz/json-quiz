@@ -56,6 +56,34 @@
     },
     "feedback": {
       "type": "string"
+    },
+    "score": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "enum": ["sum"]
+            }
+          },
+          "required": ["type"]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "enum": ["fixed"]
+            },
+            "success": {
+              "type": "number"
+            },
+            "failure": {
+              "type": "number"
+            }
+          },
+          "required": ["type", "success", "failure"]
+        }
+      ]
     }
   },
   "required": ["id", "type", "title"]
