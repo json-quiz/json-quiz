@@ -1,0 +1,34 @@
+{
+  "id": "1",
+  "meta": {
+    "authors": "not-an-array",
+    "created": "2015-06-04",
+    "license": []
+  },
+  "items": [
+    {
+      "id": "1",
+      "title": "Question ?",
+      "type": "application/x.choice+json",
+      "choices": [
+        {
+          "id": "1",
+          "type": "image/png",
+          "url": "http://domain.com/image-1.png"
+        },
+        {
+          "id": "2",
+          "type": "image/png",
+          "data": "http://domain.com/image-2.png"
+        },
+        {
+          "id": "3",
+          "type": "image/png",
+          "data": "http://domain.com/image-3.png"
+        }
+      ],
+      "random": true,
+      "multiple": true
+    }
+  ]
+}

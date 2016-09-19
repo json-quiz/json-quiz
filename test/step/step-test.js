@@ -1,8 +1,8 @@
-var assert = require('./../../assert')('quiz');
+var assert = require('./../../assert')('step');
 
-describe('Quiz', function () {
+describe('Step', function () {
   describe('Schema', function () {
-    describe('A quiz', function () {
+    describe('A step', function () {
       it('must be an object', function () {
         assert.hasError('not-an-object', {
           '': 'should be object'
@@ -15,14 +15,14 @@ describe('Quiz', function () {
         });
       });
 
-      it('must have a *steps* property', function () {
-        assert.hasError('no-steps', {
-          '.steps': 'property .steps is required'
+      it('must have an *items* property', function () {
+        assert.hasError('no-items', {
+          '.items': 'property .items is required'
         });
       });
 
       it('may have a *meta* property', function () {
-        assert.isValid('quiz-metadata');
+        assert.isValid('step-metadata');
       });
     });
 
@@ -34,31 +34,25 @@ describe('Quiz', function () {
       });
     });
 
-    describe('The *steps* property', function () {
+    describe('The *items* property', function () {
       it('must be an array', function () {
-        assert.hasError('steps-is-not-an-array', {
-          '.steps': 'should be array'
+        assert.hasError('items-is-not-an-array', {
+          '.items': 'should be array'
         });
       });
 
-      it('should contain at least one step', function () {
-        assert.hasError('under-one-step', {
-          '.steps': 'should NOT have less than 1 items'
-        });
-      });
-
-      describe('Each step', function () {
-        it('must satisfy the #step# schema', function () {
-          assert.hasError('step-not-satisfying-step-schema', {
-            '.steps[0]': 'should be object'
-          });
-        });
-
+      describe('Each item', function () {
         it('must be unique', function () {
-          assert.hasError('duplicate-steps', {
-            '.steps': 'items ## 0 and 1 are duplicate'
+          assert.hasError('duplicate-items', {
+            '.items': 'items ## 0 and 1 are duplicate'
           });
         });
+
+        it('must satisfy the #content# or questions schemas', function () {
+          assert.hasError('item-not-satisfying-content-or-question-schema', {
+            '.items[0]': 'should match exactly one schema in oneOf'
+          });
+        })
       });
     });
 
@@ -74,8 +68,9 @@ describe('Quiz', function () {
 
   describe('Examples', function () {
     assert.areValid([
-      'content-and-question-steps',
-      'quiz-metadata'
+      'one-question',
+      'multiple-questions',
+      'step-metadata'
     ]);
   });
 });

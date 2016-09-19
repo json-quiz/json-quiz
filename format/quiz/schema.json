@@ -12,42 +12,7 @@
       "type": "array",
       "minItems": 1,
       "uniqueItems": true,
-      "items": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "items": {
-            "type": "array",
-            "minItems": 1,
-            "uniqueItems": true,
-            "items": {
-              "oneOf": [
-                {
-                  "$ref": "http://json-quiz.github.io/json-quiz/schemas/content/schema.json"
-                },
-                {
-                  "$ref": "http://json-quiz.github.io/json-quiz/schemas/question/choice/schema.json"
-                },
-                {
-                  "$ref": "http://json-quiz.github.io/json-quiz/schemas/question/match/schema.json"
-                },
-                {
-                  "$ref": "http://json-quiz.github.io/json-quiz/schemas/question/sort/schema.json"
-                },
-                {
-                  "$ref": "http://json-quiz.github.io/json-quiz/schemas/question/cloze/schema.json"
-                },
-                {
-                  "$ref": "http://json-quiz.github.io/json-quiz/schemas/question/short/schema.json"
-                }
-              ]
-            }
-          }
-        },
-        "required": ["id", "items"]
-      }
+      "items": { "$ref": "http://json-quiz.github.io/json-quiz/schemas/step/schema.json" }
     }
   },
   "required": ["id", "steps"]

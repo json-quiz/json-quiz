@@ -1,9 +1,9 @@
 {
   "id": "1",
-  "steps": [
+  "items": [
     {
       "id": "1",
-      "items": []
+      "foo": "bar"
     }
   ]
 }

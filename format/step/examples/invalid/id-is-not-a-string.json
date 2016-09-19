@@ -1,0 +1,24 @@
+{
+  "id": 123,
+  "items": [
+    {
+      "id": "1",
+      "type": "application/x.choice+json",
+      "title": "Question ?",
+      "choices": [
+        {
+          "id": "1",
+          "type": "text/plain",
+          "data": "True"
+        },
+        {
+          "id": "2",
+          "type": "text/plain",
+          "data": "False"
+        }
+      ],
+      "random": false,
+      "multiple": false
+    }
+  ]
+}
