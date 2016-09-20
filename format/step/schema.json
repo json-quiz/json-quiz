@@ -1,15 +1,20 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Quiz unit that may contain various items like questions, text, video, etc.",
   "type": "object",
   "properties": {
     "id": {
+      "description": "Unique identifier (preferably a UUID).",
       "type": "string"
     },
     "meta": {
+      "description": "Metadata associated with the step.",
       "$ref": "http://json-quiz.github.io/json-quiz/schemas/metadata/schema.json"
     },
     "items": {
+      "description": "List of items the step is comprised of. A step must contain at least one item.",
       "type": "array",
+      "minItems": 1,
       "uniqueItems": true,
       "items": {
         "oneOf": [

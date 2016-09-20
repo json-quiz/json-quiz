@@ -1,14 +1,18 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Root object representing the quiz.",
   "type": "object",
   "properties": {
     "id": {
+      "description": "Unique identifier (preferably a UUID).",
       "type": "string"
     },
     "meta": {
+      "description": "Metadata associated with the quiz.",
       "$ref": "http://json-quiz.github.io/json-quiz/schemas/metadata/schema.json"
     },
     "steps": {
+      "description": "List of steps the quiz is comprised of. A quiz must have at least one step.",
       "type": "array",
       "minItems": 1,
       "uniqueItems": true,
