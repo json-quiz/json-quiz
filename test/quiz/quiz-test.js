@@ -15,6 +15,12 @@ describe('Quiz', function () {
         });
       });
 
+      it('must have a *title* property', function () {
+        assert.hasError('no-title', {
+          '.title': 'property .title is required'
+        });
+      });
+
       it('must have a *steps* property', function () {
         assert.hasError('no-steps', {
           '.steps': 'property .steps is required'
@@ -34,16 +40,18 @@ describe('Quiz', function () {
       });
     });
 
+    describe('The *title* property', function () {
+      it('must be a string', function () {
+        assert.hasError('title-is-not-a-string', {
+          '.title': 'should be string'
+        });
+      });
+    });
+
     describe('The *steps* property', function () {
       it('must be an array', function () {
         assert.hasError('steps-is-not-an-array', {
           '.steps': 'should be array'
-        });
-      });
-
-      it('should contain at least one step', function () {
-        assert.hasError('under-one-step', {
-          '.steps': 'should NOT have less than 1 items'
         });
       });
 
