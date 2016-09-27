@@ -5,13 +5,11 @@
   "hints": [
     {
       "id": "1",
-      "text": "Lorem",
-      "penalty": -1
+      "value": "Lorem"
     },
     {
       "id": "2",
-      "text": "Ipsum",
-      "penalty": 1.5
+      "value": "Ipsum"
     }
   ]
 }

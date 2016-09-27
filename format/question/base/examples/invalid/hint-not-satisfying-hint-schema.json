@@ -2,9 +2,5 @@
   "id": "1",
   "type": "application/x.type+json",
   "title": "Question ?",
-  "hints": [
-    {
-      "text": "Lorem"
-    }
-  ]
+  "hints": ["not-a-hint"]
 }

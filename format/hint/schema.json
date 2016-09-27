@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    },
+    "penalty": {
+      "type": "number",
+      "minimum": 0,
+      "exclusiveMinimum": true
+    }
+  },
+  "required": ["id"],
+  "additionalProperties": false
+}

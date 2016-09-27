@@ -157,8 +157,8 @@ describe('Base question', function () {
       });
 
       describe('Each hint', function () {
-        it('must be an object', function () {
-          assert.hasError('hint-is-not-an-object', {
+        it('must satisfy the #hint# schema', function () {
+          assert.hasError('hint-not-satisfying-hint-schema', {
             '.hints[0]': 'should be object'
           });
         });
@@ -166,52 +166,6 @@ describe('Base question', function () {
         it('must be unique', function () {
           assert.hasError('duplicate-hints', {
             '.hints': 'items ## 0 and 1 are duplicate'
-          });
-        });
-
-        it('must have an *id* property', function () {
-          assert.hasError('no-hint-id', {
-            '.hints[0].id': 'property .id is required'
-          });
-        });
-
-        it('must have a *text* property', function () {
-          assert.hasError('no-hint-text', {
-            '.hints[0].text': 'property .text is required'
-          });
-        });
-
-        it('may have a *penalty* property', function () {
-          assert.isValid('hints-penalty');
-        });
-      });
-
-      describe('The *id* property', function () {
-        it('must be a string', function () {
-          assert.hasError('hint-id-is-not-a-string', {
-            '.hints[0].id': 'should be string'
-          });
-        });
-      });
-
-      describe('The *text* property', function () {
-        it('must be a string', function () {
-          assert.hasError('hint-text-is-not-a-string', {
-            '.hints[0].text': 'should be string'
-          });
-        });
-      });
-
-      describe('The *penalty* property', function () {
-        it('must be a number', function () {
-          assert.hasError('hint-penalty-is-not-a-number', {
-            '.hints[0].penalty': 'should be number'
-          });
-        });
-
-        it('must be greater than zero', function () {
-          assert.hasErrors('hint-penalty-is-less-than-zero', {
-            '.hints[0].penalty': 'should be > 0'
           });
         });
       });
@@ -280,14 +234,13 @@ describe('Base question', function () {
 
   describe('Examples', function () {
     assert.areValid([
+      'with-hints',
       'with-metadata',
       'with-object',
       'with-resource',
       'with-fixed-score',
       'with-sum-score',
-      'global-feedback',
-      'hints-no-penalty',
-      'hints-penalty'
+      'global-feedback'
     ]);
   });
 });

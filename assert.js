@@ -9,6 +9,7 @@ var ajv = Ajv({ allErrors: true });
 var resolved = {
   'metadata': 'metadata',
   'content': 'content',
+  'hint': 'hint',
   'base-question': 'question/base',
   'choice-answer': 'answer/choice',
   'choice-question': 'question/choice',

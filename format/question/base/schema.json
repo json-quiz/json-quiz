@@ -36,22 +36,7 @@
       "minItems": 1,
       "uniqueItems": true,
       "items": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "text": {
-            "type": "string"
-          },
-          "penalty": {
-            "type": "number",
-            "minimum": 0,
-            "exclusiveMinimum": true
-          }
-        },
-        "required": ["id", "text"],
-        "additionalProperties": false
+        "$ref": "http://json-quiz.github.io/json-quiz/schemas/hint/schema.json"
       }
     },
     "feedback": {
