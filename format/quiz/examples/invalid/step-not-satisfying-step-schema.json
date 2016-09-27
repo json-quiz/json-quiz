@@ -1,4 +1,5 @@
 {
   "id": "1",
+  "title": "quiz title",
   "steps": ["not-an-object"]
 }

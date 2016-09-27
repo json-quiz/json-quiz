@@ -69,6 +69,7 @@ describe('Step', function () {
   describe('Examples', function () {
     assert.areValid([
       'one-question',
+      'one-content',
       'multiple-questions',
       'step-metadata'
     ]);

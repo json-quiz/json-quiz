@@ -5,15 +5,20 @@
     "id": {
       "type": "string"
     },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
     "meta": {
       "$ref": "http://json-quiz.github.io/json-quiz/schemas/metadata/schema.json"
     },
     "steps": {
       "type": "array",
-      "minItems": 1,
       "uniqueItems": true,
       "items": { "$ref": "http://json-quiz.github.io/json-quiz/schemas/step/schema.json" }
     }
   },
-  "required": ["id", "steps"]
+  "required": ["id", "title", "steps"]
 }
