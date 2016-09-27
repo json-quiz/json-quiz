@@ -12,6 +12,9 @@
     "title": {
       "type": "string"
     },
+    "description": {
+      "type": "string"
+    },
     "meta": {
       "$ref": "http://json-quiz.github.io/json-quiz/schemas/metadata/schema.json"
     },
