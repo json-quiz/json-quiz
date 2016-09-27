@@ -245,12 +245,12 @@ layout: spec
   "hints": [
     {
       "id": "3",
-      "text": "Lorem",
+      "value": "Lorem",
       "penalty": 1
     },
     {
       "id": "5",
-      "text": "Ipsum",
+      "value": "Ipsum",
       "penalty": 1.5
     }
   ]

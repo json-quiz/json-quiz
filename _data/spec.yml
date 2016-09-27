@@ -29,4 +29,10 @@
     - title: Short answer
       doc: short-answer
 - title: Quiz
-  doc: quiz
+  docs:
+    - title: Quiz
+      doc: quiz
+    - title: Step
+      doc: step
+- title: Hint
+  doc: hint

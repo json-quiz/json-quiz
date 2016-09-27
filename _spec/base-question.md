@@ -77,29 +77,9 @@ layout: spec
 
   * Each hint:
 
-    * must be an object
+    * must satisfy the [hint](hint.html) schema
 
     * must be unique
-
-    * must have an *id* property
-
-    * must have a *text* property
-
-    * may have a *penalty* property
-
-  * The *id* property:
-
-    * must be a string
-
-  * The *text* property:
-
-    * must be a string
-
-  * The *penalty* property:
-
-    * must be a number
-
-    * must be greater than zero
 
 * The *feedback* property:
 
@@ -130,6 +110,28 @@ layout: spec
       * must be a string
 
 ## Examples
+
+### With hints
+
+{% highlight json %}
+
+{
+  "id": "1",
+  "type": "application/x.type+json",
+  "title": "Question ?",
+  "hints": [
+    {
+      "id": "1",
+      "value": "Lorem"
+    },
+    {
+      "id": "2",
+      "value": "Ipsum"
+    }
+  ]
+}
+
+{% endhighlight %}
 
 ### With metadata
 
@@ -237,52 +239,6 @@ layout: spec
   "type": "application/x.type+json",
   "title": "Question ?",
   "feedback": "Lorem ipsum dolor sit amet"
-}
-
-{% endhighlight %}
-
-### Hints no penalty
-
-{% highlight json %}
-
-{
-  "id": "1",
-  "type": "application/x.type+json",
-  "title": "Question ?",
-  "hints": [
-    {
-      "id": "1",
-      "text": "Lorem"
-    },
-    {
-      "id": "2",
-      "text": "Ipsum"
-    }
-  ]
-}
-
-{% endhighlight %}
-
-### Hints penalty
-
-{% highlight json %}
-
-{
-  "id": "1",
-  "type": "application/x.type+json",
-  "title": "Question ?",
-  "hints": [
-    {
-      "id": "1",
-      "text": "Lorem",
-      "penalty": 1
-    },
-    {
-      "id": "2",
-      "text": "Ipsum",
-      "penalty": 1.5
-    }
-  ]
 }
 
 {% endhighlight %}

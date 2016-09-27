@@ -206,12 +206,12 @@ layout: spec
   "hints": [
     {
       "id": "21",
-      "text": "Lorem",
+      "value": "Lorem",
       "penalty": 0.5
     },
     {
       "id": "12",
-      "text": "Ipsum",
+      "value": "Ipsum",
       "penalty": 1.5
     }
   ]
