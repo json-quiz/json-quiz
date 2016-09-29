@@ -106,7 +106,7 @@ function makeAsserters(schemaId) {
       var filePath = 'valid/' + exampleName + '.json';
       var errors = validateAndNormalizeErrors(_schemaId, filePath);
       var errorsAsString = '(errors: ' + JSON.stringify(errors) + ')';
-      assert.deepEqual(errors, [], 'Validation was not supposed to return any errors ' + errorsAsString);
+      assert.deepEqual(errors, [], 'Validation was not supposed to return any errors for "' + exampleName + '" ' + errorsAsString);
     },
     areValid: function (exampleNames) {
       var self = this;
@@ -123,7 +123,7 @@ function makeAsserters(schemaId) {
       var expectedMessage = expectedError[expectedPath];
       var errorsAsString = '(errors: ' + JSON.stringify(errors) + ')';
 
-      assert(expectedPath in errors, 'No error at expected path ' + errorsAsString);
+      assert(expectedPath in errors, 'No error at expected path for "' + exampleName + '" ' + errorsAsString);
       assert(
         errors[expectedPath].indexOf(expectedMessage) > -1,
         'The expected error ("' +  expectedMessage+ '") is missing ' + errorsAsString

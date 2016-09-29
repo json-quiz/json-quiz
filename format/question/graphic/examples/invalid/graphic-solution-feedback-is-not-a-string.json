@@ -1,7 +1,7 @@
 {
   "id": "1",
   "type": "application/x.graphic+json",
-  "title": "Where is Charlie ?",
+  "content": "Where is Charlie ?",
   "description":"Find Charlie in the image below...",
   "width":800,
   "height":400,

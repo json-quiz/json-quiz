@@ -1,7 +1,7 @@
 {
   "id": "1",
   "type": "application/x.choice+json",
-  "title": "Question ?",
+  "content": "Question ?",
   "choices": [
     {
       "id": "1",

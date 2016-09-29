@@ -20,13 +20,21 @@
         "required": ["name"]
       }
     },
-    "license": {
-      "type": "string"
+    "created": {
+      "type": "string",
+      "description": "The creation date of the data described by the meta"
+    },
+    "updated": {
+      "type": "string",
+      "description": "The last update date of the data described by the meta"
     },
     "title": {
       "type": "string"
     },
     "description": {
+      "type": "string"
+    },
+    "license": {
       "type": "string"
     }
   }

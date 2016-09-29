@@ -12,7 +12,7 @@
       "items": [
         {
           "id": "1",
-          "title": "Question ?",
+          "content": "Question ?",
           "type": "application/x.choice+json",
           "choices": [
             {

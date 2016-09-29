@@ -1,5 +1,6 @@
 {
   "id": "1",
+  "content": "Question ?",
   "type": "application/x.choice+json",
   "choices": {
     "1": "True",

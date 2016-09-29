@@ -1,7 +1,7 @@
 {
   "id": "1",
   "type": "application/x.short+json",
-  "title": "Question ?",
+  "content": "Question ?",
   "text": "Lorem [[1]] dolor sit.",
   "solutions": [ 
     {

@@ -21,10 +21,22 @@ describe('Base question', function () {
         });
       });
 
-      it('must have a *title* property', function () {
-        assert.hasError('no-title', {
-          '.title': 'property .title is required'
+      it('must have a *content* property', function () {
+        assert.hasError('no-content', {
+          '.content': 'property .content is required'
         });
+      });
+
+      it('may have a *title* property', function () {
+        assert.isValid('with-title');
+      });
+
+      it('may have a *instruction* property', function () {
+        assert.isValid('with-more-info');
+      });
+
+      it('may have a *info* property', function () {
+        assert.isValid('with-more-info');
       });
 
       it('may have a *meta* property', function () {
@@ -74,6 +86,30 @@ describe('Base question', function () {
       it('must be a string', function () {
         assert.hasError('title-is-not-a-string', {
           '.title': 'should be string'
+        });
+      });
+    });
+
+    describe('The *content* property', function () {
+      it('must be a string', function () {
+        assert.hasError('content-is-not-a-string', {
+          '.content': 'should be string'
+        });
+      });
+    });
+
+    describe('The *info* property', function () {
+      it('must be a string', function () {
+        assert.hasError('info-is-not-a-string', {
+          '.info': 'should be string'
+        });
+      });
+    });
+
+    describe('The *instruction* property', function () {
+      it('must be a string', function () {
+        assert.hasError('instruction-is-not-a-string', {
+          '.instruction': 'should be string'
         });
       });
     });
@@ -240,7 +276,9 @@ describe('Base question', function () {
       'with-resource',
       'with-fixed-score',
       'with-sum-score',
-      'global-feedback'
+      'global-feedback',
+      'with-more-info',
+      'with-title'
     ]);
   });
 });
