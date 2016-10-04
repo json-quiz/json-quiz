@@ -7,7 +7,7 @@ describe('Match question', function () {
         assert.hasErrors('not-satisfying-base-schema', {
           '.id': 'property .id is required',
           '.type': 'property .type is required',
-          '.title': 'property .title is required',
+          '.content': 'property .content is required',
           '.meta': 'should be object',
           '.objects': 'should be array'
         });

@@ -1,7 +1,7 @@
 {
   "id": "1",
   "type": "application/x.cloze+json",
-  "title": "Question ?",
+  "content": "Question ?",
   "text": "Lorem ipsum [[1]] sit amet.",
   "solutions": "not-an-array"
 }

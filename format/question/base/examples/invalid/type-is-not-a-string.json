@@ -1,5 +1,6 @@
 {
   "id": "1",
   "type": 123,
-  "title": "Question ?"
+  "title": "Question ?",
+  "content": "this is the content of the question"
 }

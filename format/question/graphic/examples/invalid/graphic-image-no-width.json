@@ -1,7 +1,7 @@
 {
   "id": "1",
   "type": "application/x.graphic+json",
-  "title": "Question ?",
+  "content": "Question ?",
   "description":"Question description...",
   "image": {
     "id": "12",

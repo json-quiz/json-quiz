@@ -1,6 +1,6 @@
 {
   "id": "1",
   "type": "application/x.short+json",
-  "title": "Question ?",
+  "content": "Question ?",
   "solutions": ["not-an-object"]
 }

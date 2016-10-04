@@ -2,6 +2,7 @@
   "id": "1",
   "type": "application/x.type+json",
   "title": "Question ?",
+  "content": "this is the content of the question",
   "hints": [
     {
       "id": "1",

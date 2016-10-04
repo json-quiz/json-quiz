@@ -17,6 +17,14 @@ describe('Metadata', function () {
         assert.isValid('title-and-description');
       });
 
+      it('may have a *created* property', function () {
+        assert.isValid('updated-and-created-dates');
+      });
+
+      it('may have an *updated* property', function () {
+        assert.isValid('updated-and-created-dates');
+      });
+
       it('may have an *authors* property', function () {
         assert.isValid('author');
       });
@@ -38,6 +46,22 @@ describe('Metadata', function () {
       it('must be a string', function () {
         assert.hasError('description-is-not-a-string', {
           '.description': 'should be string'
+        });
+      });
+    });
+
+    describe('The *created* property', function () {
+      it('must be a string', function () {
+        assert.hasError('created-is-not-a-string', {
+          '.created': 'should be string'
+        });
+      });
+    });
+
+    describe('The *updated* property', function () {
+      it('must be a string', function () {
+        assert.hasError('updated-is-not-a-string', {
+          '.updated': 'should be string'
         });
       });
     });
@@ -116,6 +140,7 @@ describe('Metadata', function () {
       'author',
       'authors-and-license',
       'title-and-description',
+      'updated-and-created-dates',
       'extra-data'
     ]);
   });

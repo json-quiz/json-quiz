@@ -29,6 +29,7 @@
     }
   ],
   "title": "Question ?",
+  "content": "This is the content of my question",
   "choices": [
     {
       "id": "3",

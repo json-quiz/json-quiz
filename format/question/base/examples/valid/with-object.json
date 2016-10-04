@@ -1,6 +1,7 @@
 {
   "id": "1",
   "type": "application/x.type+json",
+  "content": "this is the content of the question",
   "objects": [
     {
       "id": "1",

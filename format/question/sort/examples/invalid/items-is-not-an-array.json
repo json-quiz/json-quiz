@@ -1,6 +1,6 @@
 {
   "id": "1",
   "type": "application/x.sort+json",
-  "title": "Question",
+  "content": "Question",
   "items": "not-an-array"
 }

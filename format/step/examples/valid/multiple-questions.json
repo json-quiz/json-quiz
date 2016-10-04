@@ -4,7 +4,7 @@
     {
       "id": "1",
       "type": "application/x.choice+json",
-      "title": "Question 1 ?",
+      "content": "Question 1 ?",
       "objects": [
         {
           "id": "1",
@@ -30,7 +30,7 @@
     {
       "id": "2",
       "type": "application/x.match+json",
-      "title": "Question 2 ?",
+      "content": "Question 2 ?",
       "firstSet": [
         {
           "id": "4",

@@ -1,0 +1,6 @@
+{
+  "id": "1",
+  "type": "application/x.type+json",
+  "content": "Question ?",
+  "instruction": ["not a string"]
+}

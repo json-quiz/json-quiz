@@ -1,5 +1,6 @@
 {
   "id": "1",
   "type": "application/x.type+json",
+  "content": "this is the content of the question",
   "title": ["not-a-string"]
 }

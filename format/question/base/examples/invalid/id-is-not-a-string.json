@@ -1,5 +1,6 @@
 {
   "id": ["not-an-id"],
   "type": "application/x.type+json",
-  "title": "Question ?"
+  "title": "Question ?",
+  "content": "this is the content of the question"
 }
