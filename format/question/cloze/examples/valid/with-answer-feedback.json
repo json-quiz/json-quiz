@@ -8,8 +8,10 @@
       "holeId": "1",
       "answers": [
         {
+          "text": "dolor",
+          "caseSensitive": false,
           "score": 2,
-          "caseSensitive": false
+          "feedback": "this is the feedback"
         }
       ]
     }

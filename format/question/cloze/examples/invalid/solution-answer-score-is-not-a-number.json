@@ -9,6 +9,7 @@
       "answers": [
         {
           "text": "dolor",
+          "caseSensitive": false,
           "score": "not-a-number"
         }
       ]

@@ -62,11 +62,19 @@
                     "text": {
                       "type": "string"
                     },
+                    "caseSensitive": {
+                      "type": "boolean",
+                      "default": false,
+                      "description": "If true, the answer case will need to be respected"
+                    },
                     "score": {
                       "type": "number"
+                    },
+                    "feedback": {
+                      "type": "string"
                     }
                   },
-                  "required": ["text", "score"]
+                  "required": ["text", "caseSensitive", "score"]
                 }
               }
             },

@@ -8,7 +8,8 @@
       "holeId": "1",
       "answers": [
         {
-          "text": "dolor"
+          "text": "dolor",
+          "caseSensitive": false
         }
       ]
     }

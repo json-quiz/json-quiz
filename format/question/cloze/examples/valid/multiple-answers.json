@@ -19,6 +19,7 @@
       "answers": [
         {
           "text": "ipsum",
+          "caseSensitive": false,
           "score": 1.5
         }
       ]
@@ -28,14 +29,17 @@
       "answers": [
         {
           "text": "amet",
+          "caseSensitive": false,
           "score": 1.5
         },
         {
           "text": "consecitur",
+          "caseSensitive": false,
           "score": 2
         },
         {
           "text": "nunc",
+          "caseSensitive": false,
           "score": 0.5
         }
       ]

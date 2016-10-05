@@ -23,6 +23,7 @@
       "answers": [
         {
           "text": "amet",
+          "caseSensitive": false,
           "score": 1.5
         }
       ]

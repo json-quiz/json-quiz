@@ -23,6 +23,7 @@
       "answers": [
         {
           "text": "bar",
+          "caseSensitive": false,
           "score": 1
         }
       ]

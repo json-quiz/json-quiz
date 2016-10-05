@@ -19,6 +19,7 @@
       "answers": [
         {
           "text": "ipsum",
+          "caseSensitive": false,
           "score": 1
         }
       ]
@@ -28,6 +29,7 @@
       "answers": [
         {
           "text": "ipsum",
+          "caseSensitive": false,
           "score": 1
         }
       ]

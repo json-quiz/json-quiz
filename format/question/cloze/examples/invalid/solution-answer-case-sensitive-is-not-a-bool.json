@@ -8,8 +8,9 @@
       "holeId": "1",
       "answers": [
         {
-          "score": 2,
-          "caseSensitive": false
+          "text": "lorem ipsum",
+          "caseSensitive": "not-a-boolean",
+          "score": 2
         }
       ]
     }

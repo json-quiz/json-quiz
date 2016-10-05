@@ -9,6 +9,7 @@
       "answers": [
         {
           "text": 123,
+          "caseSensitive": false,
           "score": 2
         }
       ]

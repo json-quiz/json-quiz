@@ -19,10 +19,12 @@
       "answers": [
         {
           "text": "ipsum",
+          "caseSensitive": false,
           "score": 1
         },
         {
           "text": "ipsum",
+          "caseSensitive": false,
           "score": 1
         }
       ]
@@ -32,6 +34,7 @@
       "answers": [
         {
           "text": "dolor",
+          "caseSensitive": false,
           "score": 3
         }
       ]

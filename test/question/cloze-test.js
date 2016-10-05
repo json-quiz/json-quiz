@@ -213,10 +213,20 @@ describe('Cloze question', function () {
             });
           });
 
+          it('must have a *caseSensitive* property', function () {
+            assert.hasError('no-solution-answer-case-sensitive', {
+              '.solutions[0].answers[0].caseSensitive': 'property .caseSensitive is required'
+            });
+          });
+
           it('must have a *score* property', function () {
             assert.hasError('no-solution-answer-score', {
               '.solutions[0].answers[0].score': 'property .score is required'
             });
+          });
+
+          it('may have a *feedback* property', function () {
+            assert.isValid('with-answer-feedback');
           });
 
           describe('The text property', function () {
@@ -227,10 +237,26 @@ describe('Cloze question', function () {
             });
           });
 
+          describe('The caseSensitive property', function () {
+            it('must be a boolean', function () {
+              assert.hasError('solution-answer-case-sensitive-is-not-a-bool', {
+                '.solutions[0].answers[0].caseSensitive': 'should be boolean'
+              });
+            });
+          });
+
           describe('The score property', function () {
             it('must be a number', function () {
               assert.hasError('solution-answer-score-is-not-a-number', {
                 '.solutions[0].answers[0].score': 'should be number'
+              });
+            });
+          });
+
+          describe('The feedback property', function () {
+            it('must be a string', function () {
+              assert.hasError('solution-answer-feedback-is-not-a-string', {
+                '.solutions[0].answers[0].feedback': 'should be string'
               });
             });
           });
@@ -245,7 +271,8 @@ describe('Cloze question', function () {
       'hole-attributes',
       'hole-choices',
       'single-answer',
-      'multiple-answers'
+      'multiple-answers',
+      'with-answer-feedback'
     ]);
   });
 });

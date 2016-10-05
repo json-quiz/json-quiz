@@ -19,6 +19,7 @@
       "answers": [
         {
           "text": "bar",
+          "caseSensitive": false,
           "score": 1
         }
       ]
@@ -28,6 +29,7 @@
       "answers": [
         {
           "text": "baz",
+          "caseSensitive": false,
           "score": 2
         }
       ]
