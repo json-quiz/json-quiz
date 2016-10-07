@@ -1,22 +1,22 @@
-var assert = require('./../../assert')('short-answer');
+var assert = require('./../../assert')('words-answer');
 
-describe('Short answer', function () {
+describe('Words answer', function () {
   describe('Schema', function () {
 
-    describe('A short answer', function () {
+    describe('A words answer', function () {
       it('must be an object', function () {
-        assert.hasError('short-answer-is-not-an-object', {
+        assert.hasError('words-answer-is-not-an-object', {
           '': 'should be object'
         });
       });
       it('must have a *text* property', function () {
-        assert.hasError('short-answer-no-text', {
+        assert.hasError('words-answer-no-text', {
           '.text': 'property .text is required'
         });
       });
       describe('The *text* property', function () {
         it('must be a string', function () {
-          assert.hasError('short-answer-text-is-not-a-string', {
+          assert.hasError('words-answer-text-is-not-a-string', {
             '.text': 'should be string'
           });
         });
@@ -26,7 +26,7 @@ describe('Short answer', function () {
 
   describe('Examples', function () {
     assert.areValid([
-      'short-answer'
+      'words-answer'
     ]);
   });
 });

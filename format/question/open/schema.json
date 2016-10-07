@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "allOf": [
+    {
+      "$ref": "http://json-quiz.github.io/json-quiz/schemas/question/base/schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "enum": ["application/x.open+json"]
+        },
+        "contentType": {
+          "enum": ["text"],
+          "description": "The content type of the answer to submit to this question"
+        },
+        "maxLength": {
+          "type": "number",
+          "minimum": 0,
+          "exclusiveMinimum": true,
+          "description": "The maximum length of the answer"
+        }
+      },
+      "required": ["contentType"]
+    }
+  ]
+}

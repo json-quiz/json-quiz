@@ -1,6 +1,6 @@
 {
   "id": "1",
-  "type": "application/x.short+json",
+  "type": "application/x.words+json",
   "content": "Question ?",
   "solutions": [
     {

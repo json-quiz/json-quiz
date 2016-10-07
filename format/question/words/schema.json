@@ -8,7 +8,7 @@
       "type": "object",
       "properties": {
         "type": {
-          "enum": ["application/x.short+json"]
+          "enum": ["application/x.words+json"]
         },
         "solutions": {
           "type": "array",

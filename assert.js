@@ -17,10 +17,11 @@ var resolved = {
   'match-answer': 'answer/match',
   'match-question': 'question/match',
   'sort-question': 'question/sort',
-  'short-answer': 'answer/short',
-  'short-question': 'question/short',
+  'words-answer': 'answer/words',
+  'words-question': 'question/words',
   'cloze-answer': 'answer/cloze',
   'cloze-question': 'question/cloze',
+  'open-question': 'question/open',
   'step': 'step',
   'quiz': 'quiz'
 };

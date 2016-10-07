@@ -1,8 +1,8 @@
-var assert = require('./../../assert')('short-question');
+var assert = require('./../../assert')('words-question');
 
-describe('Short question', function () {
+describe('Words question', function () {
   describe('Schema', function () {
-    describe('A short-answer question', function () {
+    describe('A words-answer question', function () {
       it('must satisfy the #base-question# schema', function () {
         assert.hasErrors('not-satisfying-base-schema', {
           '.id': 'property .id is required',

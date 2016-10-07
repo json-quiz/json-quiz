@@ -1,0 +1,7 @@
+{
+  "id": "1",
+  "type": "application/x.open+json",
+  "content": "Question ?",
+  "contentType": "text",
+  "maxLength": 1024
+}
