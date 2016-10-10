@@ -32,8 +32,8 @@ describe('Words question', function () {
       });
 
       describe('Each solution', function () {
-        it('must be an object', function () {
-          assert.hasError('solution-is-not-an-object', {
+        it('must satisfy the #keyword# schema', function () {
+          assert.hasError('solution-not-satisfying-keyword-schema', {
             '.solutions[0]': 'should be object'
           });
         });
@@ -41,34 +41,6 @@ describe('Words question', function () {
         it('must be unique', function () {
           assert.hasError('duplicate-solution', {
             '.solutions': 'items ## 0 and 1 are duplicate'
-          });
-        });
-
-        it('must have a *value* property', function () {
-          assert.hasError('no-solution-value', {
-            '.solutions[0].value': 'property .value is required'
-          });
-        });
-
-        it('must have a *score* property', function () {
-          assert.hasError('no-solution-score', {
-            '.solutions[0].score': 'property .score is required'
-          });
-        });
-
-        describe('The value property', function () {
-          it('must be a string', function () {
-            assert.hasError('solution-value-is-not-a-string', {
-              '.solutions[0].value': 'should be string'
-            });
-          });
-        });
-
-        describe('The score property', function () {
-          it('must be a number', function () {
-            assert.hasError('solution-score-is-not-a-number', {
-              '.solutions[0].score': 'should be number'
-            });
           });
         });
       });

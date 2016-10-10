@@ -195,69 +195,9 @@ describe('Cloze question', function () {
         });
 
         describe('Each answer', function () {
-          it('must be an object', function () {
-            assert.hasError('solution-answer-is-not-an-object', {
+          it('must satisfy the #keyword# schema', function () {
+            assert.hasError('solution-answer-not-satisfying-keyword-schema', {
               '.solutions[0].answers[0]': 'should be object'
-            });
-          });
-
-          it('must be unique', function () {
-            assert.hasError('duplicate-solution-answer', {
-              '.solutions[0].answers': 'items ## 0 and 1 are duplicate'
-            });
-          });
-
-          it('must have a *text* property', function () {
-            assert.hasError('no-solution-answer-text', {
-              '.solutions[0].answers[0].text': 'property .text is required'
-            });
-          });
-
-          it('must have a *caseSensitive* property', function () {
-            assert.hasError('no-solution-answer-case-sensitive', {
-              '.solutions[0].answers[0].caseSensitive': 'property .caseSensitive is required'
-            });
-          });
-
-          it('must have a *score* property', function () {
-            assert.hasError('no-solution-answer-score', {
-              '.solutions[0].answers[0].score': 'property .score is required'
-            });
-          });
-
-          it('may have a *feedback* property', function () {
-            assert.isValid('with-answer-feedback');
-          });
-
-          describe('The text property', function () {
-            it('must be a string', function () {
-              assert.hasError('solution-answer-text-is-not-a-string', {
-                '.solutions[0].answers[0].text': 'should be string'
-              });
-            });
-          });
-
-          describe('The caseSensitive property', function () {
-            it('must be a boolean', function () {
-              assert.hasError('solution-answer-case-sensitive-is-not-a-bool', {
-                '.solutions[0].answers[0].caseSensitive': 'should be boolean'
-              });
-            });
-          });
-
-          describe('The score property', function () {
-            it('must be a number', function () {
-              assert.hasError('solution-answer-score-is-not-a-number', {
-                '.solutions[0].answers[0].score': 'should be number'
-              });
-            });
-          });
-
-          describe('The feedback property', function () {
-            it('must be a string', function () {
-              assert.hasError('solution-answer-feedback-is-not-a-string', {
-                '.solutions[0].answers[0].feedback': 'should be string'
-              });
             });
           });
         });
@@ -271,8 +211,7 @@ describe('Cloze question', function () {
       'hole-attributes',
       'hole-choices',
       'single-answer',
-      'multiple-answers',
-      'with-answer-feedback'
+      'multiple-answers'
     ]);
   });
 });

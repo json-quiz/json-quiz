@@ -7,6 +7,7 @@ var Ajv = require('ajv');
 var ajv = Ajv({ allErrors: true });
 
 var resolved = {
+  'keyword': 'misc/keyword',
   'metadata': 'metadata',
   'content': 'content',
   'hint': 'hint',

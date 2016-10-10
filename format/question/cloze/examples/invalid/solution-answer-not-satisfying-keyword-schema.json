@@ -7,10 +7,7 @@
     {
       "holeId": "1",
       "answers": [
-        {
-          "score": 2,
-          "caseSensitive": false
-        }
+        "not-a-keyword"
       ]
     }
   ]

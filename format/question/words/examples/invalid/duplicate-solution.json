@@ -4,11 +4,13 @@
   "content": "Question ?",
   "solutions": [
     {
-      "value" : "val",
+      "text" : "val",
+      "caseSensitive": false,
       "score" : 8
     },
     {
-      "value" : "val",
+      "text" : "val",
+      "caseSensitive": false,
       "score" : 8
     }
   ]

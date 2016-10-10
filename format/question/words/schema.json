@@ -15,16 +15,7 @@
           "minItems": 1,
           "uniqueItems": true,
           "items": {
-            "type": "object",
-            "properties" : {
-              "score": {
-                "type": "number"
-              },
-              "value": {
-                "type": "string"
-              }
-            },
-            "required": ["score", "value"]
+            "$ref": "http://json-quiz.github.io/json-quiz/schemas/misc/keyword/schema.json"
           }
         }
       }

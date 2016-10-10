@@ -4,9 +4,10 @@
   "content": "Question ?",
   "solutions": [
     {
-      "value": "ipsum",
-      "score": 2
-        
+      "text": "ipsum",
+      "caseSensitive": false,
+      "score": 2,
+      "feedback": "this is a feedback"
     }
   ]
 }
