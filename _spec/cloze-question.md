@@ -93,21 +93,7 @@ layout: spec
 
     * Each answer:
 
-      * must be an object
-
-      * must be unique
-
-      * must have a *text* property
-
-      * must have a *score* property
-
-      * The text property:
-
-        * must be a string
-
-      * The score property:
-
-        * must be a number
+      * must satisfy the [keyword](keyword.html) schema
 
 ## Examples
 
@@ -118,7 +104,7 @@ layout: spec
 {
   "id": "1",
   "type": "application/x.cloze+json",
-  "title": "Question ?",
+  "content": "Question ?",
   "text": "Lorem ipsum [[1]] sit amet."
 }
 
@@ -131,7 +117,7 @@ layout: spec
 {
   "id": "1",
   "type": "application/x.cloze+json",
-  "title": "Question ?",
+  "content": "Question ?",
   "text": "Lorem [[1]] dolor sit [[2]].",
   "holes": [
     {
@@ -155,7 +141,7 @@ layout: spec
 {
   "id": "1",
   "type": "application/x.cloze+json",
-  "title": "Question ?",
+  "content": "Question ?",
   "text": "Lorem [[1]] dolor sit [[2]].",
   "holes": [
     {
@@ -178,7 +164,7 @@ layout: spec
 {
   "id": "1",
   "type": "application/x.cloze+json",
-  "title": "Question ?",
+  "content": "Question ?",
   "text": "Lorem ipsum [[1]] sit amet.",
   "solutions": [
     {
@@ -186,6 +172,7 @@ layout: spec
       "answers": [
         {
           "text": "dolor",
+          "caseSensitive": false,
           "score": 2
         }
       ]
@@ -202,7 +189,7 @@ layout: spec
 {
   "id": "1",
   "type": "application/x.cloze+json",
-  "title": "Question ?",
+  "content": "Question ?",
   "text": "Lorem [[1]] dolor sit [[2]].",
   "holes": [
     {
@@ -220,6 +207,7 @@ layout: spec
       "answers": [
         {
           "text": "ipsum",
+          "caseSensitive": false,
           "score": 1.5
         }
       ]
@@ -229,14 +217,17 @@ layout: spec
       "answers": [
         {
           "text": "amet",
+          "caseSensitive": false,
           "score": 1.5
         },
         {
           "text": "consecitur",
+          "caseSensitive": false,
           "score": 2
         },
         {
           "text": "nunc",
+          "caseSensitive": false,
           "score": 0.5
         }
       ]

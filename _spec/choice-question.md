@@ -78,7 +78,7 @@ layout: spec
 {
   "id": "1",
   "type": "application/x.choice+json",
-  "title": "Question ?",
+  "content": "Question ?",
   "choices": [
     {
       "id": "1",
@@ -104,7 +104,7 @@ layout: spec
 {
   "id": "1",
   "type": "application/x.choice+json",
-  "title": "Question ?",
+  "content": "Question ?",
   "choices": [
     {
       "id": "1",
@@ -154,7 +154,7 @@ layout: spec
 {
   "id": "1",
   "type": "application/x.choice+json",
-  "title": "Question ?",
+  "content": "Question ?",
   "choices": [
     {
       "id": "1",
@@ -220,6 +220,7 @@ layout: spec
     }
   ],
   "title": "Question ?",
+  "content": "This is the content of my question",
   "choices": [
     {
       "id": "3",

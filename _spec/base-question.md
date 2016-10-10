@@ -15,7 +15,13 @@ layout: spec
 
   * must have a *type* property
 
-  * must have a *title* property
+  * must have a *content* property
+
+  * may have a *title* property
+
+  * may have a *instruction* property
+
+  * may have a *info* property
 
   * may have a *meta* property
 
@@ -38,6 +44,18 @@ layout: spec
   * must hold a custom JSON MIME type
 
 * The *title* property:
+
+  * must be a string
+
+* The *content* property:
+
+  * must be a string
+
+* The *info* property:
+
+  * must be a string
+
+* The *instruction* property:
 
   * must be a string
 
@@ -119,6 +137,7 @@ layout: spec
   "id": "1",
   "type": "application/x.type+json",
   "title": "Question ?",
+  "content": "this is the content of the question",
   "hints": [
     {
       "id": "1",
@@ -140,6 +159,7 @@ layout: spec
 {
   "id": "1",
   "type": "application/x.type+json",
+  "content": "this is the content of the question",
   "meta": {
     "authors": [
       {
@@ -162,6 +182,7 @@ layout: spec
 {
   "id": "1",
   "type": "application/x.type+json",
+  "content": "this is the content of the question",
   "objects": [
     {
       "id": "1",
@@ -185,6 +206,7 @@ layout: spec
   "id": "1",
   "type": "application/x.type+json",
   "title": "Question ?",
+  "content": "this is the content of the question",
   "resources": [
     {
       "id": "1",
@@ -204,6 +226,7 @@ layout: spec
   "id": "1",
   "type": "application/x.type+json",
   "title": "Question ?",
+  "content": "this is the content of the question",
   "score": {
     "type": "fixed",
     "success": 5,
@@ -222,6 +245,7 @@ layout: spec
   "id": "1",
   "type": "application/x.type+json",
   "title": "Question ?",
+  "content": "this is the content of the question",
   "score": {
     "type": "sum"
   }
@@ -238,7 +262,36 @@ layout: spec
   "id": "1",
   "type": "application/x.type+json",
   "title": "Question ?",
+  "content": "this is the content of the question",
   "feedback": "Lorem ipsum dolor sit amet"
+}
+
+{% endhighlight %}
+
+### With more info
+
+{% highlight json %}
+
+{
+  "id": "1",
+  "type": "application/x.type+json",
+  "title": "Question ?",
+  "content": "this is the content of the question",
+  "info": "Lorem ipsum dolor sit amet",
+  "instruction": "Lorem ipsum dolor sit amet"
+}
+
+{% endhighlight %}
+
+### With title
+
+{% highlight json %}
+
+{
+  "id": "1",
+  "type": "application/x.type+json",
+  "title": "Question ?",
+  "content": "this is the content of the question"
 }
 
 {% endhighlight %}

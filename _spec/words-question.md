@@ -1,13 +1,13 @@
 ---
-title: Short question
+title: Words question
 layout: spec
 ---
 
-# Short question
+# Words question
 
 ## Schema
 
-* A short-answer question:
+* A words-answer question:
 
   * must satisfy the [base-question](base-question.html) schema
 
@@ -21,21 +21,9 @@ layout: spec
 
   * Each solution:
 
-    * must be an object
+    * must satisfy the [keyword](keyword.html) schema
 
     * must be unique
-
-    * must have a *value* property
-
-    * must have a *score* property
-
-    * The value property:
-
-      * must be a string
-
-    * The score property:
-
-      * must be a number
 
 ## Examples
 
@@ -45,8 +33,8 @@ layout: spec
 
 {
   "id": "1",
-  "type": "application/x.short+json",
-  "title": "Question ?"
+  "type": "application/x.words+json",
+  "content": "Question ?"
 }
 
 {% endhighlight %}
@@ -57,13 +45,14 @@ layout: spec
 
 {
   "id": "1",
-  "type": "application/x.short+json",
-  "title": "Question ?",
+  "type": "application/x.words+json",
+  "content": "Question ?",
   "solutions": [
     {
-      "value": "ipsum",
-      "score": 2
-        
+      "text": "ipsum",
+      "caseSensitive": false,
+      "score": 2,
+      "feedback": "this is a feedback"
     }
   ]
 }
@@ -76,15 +65,17 @@ layout: spec
 
 {
   "id": "1",
-  "type": "application/x.short+json",
-  "title": "Question ?",
+  "type": "application/x.words+json",
+  "content": "Question ?",
   "solutions": [
     {
-      "value": "ipsum",
+      "text": "ipsum",
+      "caseSensitive": false,
       "score": 2
     },
     {
-      "value": "amet",
+      "text": "amet",
+      "caseSensitive": false,
       "score": 3
     }
   ]

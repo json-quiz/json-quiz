@@ -15,6 +15,10 @@ layout: spec
 
   * may have a *description* property
 
+  * may have a *created* property
+
+  * may have an *updated* property
+
   * may have an *authors* property
 
   * may have a *license* property
@@ -24,6 +28,14 @@ layout: spec
   * must be a string
 
 * The *description* property:
+
+  * must be a string
+
+* The *created* property:
+
+  * must be a string
+
+* The *updated* property:
 
   * must be a string
 
@@ -105,6 +117,17 @@ layout: spec
   ],
   "title": "Lorem",
   "description": "Lorem ipsum dolor sit amet"
+}
+
+{% endhighlight %}
+
+### Updated and created dates
+
+{% highlight json %}
+
+{
+  "created": "2016-09-01T10:00:00",
+  "updated": "2016-09-03T11:50:00"
 }
 
 {% endhighlight %}

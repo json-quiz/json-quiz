@@ -78,7 +78,7 @@ layout: spec
 {
   "id": "1",
   "type": "application/x.match+json",
-  "title": "Question ?",
+  "content": "Question ?",
   "firstSet": [
     {
       "id": "2",
@@ -114,7 +114,7 @@ layout: spec
 {
   "id": "1",
   "type": "application/x.match+json",
-  "title": "Question ?",
+  "content": "Question ?",
   "firstSet": [
     {
       "id": "2",
@@ -177,7 +177,7 @@ layout: spec
     "license": "CC",
     "created": "2014-06-23"
   },
-  "title": "Question ?",
+  "content": "Question ?",
   "objects": [
     {
       "id": "1",

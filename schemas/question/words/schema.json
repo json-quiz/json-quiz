@@ -8,23 +8,14 @@
       "type": "object",
       "properties": {
         "type": {
-          "enum": ["application/x.short+json"]
+          "enum": ["application/x.words+json"]
         },
         "solutions": {
           "type": "array",
           "minItems": 1,
           "uniqueItems": true,
           "items": {
-            "type": "object",
-            "properties" : {
-              "score": {
-                "type": "number"
-              },
-              "value": {
-                "type": "string"
-              }
-            },
-            "required": ["score", "value"]
+            "$ref": "http://json-quiz.github.io/json-quiz/schemas/misc/keyword/schema.json"
           }
         }
       }

@@ -1,13 +1,13 @@
 ---
-title: Short answer
+title: Words answer
 layout: spec
 ---
 
-# Short answer
+# Words answer
 
 ## Schema
 
-* A short answer:
+* A words answer:
 
   * must be an object
 
@@ -19,7 +19,7 @@ layout: spec
 
 ## Examples
 
-### Short answer
+### Words answer
 
 {% highlight json %}
 

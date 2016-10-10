@@ -47,7 +47,7 @@ layout: spec
     {
       "id": "1",
       "type": "application/x.choice+json",
-      "title": "Question ?",
+      "content": "Question ?",
       "choices": [
         {
           "id": "1",
@@ -95,7 +95,7 @@ layout: spec
     {
       "id": "1",
       "type": "application/x.choice+json",
-      "title": "Question 1 ?",
+      "content": "Question 1 ?",
       "objects": [
         {
           "id": "1",
@@ -121,7 +121,7 @@ layout: spec
     {
       "id": "2",
       "type": "application/x.match+json",
-      "title": "Question 2 ?",
+      "content": "Question 2 ?",
       "firstSet": [
         {
           "id": "4",
@@ -171,7 +171,7 @@ layout: spec
   "items": [
     {
       "id": "1",
-      "title": "Question ?",
+      "content": "Question ?",
       "type": "application/x.choice+json",
       "choices": [
         {

@@ -138,7 +138,7 @@ layout: spec
 {
   "id": "1",
   "type": "application/x.graphic+json",
-  "title": "Question ?",
+  "content": "Question ?",
   "description":"Question description...",
   "image": {
     "id": "12",
@@ -163,7 +163,7 @@ layout: spec
 {
   "id": "1",
   "type": "application/x.graphic+json",
-  "title": "Question ?",
+  "content": "Question ?",
   "description":"Question description...",
   "meta": {
     "authors": [
@@ -227,7 +227,7 @@ layout: spec
 {
   "id": "1",
   "type": "application/x.graphic+json",
-  "title": "Where is Charlie ?",
+  "content": "Where is Charlie ?",
   "description":"Find Charlie in the image below...",
   "image": {
     "id": "12",
@@ -268,7 +268,7 @@ layout: spec
 {
   "id": "1",
   "type": "application/x.graphic+json",
-  "title": "Question ?",
+  "content": "Question ?",
   "description":"Question description...",
   "meta": {
     "authors": [

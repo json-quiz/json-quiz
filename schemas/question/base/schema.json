@@ -12,8 +12,20 @@
     "title": {
       "type": "string"
     },
+    "content": {
+      "type": "string",
+      "description": "The content of the question"
+    },
     "description": {
       "type": "string"
+    },
+    "instruction": {
+      "type": "string",
+      "description": "The additional instructions for the question"
+    },
+    "info": {
+      "type": "string",
+      "description": "Supplementary information about the question"
     },
     "meta": {
       "$ref": "http://json-quiz.github.io/json-quiz/schemas/metadata/schema.json"
@@ -74,5 +86,5 @@
       ]
     }
   },
-  "required": ["id", "type", "title"]
+  "required": ["id", "type", "content"]
 }

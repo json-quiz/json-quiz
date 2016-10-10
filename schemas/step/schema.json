@@ -35,7 +35,10 @@
             "$ref": "http://json-quiz.github.io/json-quiz/schemas/question/cloze/schema.json"
           },
           {
-            "$ref": "http://json-quiz.github.io/json-quiz/schemas/question/short/schema.json"
+            "$ref": "http://json-quiz.github.io/json-quiz/schemas/question/words/schema.json"
+          },
+          {
+            "$ref": "http://json-quiz.github.io/json-quiz/schemas/question/open/schema.json"
           }
         ]
       }

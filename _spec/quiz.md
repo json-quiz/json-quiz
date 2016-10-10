@@ -67,7 +67,7 @@ layout: spec
         {
           "id": "2",
           "type": "application/x.choice+json",
-          "title": "Question ?",
+          "content": "Question ?",
           "choices": [
             {
               "id": "3",
@@ -113,7 +113,7 @@ layout: spec
       "items": [
         {
           "id": "1",
-          "title": "Question ?",
+          "content": "Question ?",
           "type": "application/x.choice+json",
           "choices": [
             {

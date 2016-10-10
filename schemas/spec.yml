@@ -14,10 +14,12 @@
       doc: graphic-question
     - title: Match question
       doc: match-question
-    - title: Short question
-      doc: short-question
+    - title: Words question
+      doc: words-question
     - title: Sort question
       doc: sort-question
+    - title: Open question
+      doc: open-question
 - title: Answers
   docs:
     - title: Choice answer
@@ -26,8 +28,8 @@
       doc: cloze-answer
     - title: Match answer
       doc: match-answer
-    - title: Short answer
-      doc: short-answer
+    - title: Words answer
+      doc: words-answer
 - title: Quiz
   docs:
     - title: Quiz
@@ -36,3 +38,5 @@
       doc: step
 - title: Hint
   doc: hint
+- title: Misc
+  doc: misc

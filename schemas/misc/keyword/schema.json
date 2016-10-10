@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "text": {
+      "type": "string"
+    },
+    "caseSensitive": {
+      "type": "boolean",
+      "default": false,
+      "description": "If true, the answer case will need to be respected"
+    },
+    "score": {
+      "type": "number",
+      "description": "The resulting score if the keyword is found"
+    },
+    "feedback": {
+      "type": "string"
+    }
+  },
+  "required": ["text", "caseSensitive", "score"],
+  "additionalProperties": false
+}

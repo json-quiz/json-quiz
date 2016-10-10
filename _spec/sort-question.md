@@ -60,7 +60,7 @@ layout: spec
 {
   "id": "1",
   "type": "application/x.sort+json",
-  "title": "Question ?",
+  "content": "Question ?",
   "items": [
     {
       "id": "2",
@@ -84,7 +84,7 @@ layout: spec
 {
   "id": "1",
   "type": "application/x.sort+json",
-  "title": "Question ?",
+  "content": "Question ?",
   "items": [
     {
       "id": "2",
@@ -134,7 +134,7 @@ layout: spec
       }
     ]
   },
-  "title": "Question ?",
+  "content": "Question ?",
   "objects": [
     {
       "id": "42",
