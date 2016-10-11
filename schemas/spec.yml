@@ -39,4 +39,6 @@
 - title: Hint
   doc: hint
 - title: Misc
-  doc: misc
+  docs:
+    - title: Keyword
+      doc: keyword
