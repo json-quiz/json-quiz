@@ -11,7 +11,7 @@
           "enum": ["application/x.open+json"]
         },
         "contentType": {
-          "enum": ["text"],
+          "enum": ["text", "audio", "video"],
           "description": "The content type of the answer to submit to this question"
         },
         "maxLength": {
