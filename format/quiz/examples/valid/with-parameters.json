@@ -2,9 +2,14 @@
   "id": "1",
   "title": "quiz title",
   "meta": {
-    "authors": "not-an-array",
+    "authors": [
+      {
+        "name": "John Doe",
+        "email": "john@mail.com"
+      }
+    ],
     "created": "2015-06-04",
-    "license": []
+    "license": "CC"
   },
   "parameters": {
     "type": "summative",
@@ -12,9 +17,9 @@
     "interruptible": true,
     "duration": 0,
     "maxAttempts": 5,
-    "random": false,
+    "randomOrder": "once",
+    "randomPick": "never",
     "pick": 0,
-    "draw": "once",
     "showMetadata": true,
     "showStatistics": false,
     "showFullCorrection": true,

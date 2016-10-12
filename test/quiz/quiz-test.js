@@ -27,6 +27,10 @@ describe('Quiz', function () {
         });
       });
 
+      it('may have a *parameters* property', function () {
+        assert.isValid('with-parameters');
+      });
+
       it('may have a *meta* property', function () {
         assert.isValid('quiz-metadata');
       });
@@ -44,6 +48,14 @@ describe('Quiz', function () {
       it('must be a string', function () {
         assert.hasError('title-is-not-a-string', {
           '.title': 'should be string'
+        });
+      });
+    });
+
+    describe('The *parameters* property', function () {
+      it('must be an object', function () {
+        assert.hasError('parameters-is-not-an-object', {
+          '.parameters': 'should be object'
         });
       });
     });

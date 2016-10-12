@@ -1,5 +1,20 @@
 {
   "id": "1",
   "title": [],
+  "parameters": {
+    "type": "summative",
+    "anonymous": false,
+    "interruptible": true,
+    "duration": 0,
+    "maxAttempts": 5,
+    "random": false,
+    "pick": 0,
+    "draw": "once",
+    "showMetadata": true,
+    "showStatistics": false,
+    "showFullCorrection": true,
+    "showCorrectionAt": "validation",
+    "showScoreAt": "correction"
+  },
   "steps": []
 }
