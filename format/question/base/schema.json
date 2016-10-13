@@ -82,6 +82,18 @@
             }
           },
           "required": ["type", "success", "failure"]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "enum": ["manual"]
+            },
+            "max": {
+              "type": "number"
+            }
+          },
+          "required": ["type", "max"]
         }
       ]
     }
