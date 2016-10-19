@@ -1,0 +1,18 @@
+{
+  "id": "1",
+  "type": "application/x.set+json",
+  "content": "Question ?",
+  "penalty": 1,
+  "random": false,
+  "sets": [
+    {
+      "id": "2",
+      "name": "Set A"
+    },
+    {
+      "id": "3",
+      "name": "Set B"
+    }
+  ],
+  "members": []
+}

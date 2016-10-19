@@ -17,6 +17,7 @@ var resolved = {
   'graphic-question': 'question/graphic',
   'match-answer': 'answer/match',
   'match-question': 'question/match',
+  'set-question': 'question/set',
   'sort-question': 'question/sort',
   'words-answer': 'answer/words',
   'words-question': 'question/words',

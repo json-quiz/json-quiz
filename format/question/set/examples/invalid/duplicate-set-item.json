@@ -1,0 +1,34 @@
+{
+  "id": "1",
+  "type": "application/x.set+json",
+  "content": "Question ?",
+  "penalty": 1,
+  "random": false,
+  "sets": [
+    {
+      "id": "2",
+      "name": "Set A"
+    },
+    {
+      "id": "2",
+      "name": "Set A"
+    }
+  ],
+  "members": [
+    {
+      "id": "4",
+      "type": "text/plain",
+      "data": "Item X"
+    },
+    {
+      "id": "5",
+      "type": "text/plain",
+      "data": "Item Y"
+    },
+    {
+      "id": "6",
+      "type": "text/plain",
+      "data": "Item Z"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "penalty": 1,
+  "random": false,
+  "sets": [
+    {
+      "id": "2",
+      "name": "Set A"
+    },
+    {
+      "id": "3",
+      "name": "Set B"
+    }
+  ],
+  "members": [
+    {
+      "id": "4",
+      "type": "text/plain",
+      "data": "Item X"
+    },
+    {
+      "id": "5",
+      "type": "text/plain",
+      "data": "Item Y"
+    },
+    {
+      "id": "6",
+      "type": "text/plain",
+      "data": "Item Z"
+    }
+  ]
+}

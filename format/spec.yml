@@ -14,6 +14,8 @@
       doc: graphic-question
     - title: Match question
       doc: match-question
+    - title: Set question
+      doc: set-question
     - title: Words question
       doc: words-question
     - title: Sort question
