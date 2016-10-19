@@ -16,6 +16,8 @@
       doc: match-question
     - title: Set question
       doc: set-question
+    - title: Pair question
+      doc: pair-question
     - title: Words question
       doc: words-question
     - title: Sort question

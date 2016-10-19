@@ -1,0 +1,19 @@
+{
+  "id": "1",
+  "type": "application/x.pair+json",
+  "content": "Question ?",
+  "random": false,
+  "penalty": 0.5,
+  "left": [
+    {
+      "id": "3",
+      "type": "text/plain",
+      "data": "Item A"
+    },
+    {
+      "id": "6",
+      "type": "text/plain",
+      "data": "Item B"
+    }
+  ]
+}

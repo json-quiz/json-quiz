@@ -1,0 +1,30 @@
+{
+  "id": "1",
+  "type": "application/x.pair+json",
+  "content": "Question ?",
+  "penalty": 0.5,
+  "left": [
+    {
+      "id": "3",
+      "type": "text/plain",
+      "data": "Item A"
+    },
+    {
+      "id": "6",
+      "type": "text/plain",
+      "data": "Item B"
+    }
+  ],
+  "right": [
+    {
+      "id": "4",
+      "type": "text/plain",
+      "data": "Item X"
+    },
+    {
+      "id": "7",
+      "type": "text/plain",
+      "data": "Item Y"
+    }
+  ]
+}
