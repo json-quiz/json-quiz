@@ -24,6 +24,10 @@ describe('Step', function () {
       it('may have a *meta* property', function () {
         assert.isValid('step-metadata');
       });
+
+      it('may have a *parameters* property', function () {
+        assert.isValid('with-parameters');
+      });
     });
 
     describe('The *id* property', function () {
@@ -56,6 +60,14 @@ describe('Step', function () {
       });
     });
 
+    describe('The *parameters* property', function () {
+      it('must be an object', function () {
+        assert.hasError('parameters-is-not-an-object', {
+          '.parameters': 'should be object'
+        });
+      });
+    });
+
     describe('The *meta* property', function () {
       it('must satisfy the #metadata# schema', function () {
         assert.hasErrors('meta-not-satisfying-metadata-schema', {
@@ -71,7 +83,8 @@ describe('Step', function () {
       'one-question',
       'one-content',
       'multiple-questions',
-      'step-metadata'
+      'step-metadata',
+      'with-parameters'
     ]);
   });
 });

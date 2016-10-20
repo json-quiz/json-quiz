@@ -1,0 +1,16 @@
+{
+  "id": "1",
+  "parameters": {
+    "maxAttempts": 0,
+    "randomOrder": "once",
+    "randomPick": "once",
+    "pick": 1
+  },
+  "items": [
+    {
+      "id": "1",
+      "type": "text/html",
+      "data": "<p>Lorem ipsum dolor <em>sit</em> amet."
+    }
+  ]
+}

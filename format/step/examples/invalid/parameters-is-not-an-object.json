@@ -1,0 +1,11 @@
+{
+  "id": "1",
+  "parameters": "not-an-object",
+  "items": [
+    {
+      "id": "1",
+      "type": "text/html",
+      "data": "<p>Lorem ipsum dolor <em>sit</em> amet."
+    }
+  ]
+}

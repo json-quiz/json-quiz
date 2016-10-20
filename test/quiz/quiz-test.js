@@ -95,7 +95,8 @@ describe('Quiz', function () {
   describe('Examples', function () {
     assert.areValid([
       'content-and-question-steps',
-      'quiz-metadata'
+      'quiz-metadata',
+      'with-parameters'
     ]);
   });
 });
