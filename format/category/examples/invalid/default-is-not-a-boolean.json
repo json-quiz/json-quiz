@@ -1,0 +1,5 @@
+{
+  "id": "1",
+  "name": "Category A",
+  "default": ["not-a-bool"]
+}

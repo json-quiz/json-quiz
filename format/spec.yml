@@ -2,6 +2,8 @@
   doc: metadata
 - title: Content
   doc: content
+- title: Category
+  doc: category
 - title: Questions
   docs:
     - title: Base question

@@ -11,6 +11,7 @@ var resolved = {
   'metadata': 'metadata',
   'content': 'content',
   'hint': 'hint',
+  'category': 'category',
   'base-question': 'question/base',
   'choice-answer': 'answer/choice',
   'choice-question': 'question/choice',

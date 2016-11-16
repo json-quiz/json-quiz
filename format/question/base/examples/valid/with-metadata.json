@@ -10,7 +10,11 @@
       }
     ],
     "license": "CC",
-    "created": "2014-06-23"
+    "created": "2014-06-23",
+    "category": {
+      "id": "1",
+      "name": "Category A"
+    }
   },
   "title": "Question ?"
 }
