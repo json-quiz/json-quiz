@@ -1,6 +1,8 @@
 {
   "id": "1",
   "type": "application/x.match+json",
+  "random": false,
+  "penalty": 0,
   "meta": {
     "authors": [
       {

@@ -3,7 +3,7 @@
   "type": "application/x.match+json",
   "content": "Question ?",
   "random": false,
-  "penalty": 0,
+  "penalty": "not a number",
   "firstSet": [
     {
       "id": "2",
@@ -31,7 +31,8 @@
   "solutions": [
     {
       "firstId": "2",
-      "secondId": "5"
+      "secondId": "5",
+      "score": 2
     },
     {
       "firstId": "3",

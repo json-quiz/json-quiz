@@ -7,14 +7,16 @@
   "sets": [
     {
       "id": "2",
-      "name": "Set A"
+      "type": "text/html",
+      "data": "Set A"
     },
     {
       "id": "3",
-      "name": "Set B"
+      "type": "text/html",
+      "data": "Set B"
     }
   ],
-  "members": [
+  "items": [
     {
       "id": "4",
       "type": "text/plain",
@@ -31,18 +33,22 @@
       "data": "Item Z"
     }
   ],
-  "solutions": [
-    {
-      "setId": "2",
-      "memberId": "4",
-      "score": 3,
-      "feedback": "Lorem ipsum"
-    },
-    {
-      "setId": "3",
-      "memberId": "5",
-      "score": 0.5,
-      "feedback": "Lorem ipsum"
-    }
-  ]
+  "solutions": {
+    "associations": [
+      {
+        "setId": "2",
+        "itemId": "4",
+        "score": 3,
+        "feedback": "Lorem ipsum"
+      },
+      {
+        "setId": "3",
+        "itemId": "5",
+        "score": 0.5,
+        "feedback": "Lorem ipsum"
+      }
+    ]
+  }
+
+
 }

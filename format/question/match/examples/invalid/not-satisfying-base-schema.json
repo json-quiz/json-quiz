@@ -1,6 +1,8 @@
 {
   "objects": "not-an-array",
   "meta": "not-an-object",
+  "random": false,
+  "penalty": 0,
   "firstSet": [
     {
       "id": "1",

@@ -6,14 +6,17 @@
   "random": false,
   "sets": [
     {
-      "name": "Set A"
+      "id": "2",
+      "type": "text/html",
+      "data": "Set A"
     },
     {
       "id": "3",
-      "name": "Set B"
+      "type": "text/html",
+      "data": "Set B"
     }
   ],
-  "members": [
+  "items": [
     {
       "id": "4",
       "type": "text/plain",
@@ -29,5 +32,19 @@
       "type": "text/plain",
       "data": "Item Z"
     }
-  ]
+  ],
+  "solutions": {
+    "associations": [
+      {
+        "setId": "2",
+        "itemId": "4",
+        "score": 3
+      },
+      {
+        "setId": "2",
+        "itemId": "4",
+        "score": 3
+      }
+    ]
+  }
 }

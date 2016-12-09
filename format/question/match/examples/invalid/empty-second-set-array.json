@@ -4,17 +4,17 @@
   "content": "Question ?",
   "random": false,
   "penalty": 0,
-  "firstSet": "not-an-array",
-  "secondSet": [
+  "firstSet": [
     {
-      "id": "4",
+      "id": "2",
       "type": "text/plain",
-      "data": "Item C"
+      "data": "Item A"
     },
     {
-      "id": "5",
+      "id": "3",
       "type": "text/plain",
-      "data": "Item D"
+      "data": "Item B"
     }
-  ]
+  ],
+  "secondSet": []
 }

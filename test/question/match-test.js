@@ -13,6 +13,18 @@ describe('Match question', function () {
         });
       });
 
+      it('must have a *random* property', function () {
+        assert.hasError('no-random-property', {
+          '.random': 'property .random is required'
+        });
+      });
+
+      it('must have a *penalty* property', function () {
+        assert.hasError('no-penalty-property', {
+          '.penalty': 'property .penalty is required'
+        });
+      });
+
       it('must have a *firstSet* property', function () {
         assert.hasError('no-first-set', {
           '.firstSet': 'property .firstSet is required'
@@ -30,6 +42,28 @@ describe('Match question', function () {
       });
     });
 
+    describe('The *random* property', function () {
+      it('must be a boolean', function () {
+        assert.hasError('random-is-not-a-boolean', {
+          '.random': 'should be boolean'
+        });
+      });
+    });
+
+    describe('The *penalty* property', function () {
+      it('must be a number', function () {
+        assert.hasError('penalty-is-not-a-number', {
+          '.penalty': 'should be number'
+        });
+      });
+
+      it('must be greater than 0', function () {
+        assert.hasError('penalty-is-under-zero', {
+          '.penalty': 'should be >= 0'
+        });
+      });
+    });
+
     describe('The *firstSet* property', function () {
       it('must be an array', function () {
         assert.hasError('first-set-is-not-an-array', {
@@ -37,9 +71,9 @@ describe('Match question', function () {
         });
       });
 
-      it('must contain at least two items', function () {
-        assert.hasError('under-two-first-set-items', {
-          '.firstSet': 'should NOT have less than 2 items'
+      it('must contain at least one item', function () {
+        assert.hasError('empty-first-set-array', {
+          '.firstSet': 'should NOT have less than 1 items'
         });
       });
 
@@ -66,9 +100,9 @@ describe('Match question', function () {
         });
       });
 
-      it('must contain at least two items', function () {
-        assert.hasError('under-two-second-set-items', {
-          '.secondSet': 'should NOT have less than 2 items'
+      it('must contain at least one item', function () {
+        assert.hasError('empty-second-set-array', {
+          '.secondSet': 'should NOT have less than 1 items'
         });
       });
 

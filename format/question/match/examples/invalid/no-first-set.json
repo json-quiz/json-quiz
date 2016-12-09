@@ -2,6 +2,8 @@
   "id": "1",
   "type": "application/x.match+json",
   "content": "Question ?",
+  "random": false,
+  "penalty": 0,
   "secondSet": [
     {
       "id": "4",

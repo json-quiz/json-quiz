@@ -7,29 +7,24 @@
   "sets": [
     {
       "id": "2",
-      "name": "Set A"
+      "type": "text/html",
+      "data": "Set A"
     },
     {
       "id": "3",
-      "name": "Set B"
+      "type": "text/html",
+      "data": "Set B"
     }
   ],
-  "members": [
+  "items": [
     {
       "id": "4",
       "type": "text/plain",
-      "data": "Item X"
+      "data": ["not-a-string"]
     },
     {
-      "id": "5",
       "type": "text/plain",
       "data": "Item Y"
-    },
-    {
-      "id": "6",
-      "type": "text/plain",
-      "data": "Item Z"
     }
-  ],
-  "solutions": "not-an-array"
+  ]
 }

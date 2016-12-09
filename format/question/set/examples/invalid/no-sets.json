@@ -4,7 +4,7 @@
   "content": "Question ?",
   "penalty": 1,
   "random": false,
-  "members": [
+  "items": [
     {
       "id": "4",
       "type": "text/plain",

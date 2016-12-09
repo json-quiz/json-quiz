@@ -7,14 +7,16 @@
   "sets": [
     {
       "id": "2",
-      "name": "Set A"
+      "type": "text/html",
+      "data": "Set A"
     },
     {
-      "id": "2",
-      "name": "Set A"
+      "id": "3",
+      "type": "text/html",
+      "data": "Set B"
     }
   ],
-  "members": [
+  "items": [
     {
       "id": "4",
       "type": "text/plain",
@@ -30,5 +32,18 @@
       "type": "text/plain",
       "data": "Item Z"
     }
-  ]
+  ],
+  "solutions": {
+    "associations": [
+      {
+        "itemId": "4",
+        "score": 3
+      },
+      {
+        "setId": "3",
+        "itemId": "5",
+        "score": 0.5
+      }
+    ]
+  }
 }

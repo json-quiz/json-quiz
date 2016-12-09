@@ -3,7 +3,7 @@
   "type": "application/x.set+json",
   "content": "Question ?",
   "penalty": 1,
-  "random": [false],
+  "random": false,
   "sets": [
     {
       "id": "2",
@@ -17,6 +17,11 @@
     }
   ],
   "items": [
+    {
+      "id": "3",
+      "type": "text/plain",
+      "data": "Item W"
+    },
     {
       "id": "4",
       "type": "text/plain",
@@ -38,12 +43,21 @@
       {
         "setId": "2",
         "itemId": "4",
-        "score": 3
+        "score": 3,
+        "feedback": "Lorem ipsum"
       },
       {
         "setId": "3",
         "itemId": "5",
-        "score": 0.5
+        "score": 0.5,
+        "feedback": "Lorem ipsum"
+      }
+    ],
+    "odd": [
+      {
+        "itemId": "3",
+        "score": -1,
+        "feedback": "Dolor sit amet"
       }
     ]
   }
