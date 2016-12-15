@@ -1,0 +1,6 @@
+{
+  "questionId": "123",
+  "data": [
+    {"not-a-valid-schema": "test"}
+  ]
+}

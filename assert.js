@@ -13,21 +13,25 @@ var resolved = {
   'hint': 'hint',
   'category': 'category',
   'base-question': 'question/base',
-  'choice-answer': 'answer/choice',
+  'choice-answer': 'answer-data/choice',
   'choice-question': 'question/choice',
   'graphic-question': 'question/graphic',
-  'match-answer': 'answer/match',
+  'match-answer': 'answer-data/match',
   'match-question': 'question/match',
+  'set-answer': 'answer-data/set',
   'set-question': 'question/set',
   'pair-question': 'question/pair',
   'sort-question': 'question/sort',
-  'words-answer': 'answer/words',
+  'words-answer': 'answer-data/words',
   'words-question': 'question/words',
-  'cloze-answer': 'answer/cloze',
+  'cloze-answer': 'answer-data/cloze',
   'cloze-question': 'question/cloze',
+  'open-answer': 'answer-data/open',
   'open-question': 'question/open',
+  'answer': 'answer',
   'step': 'step',
-  'quiz': 'quiz'
+  'quiz': 'quiz',
+  'paper': 'paper'
 };
 
 Object.keys(resolved).forEach(function (id) {

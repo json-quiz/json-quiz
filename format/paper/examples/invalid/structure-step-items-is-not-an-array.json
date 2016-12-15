@@ -1,0 +1,13 @@
+{
+  "id": "123",
+  "startDate": "2016-12-13T12:00:00",
+  "user": {
+    "name": "John Doe"
+  },
+  "structure": [
+    {
+      "id": "1",
+      "items": "not-an-array"
+    }
+  ]
+}

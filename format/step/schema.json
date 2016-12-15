@@ -17,8 +17,15 @@
     "parameters": {
       "type": "object",
       "properties": {
+        "duration": {
+          "type": "number",
+          "minimum": 0,
+          "description": "The allowed duration to pass the step",
+          "default": 0
+        },
         "maxAttempts": {
           "type": "number",
+          "minimum": 0,
           "description": "The number of times a user can try the step. If 0, there is no limit",
           "default": 0
         },
@@ -34,6 +41,7 @@
         },
         "pick": {
           "type": "number",
+          "minimum": 0,
           "description": "Number of items to use when a user try the step. If 0, all the items are used",
           "default": 0
         }

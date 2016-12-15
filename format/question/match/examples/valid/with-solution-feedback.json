@@ -38,7 +38,8 @@
     {
       "firstId": "3",
       "secondId": "4",
-      "score": 0.5
+      "score": 0.5,
+      "feedback": "Dolor sit amet"
     }
   ]
 }

@@ -159,6 +159,10 @@ describe('Match question', function () {
             '.solutions[0].score': 'property .score is required'
           });
         });
+
+        it('may have a *feedback* property', function () {
+          assert.isValid('with-solution-feedback');
+        });
       });
 
       describe('The *firstId* property', function () {
@@ -191,6 +195,7 @@ describe('Match question', function () {
     assert.areValid([
       'basic',
       'solutions',
+      'with-solution-feedback',
       'text-and-images'
     ]);
   });

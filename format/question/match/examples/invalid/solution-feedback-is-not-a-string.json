@@ -33,7 +33,7 @@
       "firstId": "2",
       "secondId": "5",
       "score": 2,
-      "feedback": "Lorem ipsum"
+      "feedback": ["not-a-string"]
     },
     {
       "firstId": "3",

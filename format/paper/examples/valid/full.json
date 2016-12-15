@@ -1,0 +1,26 @@
+{
+  "id": "123",
+  "user": {
+    "name": "John Doe"
+  },
+  "startDate": "2016-12-13T12:00:00",
+  "endDate": "2016-12-13T14:00:00",
+  "finished": true,
+  "score": 14,
+  "structure": [
+    {
+      "id": "1",
+      "items": ["1", "2"]
+    }
+  ],
+  "answers": [
+    {
+      "questionId": "1",
+      "data": "Lorem ipsum"
+    },
+    {
+      "questionId": "2",
+      "data": ["1", "2"]
+    }
+  ]
+}

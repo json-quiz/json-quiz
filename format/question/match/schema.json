@@ -52,6 +52,9 @@
               },
               "score": {
                 "type": "number"
+              },
+              "feedback": {
+                "type": "string"
               }
             },
             "required": [

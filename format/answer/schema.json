@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "questionId": {
+      "type": "string",
+      "description": "The ID of the question that is answered"
+    },
+    "tries": {
+      "type": "number",
+      "minimum": 1,
+      "description": "The number of answers submitted for the question and the current user attempt",
+      "default": 1
+    },
+    "score": {
+      "type": "number",
+      "description": "The score obtained by the user for his answer"
+    },
+    "usedHints": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "$ref": "http://json-quiz.github.io/json-quiz/schemas/hint/schema.json"
+      }
+    },
+    "data": {
+      "description": "The data submitted by the user as his answer",
+      "default": null,
+      "oneOf": [
+        {
+          "$ref": "http://json-quiz.github.io/json-quiz/schemas/answer-data/choice/schema.json"
+        },
+        {
+          "$ref": "http://json-quiz.github.io/json-quiz/schemas/answer-data/cloze/schema.json"
+        },
+        {
+          "$ref": "http://json-quiz.github.io/json-quiz/schemas/answer-data/match/schema.json"
+        },
+        {
+          "$ref": "http://json-quiz.github.io/json-quiz/schemas/answer-data/words/schema.json"
+        }
+      ]
+    }
+  },
+  "required": ["questionId"]
+}

@@ -1,0 +1,13 @@
+{
+  "questionId": "123",
+  "usedHints": [
+    {
+      "id": "1",
+      "value": "Lorem"
+    },
+    {
+      "id": "1",
+      "value": "Lorem"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "123",
+  "startDate": "2016-12-13T12:00:00",
+  "endDate": "2016-12-13T13:00:00",
+  "finished": "not-a-bool",
+  "structure": [
+    {
+      "id": "1",
+      "items": ["1", "2"]
+    }
+  ]
+}

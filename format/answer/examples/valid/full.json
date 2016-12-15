@@ -1,0 +1,12 @@
+{
+  "questionId": "1",
+  "score": 5,
+  "tries": 2,
+  "usedHints": [
+    {
+      "id": "1",
+      "value": "Lorem"
+    }
+  ],
+  "data": ["1", "2"]
+}

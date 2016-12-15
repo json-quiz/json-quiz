@@ -13,7 +13,7 @@
   },
   "parameters": {
     "type": "summative",
-    "anonymous": false,
+    "anonymizeAttempts": false,
     "interruptible": true,
     "duration": 0,
     "maxAttempts": 5,
