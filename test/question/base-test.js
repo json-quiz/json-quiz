@@ -130,12 +130,6 @@ describe('Base question', function () {
         });
       });
 
-      it('must contain at least one object', function () {
-        assert.hasError('under-one-object', {
-          '.objects': 'should NOT have less than 1 items'
-        });
-      });
-
       describe('Each object', function () {
         it('must satisfy the #content# schema', function () {
           assert.hasError('object-not-satisfying-content-schema', {
@@ -158,12 +152,6 @@ describe('Base question', function () {
         });
       });
 
-      it('must contain at least one resource', function () {
-        assert.hasError('under-one-resource', {
-          '.resources': 'should NOT have less than 1 items'
-        });
-      });
-
       describe('Each resource', function () {
         it('must satisfy the #content# schema', function () {
           assert.hasError('resource-not-satisfying-content-schema', {
@@ -183,12 +171,6 @@ describe('Base question', function () {
       it('must be an array', function () {
         assert.hasError('hints-is-not-an-array', {
           '.hints': 'should be array'
-        });
-      });
-
-      it('must contain at least one hint', function () {
-        assert.hasError('under-one-hint', {
-          '.hints': 'should NOT have less than 1 items'
         });
       });
 

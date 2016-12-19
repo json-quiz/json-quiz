@@ -32,7 +32,6 @@
     },
     "objects": {
       "type": "array",
-      "minItems": 1,
       "uniqueItems": true,
       "items": {
         "$ref": "http://json-quiz.github.io/json-quiz/schemas/content/schema.json"
@@ -40,7 +39,6 @@
     },
     "resources": {
       "type": "array",
-      "minItems": 1,
       "uniqueItems": true,
       "items": {
         "$ref": "http://json-quiz.github.io/json-quiz/schemas/content/schema.json"
@@ -48,7 +46,6 @@
     },
     "hints": {
       "type": "array",
-      "minItems": 1,
       "uniqueItems": true,
       "items": {
         "$ref": "http://json-quiz.github.io/json-quiz/schemas/hint/schema.json"
