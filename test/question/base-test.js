@@ -31,11 +31,7 @@ describe('Base question', function () {
         assert.isValid('with-title');
       });
 
-      it('may have a *instruction* property', function () {
-        assert.isValid('with-more-info');
-      });
-
-      it('may have a *info* property', function () {
+      it('may have a *description* property', function () {
         assert.isValid('with-more-info');
       });
 
@@ -98,18 +94,10 @@ describe('Base question', function () {
       });
     });
 
-    describe('The *info* property', function () {
+    describe('The *description* property', function () {
       it('must be a string', function () {
-        assert.hasError('info-is-not-a-string', {
-          '.info': 'should be string'
-        });
-      });
-    });
-
-    describe('The *instruction* property', function () {
-      it('must be a string', function () {
-        assert.hasError('instruction-is-not-a-string', {
-          '.instruction': 'should be string'
+        assert.hasError('description-is-not-a-string', {
+          '.description': 'should be string'
         });
       });
     });

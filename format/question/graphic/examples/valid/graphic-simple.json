@@ -2,7 +2,6 @@
   "id": "1",
   "type": "application/x.graphic+json",
   "content": "Question ?",
-  "description":"Question description...",
   "image": {
     "id": "12",
     "type": "image/jpeg",

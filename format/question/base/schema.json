@@ -17,13 +17,6 @@
       "description": "The content of the question"
     },
     "description": {
-      "type": "string"
-    },
-    "instruction": {
-      "type": "string",
-      "description": "The additional instructions for the question"
-    },
-    "info": {
       "type": "string",
       "description": "Supplementary information about the question"
     },

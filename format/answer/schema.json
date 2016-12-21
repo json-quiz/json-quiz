@@ -19,7 +19,6 @@
     "usedHints": {
       "type": "array",
       "uniqueItems": true,
-      "minItems": 1,
       "items": {
         "$ref": "http://json-quiz.github.io/json-quiz/schemas/hint/schema.json"
       }

@@ -69,12 +69,6 @@ describe('Answer', function () {
             });
           });
 
-          it('must contain at least one hint', function () {
-            assert.hasError('under-one-used-hint', {
-              '.usedHints': 'should NOT have less than 1 items'
-            });
-          });
-
           it('must satisfy the #hint# schemas', function () {
             assert.hasError('used-hint-not-satisfying-hint-schema', {
               '.usedHints[0]': 'should be object'
