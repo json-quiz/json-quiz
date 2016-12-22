@@ -8,9 +8,9 @@
     },
     "tries": {
       "type": "number",
-      "minimum": 1,
+      "minimum": 0,
       "description": "The number of answers submitted for the question and the current user attempt",
-      "default": 1
+      "default": 0
     },
     "score": {
       "type": "number",
