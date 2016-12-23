@@ -11,10 +11,12 @@
           "enum": ["application/x.choice+json"]
         },
         "random": {
-          "type": "boolean"
+          "type": "boolean",
+          "default": false
         },
         "multiple": {
-          "type": "boolean"
+          "type": "boolean",
+          "default": false
         },
          "choices": {
           "type": "array",
@@ -41,8 +43,7 @@
                 "type": "string"
               }
             },
-            "required": ["id", "score"],
-            "additionalProperties": false
+            "required": ["id", "score"]
           }
         }
       },
