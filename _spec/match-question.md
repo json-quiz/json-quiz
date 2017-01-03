@@ -11,17 +11,31 @@ layout: spec
 
   * must satisfy the [base-question](base-question.html) schema
 
+  * must have a *random* property
+
+  * must have a *penalty* property
+
   * must have a *firstSet* property
 
   * must have a *secondSet* property
 
   * may have a *solutions* property
 
+* The *random* property:
+
+  * must be a boolean
+
+* The *penalty* property:
+
+  * must be a number
+
+  * must be greater than 0
+
 * The *firstSet* property:
 
   * must be an array
 
-  * must contain at least two items
+  * must contain at least one item
 
   * Each item:
 
@@ -33,7 +47,7 @@ layout: spec
 
   * must be an array
 
-  * must contain at least two items
+  * must contain at least one item
 
   * Each item:
 
@@ -57,6 +71,8 @@ layout: spec
 
     * must have a *score* property
 
+    * may have a *feedback* property
+
   * The *firstId* property:
 
     * must be a string
@@ -79,6 +95,8 @@ layout: spec
   "id": "1",
   "type": "application/x.match+json",
   "content": "Question ?",
+  "random": false,
+  "penalty": 0,
   "firstSet": [
     {
       "id": "2",
@@ -105,6 +123,7 @@ layout: spec
   ]
 }
 
+
 {% endhighlight %}
 
 ### Solutions
@@ -115,6 +134,8 @@ layout: spec
   "id": "1",
   "type": "application/x.match+json",
   "content": "Question ?",
+  "random": false,
+  "penalty": 0,
   "firstSet": [
     {
       "id": "2",
@@ -143,7 +164,8 @@ layout: spec
     {
       "firstId": "2",
       "secondId": "5",
-      "score": 2
+      "score": 2,
+      "feedback": "Lorem ipsum"
     },
     {
       "firstId": "3",
@@ -152,6 +174,60 @@ layout: spec
     }
   ]
 }
+
+
+{% endhighlight %}
+
+### With solution feedback
+
+{% highlight json %}
+
+{
+  "id": "1",
+  "type": "application/x.match+json",
+  "content": "Question ?",
+  "random": false,
+  "penalty": 0,
+  "firstSet": [
+    {
+      "id": "2",
+      "type": "text/plain",
+      "data": "Item A"
+    },
+    {
+      "id": "3",
+      "type": "text/plain",
+      "data": "Item B"
+    }
+  ],
+  "secondSet": [
+    {
+      "id": "4",
+      "type": "text/plain",
+      "data": "Item C"
+    },
+    {
+      "id": "5",
+      "type": "text/plain",
+      "data": "Item D"
+    }
+  ],
+  "solutions": [
+    {
+      "firstId": "2",
+      "secondId": "5",
+      "score": 2,
+      "feedback": "Lorem ipsum"
+    },
+    {
+      "firstId": "3",
+      "secondId": "4",
+      "score": 0.5,
+      "feedback": "Dolor sit amet"
+    }
+  ]
+}
+
 
 {% endhighlight %}
 
@@ -162,6 +238,8 @@ layout: spec
 {
   "id": "1",
   "type": "application/x.match+json",
+  "random": false,
+  "penalty": 0,
   "meta": {
     "authors": [
       {
@@ -233,6 +311,7 @@ layout: spec
   ],
   "feedback": "Lorem ipsum dolor sit amet."
 }
+
 
 {% endhighlight %}
 

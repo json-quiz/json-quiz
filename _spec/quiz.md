@@ -17,6 +17,8 @@ layout: spec
 
   * must have a *steps* property
 
+  * may have a *parameters* property
+
   * may have a *meta* property
 
 * The *id* property:
@@ -26,6 +28,10 @@ layout: spec
 * The *title* property:
 
   * must be a string
+
+* The *parameters* property:
+
+  * must be an object
 
 * The *steps* property:
 
@@ -106,6 +112,73 @@ layout: spec
     ],
     "created": "2015-06-04",
     "license": "CC"
+  },
+  "steps": [
+    {
+      "id": "1",
+      "items": [
+        {
+          "id": "1",
+          "content": "Question ?",
+          "type": "application/x.choice+json",
+          "choices": [
+            {
+              "id": "1",
+              "type": "image/png",
+              "url": "http://domain.com/image-1.png"
+            },
+            {
+              "id": "2",
+              "type": "image/png",
+              "data": "http://domain.com/image-2.png"
+            },
+            {
+              "id": "3",
+              "type": "image/png",
+              "data": "http://domain.com/image-3.png"
+            }
+          ],
+          "random": true,
+          "multiple": true
+        }
+      ]
+    }
+  ]
+}
+
+{% endhighlight %}
+
+### With parameters
+
+{% highlight json %}
+
+{
+  "id": "1",
+  "title": "quiz title",
+  "meta": {
+    "authors": [
+      {
+        "name": "John Doe",
+        "email": "john@mail.com"
+      }
+    ],
+    "created": "2015-06-04",
+    "license": "CC"
+  },
+  "parameters": {
+    "type": "summative",
+    "anonymizeAttempts": false,
+    "interruptible": true,
+    "duration": 0,
+    "maxAttempts": 5,
+    "randomOrder": "once",
+    "randomPick": "never",
+    "pick": 0,
+    "showMetadata": true,
+    "showStatistics": false,
+    "showFullCorrection": true,
+    "showCorrectionAt": "validation",
+    "showScoreAt": "correction"
   },
   "steps": [
     {

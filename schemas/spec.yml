@@ -1,7 +1,12 @@
 - title: Metadata
   doc: metadata
+
 - title: Content
   doc: content
+
+- title: Category
+  doc: category
+
 - title: Questions
   docs:
     - title: Base question
@@ -14,13 +19,21 @@
       doc: graphic-question
     - title: Match question
       doc: match-question
+    - title: Set question
+      doc: set-question
+    - title: Pair question
+      doc: pair-question
     - title: Words question
       doc: words-question
     - title: Sort question
       doc: sort-question
     - title: Open question
       doc: open-question
+
 - title: Answers
+  doc: answers
+
+- title: Answer data
   docs:
     - title: Choice answer
       doc: choice-answer
@@ -28,16 +41,30 @@
       doc: cloze-answer
     - title: Match answer
       doc: match-answer
+    - title: Set answer
+      doc: set-answer
     - title: Words answer
       doc: words-answer
+    - title: Open answer
+      doc: open-answer
+
 - title: Quiz
   docs:
     - title: Quiz
       doc: quiz
     - title: Step
       doc: step
+
+- title: Attempt
+  docs:
+    - title: Paper
+      doc: paper
+    - title: Answer
+      doc: answer
+
 - title: Hint
   doc: hint
+
 - title: Misc
   docs:
     - title: Keyword

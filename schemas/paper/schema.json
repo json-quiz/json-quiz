@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "description": "A paper represents an user attempt to a quiz",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "The unique identifier of the paper"
+    },
+    "number": {
+      "type": "number",
+      "description": "An incremental number that represents the attempts of the user",
+      "minimum": 0,
+      "exclusiveMinimum": true,
+      "default": 1
+    },
+    "user": {
+      "type": "object",
+      "description": "The user who submitted the answers",
+      "properties": {
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": ["name"]
+    },
+    "score": {
+      "type": "number",
+      "description": "The score obtained by the user for his attempt"
+    },
+    "startDate": {
+      "type": "string",
+      "description": "The date the user started the test"
+    },
+    "endDate": {
+      "type": "string",
+      "description": "The date the user finished the test"
+    },
+    "finished": {
+      "type": "boolean",
+      "description": "Did the user finish his attempt?",
+      "default": false
+    },
+    "structure": {
+      "type": "array",
+      "description": "The test structure generated using the various generation options (eg. random, pick a set of questions)",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The ID of a step"
+          },
+          "items": {
+            "type": "array",
+            "uniqueItems": true,
+            "description": "A list of item IDs to display",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": ["id", "items"]
+      }
+    },
+    "answers": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "$ref": "http://json-quiz.github.io/json-quiz/schemas/answer/schema.json"
+      }
+    }
+  },
+  "required": ["id", "startDate", "structure"]
+}

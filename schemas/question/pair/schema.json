@@ -8,32 +8,41 @@
       "type": "object",
       "properties": {
         "type": {
-          "enum": ["application/x.choice+json"]
+          "enum": ["application/x.pair+json"]
         },
         "random": {
-          "type": "boolean",
-          "default": false
+          "type": "boolean"
         },
-        "multiple": {
-          "type": "boolean",
-          "default": false
+        "penalty": {
+          "type": "number"
         },
-         "choices": {
+        "left": {
           "type": "array",
-          "minItems": 2,
+          "minItems": 1,
           "uniqueItems": true,
           "items": {
             "$ref": "http://json-quiz.github.io/json-quiz/schemas/content/schema.json"
           }
         },
-         "solutions": {
+        "right": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "http://json-quiz.github.io/json-quiz/schemas/content/schema.json"
+          }
+        },
+        "solutions": {
           "type": "array",
           "minItems": 1,
           "uniqueItems": true,
           "items": {
             "type": "object",
             "properties": {
-              "id": {
+              "leftId": {
+                "type": "string"
+              },
+              "rightId": {
                 "type": "string"
               },
               "score": {
@@ -43,11 +52,11 @@
                 "type": "string"
               }
             },
-            "required": ["id", "score"]
+            "required": ["leftId", "rightId", "score"]
           }
         }
       },
-      "required": ["random", "multiple", "choices"]
+      "required": ["random", "penalty", "left", "right"]
     }
   ]
 }

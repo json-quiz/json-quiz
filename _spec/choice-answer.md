@@ -13,15 +13,9 @@ layout: spec
 
   * Each answer:
 
-    * must be an object
+    * must be a string
 
     * must be unique
-
-    * must have a *choiceId* property
-
-    * The *choiceId* property:
-
-      * must be a string
 
 ## Examples
 
@@ -30,12 +24,7 @@ layout: spec
 {% highlight json %}
 
 [
-  {
-    "choiceId": "41"
-  },
-  {
-    "choiceId": "62"
-  }
+  "41", "42"
 ]
 
 

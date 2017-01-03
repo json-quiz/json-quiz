@@ -18,6 +18,5 @@
       "type": "string"
     }
   },
-  "required": ["text", "caseSensitive", "score"],
-  "additionalProperties": false
+  "required": ["text", "caseSensitive", "score"]
 }

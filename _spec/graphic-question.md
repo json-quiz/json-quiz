@@ -139,7 +139,6 @@ layout: spec
   "id": "1",
   "type": "application/x.graphic+json",
   "content": "Question ?",
-  "description":"Question description...",
   "image": {
     "id": "12",
     "type": "image/jpeg",
@@ -164,7 +163,6 @@ layout: spec
   "id": "1",
   "type": "application/x.graphic+json",
   "content": "Question ?",
-  "description":"Question description...",
   "meta": {
     "authors": [
       {
@@ -228,7 +226,6 @@ layout: spec
   "id": "1",
   "type": "application/x.graphic+json",
   "content": "Where is Charlie ?",
-  "description":"Find Charlie in the image below...",
   "image": {
     "id": "12",
     "meta": {
@@ -269,7 +266,6 @@ layout: spec
   "id": "1",
   "type": "application/x.graphic+json",
   "content": "Question ?",
-  "description":"Question description...",
   "meta": {
     "authors": [
       {

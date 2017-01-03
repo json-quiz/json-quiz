@@ -14,6 +14,79 @@
     "meta": {
       "$ref": "http://json-quiz.github.io/json-quiz/schemas/metadata/schema.json"
     },
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "enum": ["formative", "evaluative", "summative"],
+          "description": "Hide the name of the users who have passed the quiz in the results",
+          "default": "summative"
+        },
+        "anonymizeAttempts": {
+          "type": "boolean",
+          "description": "Hide the name of the users who have passed the quiz in the results",
+          "default": false
+        },
+        "interruptible": {
+          "type": "boolean",
+          "description": "Is it possible to stop the quiz and continue it later ?",
+          "default": false
+        },
+        "duration": {
+          "type": "number",
+          "minimum": 0,
+          "description": "The allowed duration to pass the quiz",
+          "default": 0
+        },
+        "maxAttempts": {
+          "type": "number",
+          "minimum": 0,
+          "description": "The number of times a user can pass the quiz. If 0, there is no limit",
+          "default": 0
+        },
+        "randomOrder": {
+          "enum": ["once", "never", "always"],
+          "description": "Randomize order of steps in the quiz",
+          "default": "never"
+        },
+        "randomPick": {
+          "enum": ["once", "never", "always"],
+          "description": "Pick a random sub set of steps in the quiz",
+          "default": "never"
+        },
+        "pick": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Number of steps to use when a user pass the quiz. If 0, all the steps are used",
+          "default": 0
+        },
+        "showMetadata": {
+          "type": "boolean",
+          "description": "Display detail information about the exercise",
+          "default": true
+        },
+        "showStatistics": {
+          "type": "boolean",
+          "description": "Display statistics about what users have answered",
+          "default": false
+        },
+        "showFullCorrection": {
+          "type": "boolean",
+          "description": "Display the full correction with expected answers",
+          "default": true
+        },
+        "showCorrectionAt": {
+          "enum": ["validation", "lastAttempt", "date", "never"],
+          "description": "The point at which users can view the correction of their attempt to the quiz",
+          "default": "validation"
+        },
+        "showScoreAt": {
+          "enum": ["validation", "correction", "never"],
+          "description": "The point at which users can view the score of their attempt to the quiz",
+          "default": "correction"
+        }
+      }
+    },
     "steps": {
       "type": "array",
       "uniqueItems": true,

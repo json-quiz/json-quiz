@@ -5,10 +5,13 @@
   "items": {
     "type": "object",
     "properties": {
-      "choiceId": {
+      "itemId": {
+        "type": "string"
+      },
+      "setId": {
         "type": "string"
       }
     },
-    "required": ["choiceId"]
+    "required": ["itemId", "setId"]
   }
 }

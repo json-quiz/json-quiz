@@ -9,13 +9,7 @@ layout: spec
 
 * A words answer:
 
-  * must be an object
-
-  * must have a *text* property
-
-  * The *text* property:
-
-    * must be a string
+  * must be a string
 
 ## Examples
 
@@ -23,10 +17,7 @@ layout: spec
 
 {% highlight json %}
 
-{
-  "text": "Lorem ipsum dolor sit amet"
-}
-
+"Lorem ipsum dolor sit amet"
 
 {% endhighlight %}
 

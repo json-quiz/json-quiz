@@ -1,13 +1,13 @@
 ---
-title: Match answer
+title: Set answer
 layout: spec
 ---
 
-# Match answer
+# Set answer
 
 ## Schema
 
-* A match answer:
+* A set answer:
 
   * must be an array
 
@@ -17,28 +17,28 @@ layout: spec
 
     * must be unique
 
-    * must have a *firstId* property
+    * must have a *itemId* property
 
-    * must have a *secondId* property
+    * must have a *setId* property
 
-    * The *firstId* property:
+    * The *itemId* property:
 
       * must be a string
 
-    * The *secondId* property:
+    * The *setId* property:
 
       * must be a string
 
 ## Examples
 
-### Match answer
+### Set answer
 
 {% highlight json %}
 
 [
   {
-    "firstId": "1",
-    "secondId": "2"
+    "itemId": "1",
+    "setId": "2"
   }
 ]
 

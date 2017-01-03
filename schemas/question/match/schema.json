@@ -10,9 +10,20 @@
         "type": {
           "enum": ["application/x.match+json"]
         },
+        "random": {
+          "type": "boolean",
+          "description": "Randomize firstSet and secondSet items",
+          "default": false
+        },
+        "penalty": {
+          "type": "number",
+          "description": "Penalty to apply for each incorrect association",
+          "minimum": 0,
+          "default": 0
+        },
         "firstSet": {
           "type": "array",
-          "minItems": 2,
+          "minItems": 1,
           "uniqueItems": true,
           "items": {
             "$ref": "http://json-quiz.github.io/json-quiz/schemas/content/schema.json"
@@ -20,7 +31,7 @@
         },
         "secondSet": {
           "type": "array",
-          "minItems": 2,
+          "minItems": 1,
           "uniqueItems": true,
           "items": {
             "$ref": "http://json-quiz.github.io/json-quiz/schemas/content/schema.json"
@@ -41,6 +52,9 @@
               },
               "score": {
                 "type": "number"
+              },
+              "feedback": {
+                "type": "string"
               }
             },
             "required": [
@@ -51,7 +65,7 @@
           }
         }
       },
-      "required": ["firstSet", "secondSet"]
+      "required": ["random", "penalty", "firstSet", "secondSet"]
     }
   ]
 }

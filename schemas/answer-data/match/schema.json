@@ -5,13 +5,13 @@
   "items": {
     "type": "object",
     "properties": {
-      "firstSetId": {
+      "firstId": {
         "type": "string"
       },
-      "secondSetId": {
+      "secondId": {
         "type": "string"
       }
     },
-    "required": ["firstSetId", "secondSetId"]
+    "required": ["firstId", "secondId"]
   }
 }

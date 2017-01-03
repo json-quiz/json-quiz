@@ -14,6 +14,5 @@
       "exclusiveMinimum": true
     }
   },
-  "required": ["id"],
-  "additionalProperties": false
+  "required": ["id"]
 }

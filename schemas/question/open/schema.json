@@ -17,7 +17,7 @@
         "maxLength": {
           "type": "number",
           "minimum": 0,
-          "exclusiveMinimum": true,
+          "default": 0,
           "description": "The maximum length of the answer"
         }
       },

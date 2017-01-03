@@ -17,6 +17,8 @@ layout: spec
 
   * may have a *meta* property
 
+  * may have a *parameters* property
+
 * The *id* property:
 
   * must be a string
@@ -30,6 +32,10 @@ layout: spec
     * must be unique
 
     * must satisfy the [content](content.html) or questions schemas
+
+* The *parameters* property:
+
+  * must be an object
 
 * The *meta* property:
 
@@ -122,6 +128,8 @@ layout: spec
       "id": "2",
       "type": "application/x.match+json",
       "content": "Question 2 ?",
+      "random": false,
+      "penalty": 2,
       "firstSet": [
         {
           "id": "4",
@@ -149,6 +157,7 @@ layout: spec
     }
   ]
 }
+
 
 {% endhighlight %}
 
@@ -192,6 +201,29 @@ layout: spec
       ],
       "random": true,
       "multiple": true
+    }
+  ]
+}
+
+{% endhighlight %}
+
+### With parameters
+
+{% highlight json %}
+
+{
+  "id": "1",
+  "parameters": {
+    "maxAttempts": 0,
+    "randomOrder": "once",
+    "randomPick": "once",
+    "pick": 1
+  },
+  "items": [
+    {
+      "id": "1",
+      "type": "text/html",
+      "data": "<p>Lorem ipsum dolor <em>sit</em> amet."
     }
   ]
 }

@@ -19,9 +19,7 @@ layout: spec
 
   * may have a *title* property
 
-  * may have a *instruction* property
-
-  * may have a *info* property
+  * may have a *description* property
 
   * may have a *meta* property
 
@@ -51,11 +49,7 @@ layout: spec
 
   * must be a string
 
-* The *info* property:
-
-  * must be a string
-
-* The *instruction* property:
+* The *description* property:
 
   * must be a string
 
@@ -67,8 +61,6 @@ layout: spec
 
   * must be an array
 
-  * must contain at least one object
-
   * Each object:
 
     * must satisfy the [content](content.html) schema
@@ -79,8 +71,6 @@ layout: spec
 
   * must be an array
 
-  * must contain at least one resource
-
   * Each resource:
 
     * must satisfy the [content](content.html) schema
@@ -90,8 +80,6 @@ layout: spec
 * The *hints* property:
 
   * must be an array
-
-  * must contain at least one hint
 
   * Each hint:
 
@@ -168,7 +156,11 @@ layout: spec
       }
     ],
     "license": "CC",
-    "created": "2014-06-23"
+    "created": "2014-06-23",
+    "category": {
+      "id": "1",
+      "name": "Category A"
+    }
   },
   "title": "Question ?"
 }
@@ -277,8 +269,7 @@ layout: spec
   "type": "application/x.type+json",
   "title": "Question ?",
   "content": "this is the content of the question",
-  "info": "Lorem ipsum dolor sit amet",
-  "instruction": "Lorem ipsum dolor sit amet"
+  "description": "Lorem ipsum dolor sit amet"
 }
 
 {% endhighlight %}
