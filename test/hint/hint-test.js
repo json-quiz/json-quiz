@@ -48,12 +48,8 @@ describe('Hint', function () {
       });
 
       it('must be greater than zero', function () {
-        assert.hasErrors('penalty-is-less-than-zero', {
-          '.penalty': 'should be > 0'
-        });
-
-        assert.hasErrors('penalty-equals-zero', {
-          '.penalty': 'should be > 0'
+        assert.hasError('penalty-is-less-than-zero', {
+          '.penalty': 'should be >= 0'
         });
       });
     });

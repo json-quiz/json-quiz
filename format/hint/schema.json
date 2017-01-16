@@ -10,8 +10,7 @@
     },
     "penalty": {
       "type": "number",
-      "minimum": 0,
-      "exclusiveMinimum": true
+      "minimum": 0
     }
   },
   "required": ["id"]
