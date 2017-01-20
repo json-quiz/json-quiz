@@ -72,6 +72,9 @@
           },
           {
             "$ref": "http://json-quiz.github.io/json-quiz/schemas/question/open/schema.json"
+          },
+          {
+            "$ref": "http://json-quiz.github.io/json-quiz/schemas/question/set/schema.json"
           }
         ]
       }
