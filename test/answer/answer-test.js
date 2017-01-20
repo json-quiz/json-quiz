@@ -23,6 +23,10 @@ describe('Answer', function () {
         assert.isValid('with-score');
       });
 
+      it('may have a *feedback* property', function () {
+        assert.isValid('with-feedback');
+      });
+
       it('may have a *data* property', function () {
         assert.isValid('with-used-hints');
       });
@@ -51,6 +55,14 @@ describe('Answer', function () {
         it('must be a number', function () {
           assert.hasError('score-is-not-a-number', {
             '.score': 'should be number'
+          });
+        });
+      });
+
+      describe('The *feedback* property', function () {
+        it('must be a string', function () {
+          assert.hasError('feedback-is-not-a-string', {
+            '.feedback': 'should be string'
           });
         });
       });
@@ -91,6 +103,7 @@ describe('Answer', function () {
     assert.areValid([
       'with-tries',
       'with-score',
+      'with-feedback',
       'with-used-hints',
       'with-data',
       'full'

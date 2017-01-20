@@ -16,6 +16,11 @@
       "type": "number",
       "description": "The score obtained by the user for his answer"
     },
+    "feedback": {
+      "type": "string",
+      "description": "A custom feedback written by a quiz creator",
+      "default": null
+    },
     "usedHints": {
       "type": "array",
       "uniqueItems": true,
