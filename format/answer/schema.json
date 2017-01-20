@@ -2,6 +2,10 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
+    "id": {
+      "type": "string",
+      "description": "The ID of the answer"
+    },
     "questionId": {
       "type": "string",
       "description": "The ID of the question that is answered"
@@ -47,5 +51,5 @@
       ]
     }
   },
-  "required": ["questionId"]
+  "required": ["id", "questionId"]
 }

@@ -9,6 +9,12 @@ describe('Answer', function () {
         });
       });
 
+      it('must have an *id* property', function () {
+        assert.hasError('no-id', {
+          '.id': 'property .id is required'
+        });
+      });
+
       it('must have a *questionId* property', function () {
         assert.hasError('no-question-id', {
           '.questionId': 'property .questionId is required'
@@ -33,6 +39,14 @@ describe('Answer', function () {
 
       it('may have a *usedHints* property', function () {
         assert.isValid('with-data');
+      });
+
+      describe('The *id* property', function () {
+        it('must be a string', function () {
+          assert.hasError('id-is-not-a-string', {
+            '.id': 'should be string'
+          });
+        });
       });
 
       describe('The *questionId* property', function () {
