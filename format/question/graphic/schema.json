@@ -25,6 +25,9 @@
             },
             "radius": {
               "type": "number"
+            },
+            "color": {
+              "type": "string"
             }
           },
           "required": ["id", "shape", "center", "radius"]

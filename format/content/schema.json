@@ -33,8 +33,7 @@
       "type": "object",
       "properties": {
         "url": {
-          "type": "string",
-          "format": "uri"
+          "type": "string"
         }
       },
       "required": ["url"]

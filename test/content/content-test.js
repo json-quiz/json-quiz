@@ -61,12 +61,6 @@ describe('Content', function () {
           '.url': 'should be string'
         });
       });
-
-      it('must hold an URL', function () {
-        assert.hasError('url-is-not-valid', {
-          '.url': 'should match format uri'
-        });
-      });
     });
 
     describe('The *data* property', function () {
