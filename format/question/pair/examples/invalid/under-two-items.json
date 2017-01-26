@@ -4,17 +4,12 @@
   "content": "Question ?",
   "random": false,
   "penalty": 0.5,
-  "left": [],
-  "right": [
+  "items": [
     {
-      "id": "4",
+      "id": "3",
       "type": "text/plain",
-      "data": "Item X"
-    },
-    {
-      "id": "7",
-      "type": "text/plain",
-      "data": "Item Y"
+      "data": "Item A",
+      "coordinates": [0, 1]
     }
   ]
 }

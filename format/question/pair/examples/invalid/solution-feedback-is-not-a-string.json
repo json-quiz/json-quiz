@@ -4,11 +4,12 @@
   "content": "Question ?",
   "random": false,
   "penalty": 0.5,
-  "left": [
+  "items": [
     {
       "id": "3",
       "type": "text/plain",
-      "data": "Item A"
+      "data": "Item A",
+      "coordinates": [0, 1]
     },
     {
       "id": "6",
@@ -16,30 +17,11 @@
       "data": "Item B"
     }
   ],
-  "right": [
-    {
-      "id": "4",
-      "type": "text/plain",
-      "data": "Item X"
-    },
-    {
-      "id": "7",
-      "type": "text/plain",
-      "data": "Item Y"
-    }
-  ],
   "solutions": [
     {
-      "leftId": "3",
-      "rightId": "4",
+      "itemIds": ["3","6"],
       "score": 1.5,
-      "feedback": ["Lorem ipsum"]
-    },
-    {
-      "leftId": "6",
-      "rightId": "7",
-      "score": 1,
-      "feedback": "Lorem ipsum 2"
+      "feedback": ["not a string"]
     }
   ]
 }

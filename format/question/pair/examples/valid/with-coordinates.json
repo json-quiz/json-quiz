@@ -4,28 +4,16 @@
   "content": "Question ?",
   "random": false,
   "penalty": 0.5,
-  "left": [
+  "items": [
     {
       "id": "3",
       "type": "text/plain",
       "data": "Item A"
     },
     {
-      "id": "3",
+      "id": "6",
       "type": "text/plain",
-      "data": "Item A"
-    }
-  ],
-  "right": [
-    {
-      "id": "4",
-      "type": "text/plain",
-      "data": "Item X"
-    },
-    {
-      "id": "7",
-      "type": "text/plain",
-      "data": "Item Y"
+      "data": "Item B"
     }
   ]
 }

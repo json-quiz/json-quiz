@@ -11,15 +11,9 @@ describe('Pair question', function () {
         });
       });
 
-      it('must have a *left* property', function () {
-        assert.hasError('no-left', {
-          '.left': 'property .left is required'
-        });
-      });
-
-      it('must have a *right* property', function () {
-        assert.hasError('no-right', {
-          '.right': 'property .right is required'
+      it('must have a *items* property', function () {
+        assert.hasError('no-items', {
+          '.items': 'property .items is required'
         });
       });
 
@@ -40,61 +34,37 @@ describe('Pair question', function () {
       });
     });
 
-    describe('The *left* property', function () {
+    describe('The *items* property', function () {
       it('must be an array', function () {
-        assert.hasError('left-is-not-an-array', {
-          '.left': 'should be array'
+        assert.hasError('items-is-not-an-array', {
+          '.items': 'should be array'
         });
       });
 
-      it('must contain at least one item', function () {
-        assert.hasError('under-one-left-item', {
-          '.left': 'should NOT have less than 1 items'
+      it('must contain at least two item', function () {
+        assert.hasError('under-two-items', {
+          '.items': 'should NOT have less than 2 items'
         });
       });
 
       describe('Each item', function () {
         it('must satisfy the #content# schema', function () {
-          assert.hasErrors('left-item-not-satisfying-content-schema', {
-            '.left[0].data': 'should be string',
-            '.left[1].id': 'property .id is required'
+          assert.hasErrors('item-not-satisfying-content-schema', {
+            '.items[0].data': 'should be string',
+            '.items[1].id': 'property .id is required'
           });
         });
 
         it('must be unique', function () {
-          assert.hasError('duplicate-left-item', {
-            '.left': 'items ## 0 and 1 are duplicate'
-          });
-        })
-      });
-    });
-
-    describe('The *right* property', function () {
-      it('must be an array', function () {
-        assert.hasError('right-is-not-an-array', {
-          '.right': 'should be array'
-        });
-      });
-
-      it('must contain at least one item', function () {
-        assert.hasError('under-one-right-item', {
-          '.right': 'should NOT have less than 1 items'
-        });
-      });
-
-      describe('Each item', function () {
-        it('must satisfy the #content# schema', function () {
-          assert.hasErrors('right-item-not-satisfying-content-schema', {
-            '.right[0].data': 'should be string',
-            '.right[1].id': 'property .id is required'
+          assert.hasError('duplicate-item', {
+            '.items': 'items ## 0 and 1 are duplicate'
           });
         });
 
-        it('must be unique', function () {
-          assert.hasError('duplicate-right-item', {
-            '.right': 'items ## 0 and 1 are duplicate'
-          });
-        })
+        it('may have a *coordinates* property', function () {
+          assert.isValid('with-coordinates')
+        });
+
       });
     });
 
@@ -128,15 +98,9 @@ describe('Pair question', function () {
           });
         });
 
-        it('must have a *leftId* property', function () {
-          assert.hasError('no-solution-left-id', {
-            '.solutions[0].leftId': 'property .leftId is required'
-          });
-        });
-
-        it('must have a *rightId* property', function () {
-          assert.hasError('no-solution-right-id', {
-            '.solutions[0].rightId': 'property .rightId is required'
+        it('must have a *itemIds* property', function () {
+          assert.hasError('solution-no-itemIds', {
+            '.solutions[0].itemIds': 'property .itemIds is required'
           });
         });
 
@@ -151,20 +115,21 @@ describe('Pair question', function () {
         });
       });
 
-      describe('The *leftId* property', function () {
-        it('must be a string', function () {
-          assert.hasError('solution-left-id-is-not-a-string', {
-            '.solutions[0].leftId': 'should be string'
+      describe('The *itemIds* property', function () {
+        it('must be a array', function () {
+          assert.hasError('solution-itemIds-is-not-an-array', {
+            '.solutions[0].itemIds': 'should be array'
           });
         });
-      });
 
-      describe('The *rightId* property', function () {
-        it('must be a string', function () {
-          assert.hasError('solution-right-id-is-not-a-string', {
-            '.solutions[0].rightId': 'should be string'
+        describe('Each itemIds', function () {
+          it('must contain at least one item', function () {
+            assert.hasError('itemIds-under-one-elements', {
+              '.solutions[0].itemIds': 'should NOT have less than 1 items'
+            });
           });
         });
+
       });
 
       describe('The *score* property', function () {
@@ -188,6 +153,7 @@ describe('Pair question', function () {
   describe('Examples', function () {
     assert.areValid([
       'basic',
+      'with-coordinates',
       'with-solutions',
       'with-feedback'
     ]);

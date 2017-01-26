@@ -3,28 +3,17 @@
   "type": "application/x.pair+json",
   "content": "Question ?",
   "random": false,
-  "left": [
+  "items": [
     {
       "id": "3",
       "type": "text/plain",
-      "data": "Item A"
+      "data": "Item A",
+      "coordinates": [0, 1]
     },
     {
       "id": "6",
       "type": "text/plain",
       "data": "Item B"
-    }
-  ],
-  "right": [
-    {
-      "id": "4",
-      "type": "text/plain",
-      "data": "Item X"
-    },
-    {
-      "id": "7",
-      "type": "text/plain",
-      "data": "Item Y"
     }
   ]
 }

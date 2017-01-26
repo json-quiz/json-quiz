@@ -4,11 +4,12 @@
   "content": "Question ?",
   "random": false,
   "penalty": 0.5,
-  "left": [
+  "items": [
     {
       "id": "3",
       "type": "text/plain",
-      "data": "Item A"
+      "data": "Item A",
+      "coordinates": [0, 1]
     },
     {
       "id": "6",
@@ -16,5 +17,9 @@
       "data": "Item B"
     }
   ],
-  "right": "not-an-array"
+  "solutions": [
+    {
+      "score": 1.5
+    }
+  ]
 }
