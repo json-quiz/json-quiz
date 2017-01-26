@@ -11,6 +11,12 @@ describe('Pair question', function () {
         });
       });
 
+      it('must have a *rows* property', function () {
+        assert.hasError('no-rows', {
+          '.rows': 'property .rows is required'
+        });
+      });
+
       it('must have a *items* property', function () {
         assert.hasError('no-items', {
           '.items': 'property .items is required'
@@ -31,6 +37,20 @@ describe('Pair question', function () {
 
       it('may have a *solutions* property', function () {
         assert.isValid('with-solutions');
+      });
+    });
+
+    describe('The *rows* property', function () {
+      it('must be a number', function () {
+        assert.hasError('rows-is-not-a-number', {
+          '.rows': 'should be number'
+        });
+      });
+
+      it('must be greater than 1', function () {
+        assert.hasError('rows-is-less-than-one', {
+          '.rows': 'should be >= 1'
+        });
       });
     });
 

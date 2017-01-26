@@ -3,6 +3,7 @@
   "type": "application/x.pair+json",
   "content": "Question ?",
   "random": false,
+  "rows": 1,
   "items": [
     {
       "id": "3",

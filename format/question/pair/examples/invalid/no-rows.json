@@ -4,7 +4,6 @@
   "content": "Question ?",
   "random": false,
   "penalty": 0.5,
-  "rows": 1,
   "items": [
     {
       "id": "3",
@@ -13,10 +12,9 @@
       "coordinates": [0, 1]
     },
     {
-      "id": "3",
+      "id": "6",
       "type": "text/plain",
-      "data": "Item A",
-      "coordinates": [0, 1]
+      "data": "Item B"
     }
   ]
 }

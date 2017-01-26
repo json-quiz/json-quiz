@@ -37,6 +37,11 @@
             }
           }
         },
+        "rows": {
+          "type": "number",
+          "minimum": 1,
+          "description": "The number of rows to display when the question is played"
+        },
         "solutions": {
           "type": "array",
           "minItems": 1,
@@ -68,7 +73,7 @@
           }
         }
       },
-      "required": ["random", "penalty", "items"]
+      "required": ["random", "penalty", "items", "rows"]
     }
   ]
 }

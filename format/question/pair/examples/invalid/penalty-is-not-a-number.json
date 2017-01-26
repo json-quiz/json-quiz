@@ -4,6 +4,7 @@
   "content": "Question ?",
   "random": false,
   "penalty": [0.5],
+  "rows": 1,
   "items": [
     {
       "id": "3",

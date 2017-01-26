@@ -3,5 +3,6 @@
   "type": "application/x.pair+json",
   "content": "Question ?",
   "random": false,
-  "penalty": 0.5
+  "penalty": 0.5,
+  "rows": 1
 }

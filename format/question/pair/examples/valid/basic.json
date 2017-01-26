@@ -4,12 +4,12 @@
   "content": "Question ?",
   "random": false,
   "penalty": 0.5,
+  "rows": 1,
   "items": [
     {
       "id": "3",
       "type": "text/plain",
-      "data": "Item A",
-      "coordinates": [0, 1]
+      "data": "Item A"
     },
     {
       "id": "6",
