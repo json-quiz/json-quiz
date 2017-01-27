@@ -43,6 +43,8 @@
       doc: match-answer
     - title: Set answer
       doc: set-answer
+    - title: Pair answer
+      doc: pair-answer
     - title: Words answer
       doc: words-answer
     - title: Open answer

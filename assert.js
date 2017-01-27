@@ -20,6 +20,7 @@ var resolved = {
   'match-question': 'question/match',
   'set-answer': 'answer-data/set',
   'set-question': 'question/set',
+  'pair-answer': 'answer-data/pair',
   'pair-question': 'question/pair',
   'sort-question': 'question/sort',
   'words-answer': 'answer-data/words',
