@@ -15,6 +15,7 @@ var resolved = {
   'base-question': 'question/base',
   'choice-answer': 'answer-data/choice',
   'choice-question': 'question/choice',
+  'graphic-answer': 'answer-data/graphic',
   'graphic-question': 'question/graphic',
   'match-answer': 'answer-data/match',
   'match-question': 'question/match',
