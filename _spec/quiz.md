@@ -178,7 +178,8 @@ layout: spec
     "showStatistics": false,
     "showFullCorrection": true,
     "showCorrectionAt": "validation",
-    "showScoreAt": "correction"
+    "showScoreAt": "correction",
+    "showFeedback": true
   },
   "steps": [
     {

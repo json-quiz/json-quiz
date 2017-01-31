@@ -25,6 +25,9 @@
             },
             "radius": {
               "type": "number"
+            },
+            "color": {
+              "type": "string"
             }
           },
           "required": ["id", "shape", "center", "radius"]
@@ -45,6 +48,9 @@
               "items": {
                 "$ref": "#/definitions/coord"
               }
+            },
+            "color": {
+              "type": "string"
             }
           },
           "required": ["id", "shape", "coords"]
@@ -64,6 +70,9 @@
               "items": {
                 "$ref": "#/definitions/coord"
               }
+            },
+            "color": {
+              "type": "string"
             }
           },
           "required": ["id", "shape", "coords"]

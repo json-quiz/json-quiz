@@ -11,15 +11,23 @@ layout: spec
 
   * must be an object
 
+  * must have an *id* property
+
   * must have a *questionId* property
 
   * may have a *tries* property
 
   * may have a *score* property
 
+  * may have a *feedback* property
+
   * may have a *data* property
 
   * may have a *usedHints* property
+
+  * The *id* property:
+
+    * must be a string
 
   * The *questionId* property:
 
@@ -32,6 +40,10 @@ layout: spec
   * The *score* property:
 
     * must be a number
+
+  * The *feedback* property:
+
+    * must be a string
 
   * The *usedHints* property:
 
@@ -54,6 +66,7 @@ layout: spec
 {% highlight json %}
 
 {
+  "id": "123",
   "questionId": "1",
   "tries": 2
 }
@@ -66,8 +79,23 @@ layout: spec
 {% highlight json %}
 
 {
+  "id": "123",
   "questionId": "1",
   "score": 0
+}
+
+
+{% endhighlight %}
+
+### With feedback
+
+{% highlight json %}
+
+{
+  "id": "123",
+  "questionId": "1",
+  "score": 1,
+  "feedback": "this really is a bad score dude !"
 }
 
 
@@ -78,6 +106,7 @@ layout: spec
 {% highlight json %}
 
 {
+  "id": "123",
   "questionId": "1",
   "usedHints": [
     {
@@ -95,6 +124,7 @@ layout: spec
 {% highlight json %}
 
 {
+  "id": "123",
   "questionId": "1",
   "data": ["1", "2"]
 }
@@ -107,6 +137,7 @@ layout: spec
 {% highlight json %}
 
 {
+  "id": "123",
   "questionId": "1",
   "score": 5,
   "tries": 2,

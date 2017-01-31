@@ -2,6 +2,10 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
+    "id": {
+      "type": "string",
+      "description": "The ID of the answer"
+    },
     "questionId": {
       "type": "string",
       "description": "The ID of the question that is answered"
@@ -15,6 +19,11 @@
     "score": {
       "type": "number",
       "description": "The score obtained by the user for his answer"
+    },
+    "feedback": {
+      "type": "string",
+      "description": "A custom feedback written by a quiz creator",
+      "default": null
     },
     "usedHints": {
       "type": "array",
@@ -38,9 +47,18 @@
         },
         {
           "$ref": "http://json-quiz.github.io/json-quiz/schemas/answer-data/words/schema.json"
+        },
+        {
+          "$ref": "http://json-quiz.github.io/json-quiz/schemas/answer-data/set/schema.json"
+        },
+        {
+          "$ref": "http://json-quiz.github.io/json-quiz/schemas/answer-data/pair/schema.json"
+        },
+        {
+          "$ref": "http://json-quiz.github.io/json-quiz/schemas/answer-data/graphic/schema.json"
         }
       ]
     }
   },
-  "required": ["questionId"]
+  "required": ["id", "questionId"]
 }

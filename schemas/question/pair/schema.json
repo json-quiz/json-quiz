@@ -11,26 +11,36 @@
           "enum": ["application/x.pair+json"]
         },
         "random": {
-          "type": "boolean"
+          "type": "boolean",
+          "default": false
         },
         "penalty": {
-          "type": "number"
+          "type": "number",
+          "minimum": 0
         },
-        "left": {
+        "items": {
           "type": "array",
-          "minItems": 1,
+          "minItems": 2,
           "uniqueItems": true,
           "items": {
             "$ref": "http://json-quiz.github.io/json-quiz/schemas/content/schema.json"
+          },
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "minItems": 2,
+              "uniqueItems": true,
+              "description": "Item position in a pair if pinned by the author",
+              "items": {
+                "type": "number"
+              }
+            }
           }
         },
-        "right": {
-          "type": "array",
-          "minItems": 1,
-          "uniqueItems": true,
-          "items": {
-            "$ref": "http://json-quiz.github.io/json-quiz/schemas/content/schema.json"
-          }
+        "rows": {
+          "type": "number",
+          "minimum": 1,
+          "description": "The number of rows to display when the question is played"
         },
         "solutions": {
           "type": "array",
@@ -39,11 +49,18 @@
           "items": {
             "type": "object",
             "properties": {
-              "leftId": {
-                "type": "string"
+              "itemIds": {
+                "type": "array",
+                "minItems": 1,
+                "description": "One item and it's an odd",
+                "items": {
+                  "type": "string"
+                }
               },
-              "rightId": {
-                "type": "string"
+              "ordered": {
+                "type": "boolean",
+                "default": false,
+                "description": "If set to true the items order in answer must match the order set by the author"
               },
               "score": {
                 "type": "number"
@@ -52,11 +69,11 @@
                 "type": "string"
               }
             },
-            "required": ["leftId", "rightId", "score"]
+            "required": ["itemIds", "score"]
           }
         }
       },
-      "required": ["random", "penalty", "left", "right"]
+      "required": ["random", "penalty", "items", "rows"]
     }
   ]
 }

@@ -31,7 +31,7 @@
       doc: open-question
 
 - title: Answers
-  doc: answers
+  doc: answer
 
 - title: Answer data
   docs:
@@ -43,6 +43,8 @@
       doc: match-answer
     - title: Set answer
       doc: set-answer
+    - title: Pair answer
+      doc: pair-answer
     - title: Words answer
       doc: words-answer
     - title: Open answer

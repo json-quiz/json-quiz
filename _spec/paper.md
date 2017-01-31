@@ -140,10 +140,12 @@ layout: spec
   ],
   "answers": [
     {
+      "id": "123",
       "questionId": "1",
       "data": "Lorem ipsum"
     },
     {
+      "id": "1234",
       "questionId": "2",
       "data": ["1", "2"]
     }
@@ -247,10 +249,12 @@ layout: spec
   ],
   "answers": [
     {
+      "id": "123",
       "questionId": "1",
       "data": "Lorem ipsum"
     },
     {
+      "id": "1234",
       "questionId": "2",
       "data": ["1", "2"]
     }

@@ -84,6 +84,11 @@
           "enum": ["validation", "correction", "never"],
           "description": "The point at which users can view the score of their attempt to the quiz",
           "default": "correction"
+        },
+        "showFeedback": {
+          "type": "boolean",
+          "description": "Display immediate feedback about his answer to the user",
+          "default": false
         }
       }
     },

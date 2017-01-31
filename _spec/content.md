@@ -33,8 +33,6 @@ layout: spec
 
   * must be a string
 
-  * must hold an URL
-
 * The *data* property:
 
   * must be a string

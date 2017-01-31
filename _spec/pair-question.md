@@ -11,9 +11,9 @@ layout: spec
 
   * must satisfy the [base-question](base-question.html) schema
 
-  * must have a *left* property
+  * must have a *rows* property
 
-  * must have a *right* property
+  * must have a *items* property
 
   * must have a *random* property
 
@@ -21,11 +21,17 @@ layout: spec
 
   * may have a *solutions* property
 
-* The *left* property:
+* The *rows* property:
+
+  * must be a number
+
+  * must be greater than 1
+
+* The *items* property:
 
   * must be an array
 
-  * must contain at least one item
+  * must contain at least two item
 
   * Each item:
 
@@ -33,17 +39,7 @@ layout: spec
 
     * must be unique
 
-* The *right* property:
-
-  * must be an array
-
-  * must contain at least one item
-
-  * Each item:
-
-    * must satisfy the [content](content.html) schema
-
-    * must be unique
+    * may have a *coordinates* property
 
 * The *random* property:
 
@@ -61,21 +57,19 @@ layout: spec
 
     * must be unique
 
-    * must have a *leftId* property
-
-    * must have a *rightId* property
+    * must have a *itemIds* property
 
     * must have a *score* property
 
     * may have a *feedback* property
 
-  * The *leftId* property:
+  * The *itemIds* property:
 
-    * must be a string
+    * must be a array
 
-  * The *rightId* property:
+    * Each itemIds:
 
-    * must be a string
+      * must contain at least one item
 
   * The *score* property:
 
@@ -97,7 +91,8 @@ layout: spec
   "content": "Question ?",
   "random": false,
   "penalty": 0.5,
-  "left": [
+  "rows": 1,
+  "items": [
     {
       "id": "3",
       "type": "text/plain",
@@ -108,20 +103,38 @@ layout: spec
       "type": "text/plain",
       "data": "Item B"
     }
-  ],
-  "right": [
+  ]
+}
+
+
+{% endhighlight %}
+
+### With coordinates
+
+{% highlight json %}
+
+{
+  "id": "1",
+  "type": "application/x.pair+json",
+  "content": "Question ?",
+  "random": false,
+  "penalty": 0.5,
+  "rows": 1,
+  "items": [
     {
-      "id": "4",
+      "id": "3",
       "type": "text/plain",
-      "data": "Item X"
+      "data": "Item A",
+      "coordinates": [0, 1]
     },
     {
-      "id": "7",
+      "id": "6",
       "type": "text/plain",
-      "data": "Item Y"
+      "data": "Item B"
     }
   ]
 }
+
 
 {% endhighlight %}
 
@@ -135,11 +148,13 @@ layout: spec
   "content": "Question ?",
   "random": false,
   "penalty": 0.5,
-  "left": [
+  "rows": 1,
+  "items": [
     {
       "id": "3",
       "type": "text/plain",
-      "data": "Item A"
+      "data": "Item A",
+      "coordinates": [0, 1]
     },
     {
       "id": "6",
@@ -147,31 +162,14 @@ layout: spec
       "data": "Item B"
     }
   ],
-  "right": [
-    {
-      "id": "4",
-      "type": "text/plain",
-      "data": "Item X"
-    },
-    {
-      "id": "7",
-      "type": "text/plain",
-      "data": "Item Y"
-    }
-  ],
   "solutions": [
     {
-      "leftId": "3",
-      "rightId": "4",
+      "itemIds": ["3","6"],
       "score": 1.5
-    },
-    {
-      "leftId": "6",
-      "rightId": "7",
-      "score": 1
     }
   ]
 }
+
 
 {% endhighlight %}
 
@@ -185,11 +183,13 @@ layout: spec
   "content": "Question ?",
   "random": false,
   "penalty": 0.5,
-  "left": [
+  "rows": 1,
+  "items": [
     {
       "id": "3",
       "type": "text/plain",
-      "data": "Item A"
+      "data": "Item A",
+      "coordinates": [0, 1]
     },
     {
       "id": "6",
@@ -197,33 +197,16 @@ layout: spec
       "data": "Item B"
     }
   ],
-  "right": [
-    {
-      "id": "4",
-      "type": "text/plain",
-      "data": "Item X"
-    },
-    {
-      "id": "7",
-      "type": "text/plain",
-      "data": "Item Y"
-    }
-  ],
   "solutions": [
     {
-      "leftId": "3",
-      "rightId": "4",
+      "itemIds": ["3","6"],
       "score": 1.5,
-      "feedback": "Lorem ipsum"
-    },
-    {
-      "leftId": "6",
-      "rightId": "7",
-      "score": 1,
-      "feedback": "Lorem ipsum 2"
+      "ordered": true,
+      "feedback": "Well done!"
     }
   ]
 }
+
 
 {% endhighlight %}
 

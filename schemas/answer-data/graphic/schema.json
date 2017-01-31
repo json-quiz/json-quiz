@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "A graphic question answer is a list of coordinates corresponding to the points the user has clicked on.",
+  "type": "array",
+  "uniqueItems": true,
+  "items": {
+    "type": "object",
+    "properties": {
+      "x": {
+        "description": "Position on the horizontal axis.",
+        "type": "number",
+        "minimum": 0
+      },
+      "y": {
+        "description": "Position on the vertical axis.",
+        "type": "number",
+        "minimum": 0
+      }
+    },
+    "required": ["x", "y"]
+  }
+}
