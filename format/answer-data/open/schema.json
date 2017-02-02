@@ -1,4 +1,12 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "$ref": "http://json-quiz.github.io/json-quiz/schemas/content/schema.json"
+  "type": "object",
+  "properties": {
+    "type": {
+      "enum": ["application/x.open+json"]
+    },
+    "data": {
+      "type": "string"
+    }
+  }
 }

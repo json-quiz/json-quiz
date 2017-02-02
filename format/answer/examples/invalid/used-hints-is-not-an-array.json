@@ -1,5 +1,6 @@
 {
   "id": "123",
   "questionId": "1",
-  "usedHints": "not-an-array"
+  "usedHints": "not-an-array",
+  "type": "application/x.choice+json"
 }

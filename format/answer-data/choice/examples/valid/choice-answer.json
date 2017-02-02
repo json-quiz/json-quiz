@@ -1,3 +1,4 @@
-[
-  "41", "42"
-]
+{
+  "type": "application/x.choice+json",
+  "data": ["41", "42"]
+}

@@ -2,5 +2,6 @@
   "id": "123",
   "questionId": "1",
   "score": 1,
-  "feedback": "this really is a bad score dude !"
+  "feedback": "this really is a bad score dude !",
+  "type": "application/x.choice+json"
 }

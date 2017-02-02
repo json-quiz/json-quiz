@@ -3,5 +3,6 @@
   "questionId": "123",
   "data": [
     {"not-a-valid-schema": "test"}
-  ]
+  ],
+  "type": "application/x.choice+json"
 }

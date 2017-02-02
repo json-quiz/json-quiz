@@ -1,3 +1,6 @@
-[
-  "not an object"
-]
+{
+  "type": "application/x.set+json",
+  "data": [
+    "not an object"
+  ]
+}

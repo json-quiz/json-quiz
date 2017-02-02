@@ -1,5 +1,8 @@
-[
-  {
-    "answerText": "ipsum"
-  }
-]
+{
+  "type": "application/x.cloze+json",
+  "data": [
+    {
+      "answerText": "ipsum"
+    }
+  ]
+}

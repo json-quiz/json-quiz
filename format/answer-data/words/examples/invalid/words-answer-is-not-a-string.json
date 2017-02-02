@@ -1,3 +1,6 @@
-[
-  "not a string"
-]
+{
+  "type": "application/x.words+json",
+  "data": [
+    "not a string"
+  ]
+}

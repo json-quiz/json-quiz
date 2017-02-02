@@ -1,3 +1,4 @@
 {
-  "questionId": "1"
+  "questionId": "1",
+  "type": "application/x.choice+json"
 }

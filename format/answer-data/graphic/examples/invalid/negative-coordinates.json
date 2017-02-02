@@ -1,6 +1,10 @@
-[
-  {
-    "x": 85,
-    "y": -100
-  }
-]
+{
+  "type": "application/x.graphic+json",
+  "data": [
+    {
+      "x": 85,
+      "y": -100
+    }
+  ]
+}
+

@@ -1,3 +1,6 @@
-[
-  "not an object"
-]
+{
+  "type": "application/x.cloze+json",
+  "data": [
+    "not an object"
+  ]
+}

@@ -1,1 +1,4 @@
-"Lorem ipsum dolor sit amet"
+{
+  "type": "application/x.words+json",
+  "data": "Lorem ipsum dolor sit amet"
+}

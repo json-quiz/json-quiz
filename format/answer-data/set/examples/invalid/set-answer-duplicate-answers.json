@@ -1,10 +1,13 @@
-[
-  {
-    "itemId": "1",
-    "setId": "2"
-  },
-  {
-    "itemId": "1",
-    "setId": "2"
-  }
-]
+{
+  "type": "application/x.set+json",
+  "data": [
+    {
+      "itemId": "1",
+      "setId": "2"
+    },
+    {
+      "itemId": "1",
+      "setId": "2"
+    }
+  ]
+}

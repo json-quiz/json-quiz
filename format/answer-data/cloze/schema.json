@@ -1,17 +1,30 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "type": "array",
-  "uniqueItems": true,
-  "items": {
-    "type": "object",
-    "properties": {
-      "holeId": {
-        "type": "string"
-      },
-      "answerText": {
-        "type": "string"
-      }
+  "type": "object",
+  "properties": {
+    "type": {
+      "enum": [
+        "application/x.cloze+json"
+      ]
     },
-    "required": ["holeId", "answerText"]
+    "data": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "properties": {
+          "holeId": {
+            "type": "string"
+          },
+          "answerText": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "holeId",
+          "answerText"
+        ]
+      }
+    }
   }
 }

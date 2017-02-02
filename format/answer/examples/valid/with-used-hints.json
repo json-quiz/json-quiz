@@ -6,5 +6,6 @@
       "id": "1",
       "value": "Lorem"
     }
-  ]
+  ],
+  "type": "application/x.choice+json"
 }

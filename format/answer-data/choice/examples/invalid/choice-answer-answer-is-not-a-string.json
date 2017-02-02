@@ -1,3 +1,4 @@
-[
-  ["not a string"]
-]
+{
+  "type": "application/x.choice+json",
+  "data": [["not a string"]]
+}

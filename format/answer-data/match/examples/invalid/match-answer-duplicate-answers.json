@@ -1,10 +1,13 @@
-[
-  {
-    "firstId": "1",
-    "secondId": "2"
-  },
-  {
-    "firstId": "1",
-    "secondId": "2"
-  }
-]
+{
+  "type": "application/x.match+json",
+  "data": [
+    {
+      "firstId": "1",
+      "secondId": "2"
+    },
+    {
+      "firstId": "1",
+      "secondId": "2"
+    }
+  ]
+}

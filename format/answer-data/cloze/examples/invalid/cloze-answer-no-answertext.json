@@ -1,5 +1,8 @@
-[
-  {
-    "holeId": "41"
-  }
-]
+{
+  "type": "application/x.cloze+json",
+  "data": [
+    {
+      "holeId": "41"
+    }
+  ]
+}

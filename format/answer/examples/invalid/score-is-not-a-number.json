@@ -1,5 +1,6 @@
 {
   "id": "123",
   "questionId": "1",
-  "score": ["not-a-number"]
+  "score": ["not-a-number"],
+  "type": "application/x.choice+json"
 }

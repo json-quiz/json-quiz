@@ -106,7 +106,7 @@ describe('Answer', function () {
       describe('The *data* property', function () {
         it('must satisfy the #answer-data# schema', function () {
           assert.hasError('data-not-satisfying-answer-data-schema', {
-            '.data': 'should match exactly one schema in oneOf'
+            '': 'should match exactly one schema in oneOf'
           });
         });
       });

@@ -1,5 +1,6 @@
 {
   "id": "123",
   "questionId": "1",
-  "tries": 2
+  "tries": 2,
+  "type": "application/x.choice+json"
 }

@@ -1,6 +1,9 @@
-[
-  {
-    "firstId": ["not a string"],
-    "secondId": "2"
-  }
-]
+{
+  "type": "application/x.match+json",
+  "data": [
+    {
+      "firstId": ["not a string"],
+      "secondId": "2"
+    }
+  ]
+}

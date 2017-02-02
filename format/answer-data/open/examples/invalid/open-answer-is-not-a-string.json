@@ -1,4 +1,4 @@
 {
   "type": "application/x.open+json",
-  "data": "Lorem ipsum dolor sit amet"
+  "data": ["not a string"]
 }

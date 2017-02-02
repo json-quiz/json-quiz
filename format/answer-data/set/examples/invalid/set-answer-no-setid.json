@@ -1,5 +1,8 @@
-[
-  {
-    "itemId": "1"
-  }
-]
+{
+  "type": "application/x.set+json",
+  "data": [
+    {
+      "itemId": "1"
+    }
+  ]
+}

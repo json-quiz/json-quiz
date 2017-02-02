@@ -1,1 +1,4 @@
-"not an array"
+{
+  "type": "application/x.cloze+json",
+  "data": "not an array"
+}

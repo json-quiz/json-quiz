@@ -9,5 +9,6 @@
       "value": "Lorem"
     }
   ],
-  "data": ["1", "2"]
+  "data": ["1", "2"],
+  "type": "application/x.choice+json"
 }

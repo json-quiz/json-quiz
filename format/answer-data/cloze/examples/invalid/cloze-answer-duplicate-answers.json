@@ -1,10 +1,13 @@
-[
-  {
-    "holeId": "41",
-    "answerText": "ipsum"
-  },
-  {
-    "holeId": "41",
-    "answerText": "ipsum"
-  }
-]
+{
+  "type": "application/x.cloze+json",
+  "data": [
+    {
+      "holeId": "41",
+      "answerText": "ipsum"
+    },
+    {
+      "holeId": "41",
+      "answerText": "ipsum"
+    }
+  ]
+}

@@ -1,1 +1,4 @@
-"not an array"
+{
+  "type": "application/x.match+json",
+  "data": "not an array"
+}
