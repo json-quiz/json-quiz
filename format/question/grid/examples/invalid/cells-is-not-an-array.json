@@ -1,0 +1,17 @@
+{
+  "id": "1",
+  "type": "application/x.grid+json",
+  "content": "Question ?",
+  "random": false,
+  "penalty": 0,
+  "sumMode": "row",
+  "cells": {
+    "1": "not an array"
+  },
+  "rows": 1,
+  "cols": 3,
+  "border": {
+    "thickness": 1,
+    "color": "#00ff00"
+  }
+}

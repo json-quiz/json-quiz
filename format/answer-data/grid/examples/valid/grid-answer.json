@@ -1,0 +1,13 @@
+{
+  "type": "application/x.grid+json",
+  "data": [
+    {
+      "cellId": "1",
+      "text": "ipsum"
+    },
+    {
+      "cellId": "2",
+      "text": "amet"
+    }
+  ]
+}

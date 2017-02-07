@@ -1,0 +1,118 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "allOf": [
+    {
+      "$ref": "http://json-quiz.github.io/json-quiz/schemas/question/base/schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "enum": ["application/x.grid+json"]
+        },
+        "random": {
+          "type": "boolean",
+          "default": false
+        },
+        "penalty": {
+          "type": "number",
+          "minimum": 0
+        },
+        "sumMode": {
+          "enum": ["cell", "row", "col"],
+          "default": "cell",
+          "description": "Tells how sum score is handled. Per cell item OR per row OR per column. Not present if fixed score."
+        },
+        "cells": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "coordinates": {
+                "type": "array",
+                "minItems": 2,
+                "maxItems": 2,
+                "description": "Item position in the grid [(x axis), (y axis)]",
+                "items": {
+                  "type": "number"
+                }
+              },
+              "background": {
+                "type": "string",
+                "default": "#fff",
+                "description": "Cell background color"
+              },
+              "color": {
+                "type": "string",
+                "default": "#000",
+                "description": "Cell font color"
+              },
+              "data": {
+                "type": "string"
+              },
+              "choices": {
+                "type": "array",
+                "minItems": 2,
+                "uniqueItems": true,
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": ["id", "coordinates", "background", "color"]
+          }
+        },
+        "rows": {
+          "type": "number",
+          "minimum": 1,
+          "description": "The number of rows to display when the question is played"
+        },
+        "cols": {
+          "type": "number",
+          "minimum": 1,
+          "description": "The number of columns to display when the question is played"
+        },
+        "border": {
+          "type": "object",
+          "properties": {
+            "color": {
+              "type": "string"
+            },
+            "thickness": {
+              "type": "number"
+            }
+          },
+          "required": ["color", "thickness"]
+        },
+        "solutions": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "properties": {
+              "cellId": {
+                "type": "string"
+              },
+              "answers": {
+                "type": "array",
+                "minItems": 1,
+                "uniqueItems": true,
+                "items": {
+                  "$ref": "http://json-quiz.github.io/json-quiz/schemas/misc/keyword/schema.json"
+                }
+              }
+            },
+            "required": ["cellId", "answers"]
+          }
+        }
+      },
+      "required": ["random", "penalty", "cells", "rows", "cols", "border"]
+    }
+  ]
+}

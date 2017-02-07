@@ -1,0 +1,62 @@
+{
+  "id": "1",
+  "type": "application/x.grid+json",
+  "content": "Question ?",
+  "random": false,
+  "penalty": 0,
+  "sumMode": "row",
+  "cells": [
+    {
+      "id": "1",
+      "data": "Item A",
+      "coordinates": [0, 0],
+      "background":  "#fff",
+      "color": "#000"
+    },
+    {
+      "id": "2",
+      "coordinates": [1, 0],
+      "background":  "#fff",
+      "color": "#000",
+      "choices": ["lorem", "ipsum", "dolor", "sit"]
+    },
+    {
+      "id": "3",
+      "coordinates": [2, 0],
+      "background":  "#fff",
+      "color": "#000"
+    }
+  ],
+  "rows": 1,
+  "cols": 3,
+  "border": {
+    "thickness": 1,
+    "color": "#00ff00"
+  },
+  "solutions": [
+    {
+      "answers": [
+        {
+          "text": "lorem",
+          "caseSensitive": true,
+          "score": 2
+        },
+        {
+          "text": "dolor",
+          "caseSensitive": true,
+          "score": 2
+        }
+      ]
+    },
+    {
+      "cellId": "3",
+      "answers": [
+        {
+          "text": "consectetur",
+          "caseSensitive": false,
+          "score": 2
+        }
+      ]
+    }
+  ]
+}

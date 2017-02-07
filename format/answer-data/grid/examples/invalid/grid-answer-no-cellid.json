@@ -1,0 +1,8 @@
+{
+  "type": "application/x.grid+json",
+  "data": [
+    {
+      "text": "ipsum"
+    }
+  ]
+}
