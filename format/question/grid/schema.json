@@ -83,11 +83,11 @@
             "color": {
               "type": "string"
             },
-            "thickness": {
+            "width": {
               "type": "number"
             }
           },
-          "required": ["color", "thickness"]
+          "required": ["color", "width"]
         },
         "solutions": {
           "type": "array",

@@ -30,7 +30,7 @@
   "rows": 1,
   "cols": 3,
   "border": {
-    "thickness": "not a number",
+    "width": "not a number",
     "color": "#00ff00"
   }
 }

@@ -9,7 +9,7 @@
   "rows": 1,
   "cols": 3,
   "border": {
-    "thickness": 1,
+    "width": 1,
     "color": "#00ff00"
   }
 }

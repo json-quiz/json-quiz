@@ -94,16 +94,16 @@ describe('Grid question', function () {
         });
       });
 
-      it('must have a *thickness* property', function () {
-        assert.hasError('border-no-thickness', {
-          '.border.thickness': 'property .thickness is required'
+      it('must have a *width* property', function () {
+        assert.hasError('border-no-width', {
+          '.border.width': 'property .width is required'
         });
       });
 
-      describe('The *thickness* property', function () {
+      describe('The *width* property', function () {
         it('must be a number', function () {
-          assert.hasError('border-thickness-not-a-number', {
-            '.border.thickness': 'should be number'
+          assert.hasError('border-width-not-a-number', {
+            '.border.width': 'should be number'
           });
         });
       });
@@ -160,11 +160,7 @@ describe('Grid question', function () {
             });
           });
         });
-
-
-
       });
-
     });
 
     describe('The *cells* property', function () {
@@ -255,7 +251,6 @@ describe('Grid question', function () {
       });
     });
   });
-
 
   describe('Examples', function () {
     assert.areValid([

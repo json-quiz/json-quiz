@@ -70,6 +70,9 @@
         },
         {
           "$ref": "http://json-quiz.github.io/json-quiz/schemas/answer-data/graphic/schema.json"
+        },
+        {
+          "$ref": "http://json-quiz.github.io/json-quiz/schemas/answer-data/grid/schema.json"
         }
       ]
     }
