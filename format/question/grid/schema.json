@@ -10,10 +10,6 @@
         "type": {
           "enum": ["application/x.grid+json"]
         },
-        "random": {
-          "type": "boolean",
-          "default": false
-        },
         "penalty": {
           "type": "number",
           "minimum": 0
@@ -57,7 +53,6 @@
               },
               "choices": {
                 "type": "array",
-                "minItems": 2,
                 "uniqueItems": true,
                 "items": {
                   "type": "string"
@@ -119,7 +114,7 @@
           }
         }
       },
-      "required": ["random", "penalty", "cells", "rows", "cols", "border"]
+      "required": ["penalty", "cells", "rows", "cols", "border"]
     }
   ]
 }

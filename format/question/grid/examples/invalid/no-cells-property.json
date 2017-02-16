@@ -2,7 +2,6 @@
   "id": "1",
   "type": "application/x.grid+json",
   "content": "Question ?",
-  "random": false,
   "penalty": 0,
   "sumMode": "row",
   "rows": 1,

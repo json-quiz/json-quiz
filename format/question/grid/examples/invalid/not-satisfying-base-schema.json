@@ -1,7 +1,6 @@
 {
   "objects": "not-an-array",
   "meta": "not-an-object",
-  "random": false,
   "penalty": 0,
   "sumMode": "row",
   "cells": [
@@ -17,7 +16,7 @@
       "coordinates": [1, 0],
       "background":  "#fff",
       "color": "#000",
-      "choices": ["lorem", "ipsum", "et", "doloris"]
+      "choices": ["lorem", "ipsum", "dolor"]
     },
     {
       "id": "3",

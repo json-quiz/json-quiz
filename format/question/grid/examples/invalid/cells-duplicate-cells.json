@@ -2,7 +2,6 @@
   "id": "1",
   "type": "application/x.grid+json",
   "content": "Question ?",
-  "random": false,
   "penalty": 0,
   "sumMode": "row",
   "cells": [
@@ -18,7 +17,7 @@
       "coordinates": [1, 0],
       "background":  "#fff",
       "color": "#000",
-      "choices": ["lorem", "ipsum", "dolor", "sit"]
+      "choices": ["lorem", "ipsum", "dolor"]
     },
     {
       "id": "1",

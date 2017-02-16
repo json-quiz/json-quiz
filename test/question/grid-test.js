@@ -11,12 +11,6 @@ describe('Grid question', function () {
         });
       });
 
-      it('must have a *random* property', function () {
-        assert.hasError('no-random-property', {
-          '.random': 'property .random is required'
-        });
-      });
-
       it('must have a *penalty* property', function () {
         assert.hasError('no-penalty-property', {
           '.penalty': 'property .penalty is required'
@@ -61,14 +55,6 @@ describe('Grid question', function () {
       it('must be a number', function () {
         assert.hasError('penalty-is-not-a-number', {
           '.penalty': 'should be number'
-        });
-      });
-    });
-
-    describe('The *random* property', function () {
-      it('must be a boolean', function () {
-        assert.hasError('random-is-not-a-boolean', {
-          '.random': 'should be boolean'
         });
       });
     });

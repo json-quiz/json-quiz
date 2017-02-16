@@ -2,7 +2,6 @@
   "id": "1",
   "type": "application/x.grid+json",
   "content": "Question ?",
-  "random": false,
   "penalty": 0,
   "cells": [
     {
@@ -17,7 +16,7 @@
       "coordinates": [1, 0],
       "background":  "#fff",
       "color": "#000",
-      "choices": ["lorem", "ipsum", "dolor", "sit"]
+      "choices": ["lorem", "ipsum", "dolor"]
     },
     {
       "id": "3",
@@ -42,9 +41,14 @@
           "score": 2
         },
         {
+          "text": "ipsum",
+          "caseSensitive": true,
+          "score": 2
+        },
+        {
           "text": "dolor",
           "caseSensitive": false,
-          "score": 2
+          "score": -2
         }
       ]
     },
