@@ -102,10 +102,10 @@
                   "$ref": "http://json-quiz.github.io/json-quiz/schemas/misc/keyword/schema.json"
                 },
                 "properties": {
-                  "awaited": {
+                  "expected": {
                     "type": "boolean",
                     "default": false,
-                    "description": "In case of sum mode row or column or global score mode, we need to know which text answer is the awaited one (can not be based on score)"
+                    "description": "In case of sum mode row or column or global score mode, we need to know which text answer is expected one (can not be based on score)"
                   }
                 }
               }
