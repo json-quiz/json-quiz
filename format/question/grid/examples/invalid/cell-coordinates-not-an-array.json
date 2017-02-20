@@ -7,6 +7,7 @@
   "cells": [
     {
       "id": "1",
+      "input": false,
       "data": "Item A",
       "coordinates": {"lorem": "not an array"},
       "background":  "#fff",
@@ -14,6 +15,7 @@
     },
     {
       "id": "2",
+      "input": true,
       "coordinates": [1, 0],
       "background":  "#fff",
       "color": "#000",
@@ -21,6 +23,7 @@
     },
     {
       "id": "3",
+      "input": true,
       "coordinates": [2, 0],
       "background":  "#fff",
       "color": "#000"

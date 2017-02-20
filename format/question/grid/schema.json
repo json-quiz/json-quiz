@@ -57,9 +57,14 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "input": {
+                "type": "boolean",
+                "default": false,
+                "description": "When no data nor choices set for the cell, this flag allow the player to correctly display an empty cell (ie not as a text input)."
               }
             },
-            "required": ["id", "coordinates", "background", "color"]
+            "required": ["id", "coordinates", "background", "color", "input"]
           }
         },
         "rows": {

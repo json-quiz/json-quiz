@@ -7,11 +7,10 @@
   "cells": [
     {
       "id": "1",
-      "input": false,
       "data": "Item A",
       "coordinates": [0, 0],
-      "background":  "#fff",
-      "color": "#000"
+      "color": "#000",
+      "background":  "#fff"
     },
     {
       "id": "2",
@@ -34,20 +33,5 @@
   "border": {
     "width": 1,
     "color": "#00ff00"
-  },
-  "solutions": [
-    {
-      "cellId": "2"
-    },
-    {
-      "cellId": "3",
-      "answers": [
-        {
-          "text": "consectetur",
-          "caseSensitive": false,
-          "score": 2
-        }
-      ]
-    }
-  ]
+  }
 }

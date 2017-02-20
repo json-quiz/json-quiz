@@ -194,6 +194,12 @@ describe('Grid question', function () {
           });
         });
 
+        it('must have an *input* property', function () {
+          assert.hasError('cell-no-input', {
+            '.cells[0].input': 'property .input is required'
+          });
+        });
+
         it('may have a *data* property', function () {
           assert.isValid('solutions');
         });
