@@ -20,13 +20,13 @@
   "solutions": [
     {
       "itemId": "2",
-      "order": 2,
+      "position": 2,
       "score": 1,
       "feedback": "lorem"
     },
     {
       "itemId": "3",
-      "order": 1,
+      "position": 1,
       "score": 1,
       "feedback": "ipsum"
     }

@@ -42,9 +42,9 @@
               "itemId": {
                 "type": "string"
               },
-              "order": {
+              "position": {
                 "type": "number",
-                "description": "If none then the solution item is an odd. If set then the items must be put in the right order."
+                "description": "If none then the solution item is an odd. If set then the items must be put in the right position."
               },
               "score": {
                 "type": "number"
