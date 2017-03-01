@@ -1,0 +1,10 @@
+{
+  "type": "application/x.ordering+json",
+  "data": [
+    "not an object",
+    {
+      "itemId": "2",
+      "position": 2
+    }
+  ]
+}

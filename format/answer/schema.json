@@ -73,6 +73,9 @@
         },
         {
           "$ref": "http://json-quiz.github.io/json-quiz/schemas/answer-data/grid/schema.json"
+        },
+        {
+          "$ref": "http://json-quiz.github.io/json-quiz/schemas/answer-data/ordering/schema.json"
         }
       ]
     }

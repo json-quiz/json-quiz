@@ -84,6 +84,9 @@
           },
           {
             "$ref": "http://json-quiz.github.io/json-quiz/schemas/question/grid/schema.json"
+          },
+          {
+            "$ref": "http://json-quiz.github.io/json-quiz/schemas/question/ordering/schema.json"
           }
         ]
       }

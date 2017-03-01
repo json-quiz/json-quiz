@@ -1,0 +1,31 @@
+{
+  "id": "1",
+  "type": "application/x.ordering+json",
+  "content": "Question ?",
+  "mode": "inside",
+  "direction": "vertical",
+  "items": [
+    {
+      "id": "2",
+      "type": "text/plain",
+      "data": "Item A"
+    },
+    {
+      "id": "3",
+      "type": "text/plain",
+      "data": "Item B"
+    }
+  ],
+  "solutions": [
+    {
+      "itemId": "2",
+      "order": 2,
+      "score": 1
+    },
+    {
+      "itemId": "3",
+      "order": 1,
+      "score": 1
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "objects": "not-an-array",
+  "meta": "not-an-object",
+  "penalty": 0,
+  "mode": "inside",
+  "direction": "vertical",
+  "items": [
+    {
+      "id": "2",
+      "type": "text/plain",
+      "data": "Item A"
+    },
+    {
+      "id": "3",
+      "type": "text/plain",
+      "data": "Item B"
+    }
+  ]
+}
