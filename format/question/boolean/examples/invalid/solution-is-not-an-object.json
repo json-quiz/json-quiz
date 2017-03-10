@@ -1,0 +1,26 @@
+{
+  "id": "1",
+  "type": "application/x.boolean+json",
+  "content": "Question ?",
+  "choices": [
+    {
+      "id": "1",
+      "type": "text/plain",
+      "data": "A"
+    },
+    {
+      "id": "2",
+      "type": "text/plain",
+      "data": "B"
+    }
+  ],
+  "random": false,
+  "multiple": false,
+  "solutions": [
+    "not-an-object",
+    {
+      "id": "2",
+      "score": 2
+    }
+  ]
+}

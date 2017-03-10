@@ -34,6 +34,8 @@ var resolved = {
   'grid-answer': 'answer-data/grid',
   'ordering-question': 'question/ordering',
   'ordering-answer': 'answer-data/ordering',
+  'boolean-question': 'question/boolean',
+  'boolean-answer': 'answer-data/boolean',
   'answer': 'answer',
   'step': 'step',
   'quiz': 'quiz',

@@ -1,0 +1,16 @@
+{
+  "id": "1",
+  "content": "Question ?",
+  "type": "application/x.boolean+json",
+  "choices": [
+    {
+      "id": "1",
+      "type": "text/html",
+      "data": 123
+    },
+    {
+      "type": "text/html",
+      "data": 123
+    }
+  ]
+}

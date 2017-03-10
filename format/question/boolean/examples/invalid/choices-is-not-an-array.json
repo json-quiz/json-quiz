@@ -1,0 +1,9 @@
+{
+  "id": "1",
+  "content": "Question ?",
+  "type": "application/x.boolean+json",
+  "choices": {
+    "1": "True",
+    "2": "False"
+  }
+}
