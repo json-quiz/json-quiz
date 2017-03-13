@@ -60,6 +60,16 @@
           "description": "Number of steps to use when a user pass the quiz. If 0, all the steps are used",
           "default": 0
         },
+        "showOverview": {
+          "type": "boolean",
+          "description": "Show overview to users or directly start the quiz if false",
+          "default": true
+        },
+        "showEndPage": {
+          "type": "boolean",
+          "description": "Display an end page when the user has finished the quiz",
+          "default": false
+        },
         "showMetadata": {
           "type": "boolean",
           "description": "Display detail information about the exercise",

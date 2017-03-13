@@ -20,6 +20,8 @@
     "randomOrder": "once",
     "randomPick": "never",
     "pick": 0,
+    "showOverview": true,
+    "showEndPage": true,
     "showMetadata": true,
     "showStatistics": false,
     "showFullCorrection": true,
