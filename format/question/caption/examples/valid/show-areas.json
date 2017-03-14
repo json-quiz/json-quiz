@@ -13,28 +13,36 @@
     "width": 800,
     "height": 400
   },
-  "showAreas": false,
+  "showAreas": true,
   "labels": [
     {
       "id": "1",
-      "data": "Elephant"
+      "data": "Elephant",
+      "coords": [
+        {"x": 120, "y": 30},
+        {"x": 220, "y": 130}
+      ]
     },
     {
       "id": "2",
-      "data": "Gorilla"
+      "data": "Gorilla",
+      "coords": [
+        {"x": 470, "y": 140},
+        {"x": 520, "y": 230}
+      ]
     },
     {
       "id": "3",
       "coords": [
-        {"x": 320, "y":70},
-        {"x": 420, "y":170}
+        {"x": 320, "y": 70},
+        {"x": 420, "y": 170}
       ]
     }
   ],
   "solutions": [
     {
       "id": "1",
-      "coord": {"x": 120,"y": 30},
+      "coord": {"x": 120, "y": 30},
       "answers":[
         {
           "text": "Elephant",
@@ -52,7 +60,7 @@
     },
     {
       "id": "2",
-      "coord": {"x": 470,"y": 140},
+      "coord": {"x": 470, "y": 140},
       "answers":[
         {
           "text": "Gorilla",
@@ -64,7 +72,7 @@
     },
     {
       "id": "3",
-      "coord": {"x": 470,"y": 140},
+      "coord": {"x": 470, "y": 140},
       "answers":[
         {
           "text": "Snake",

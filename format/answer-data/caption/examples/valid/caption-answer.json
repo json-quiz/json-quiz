@@ -1,0 +1,17 @@
+{
+  "type": "application/x.graphic+json",
+  "data": [
+    {
+      "id": "1",
+      "x": 153,
+      "y": 427,
+      "text": "Elephant"
+    },
+    {
+      "id": "2",
+      "x": 801,
+      "y": 79,
+      "text": "Gorilla"
+    }
+  ]
+}
