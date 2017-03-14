@@ -1,0 +1,133 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions" : {
+    "coord": {
+      "type": "object",
+      "properties": {
+        "x": {"type" : "number"},
+        "y": {"type" : "number"}
+      },
+      "required": ["x", "y"]
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "http://json-quiz.github.io/json-quiz/schemas/question/base/schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "enum": [
+            "application/x.caption+json"
+          ]
+        },
+        "image": {
+          "allOf": [
+            {
+              "$ref": "http://json-quiz.github.io/json-quiz/schemas/content/schema.json"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "width": {
+                  "type": "number"
+                },
+                "height": {
+                  "type": "number"
+                }
+              },
+              "required": ["width", "height"]
+            }
+          ]
+        },
+        "showAreas": {
+          "type": "boolean",
+          "default": false
+        },
+        "penalty": {
+          "type": "number",
+          "minimum": 0
+        },
+        "labels": {
+          "type": "array",
+          "uniqueItems": true,
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "coords": {
+                "type": "array",
+                "minItems": 2,
+                "maxItems": 2,
+                "uniqueItems": true,
+                "items": {
+                  "$ref": "#/definitions/coord"
+                },
+                "description": "Top left and bottom right coordinates for the area to draw. Only if [showAreas] is set to true"
+              },
+              "data": {
+                "type": "string",
+                "description": "Plain text data for the label. If none the label will be displayed with a text input or a dropdown list"
+              },
+              "choices": {
+                "type": "array",
+                "uniqueItems": true,
+                "items": {
+                  "type": "string"
+                },
+                "description": "Choices available for the label"
+              }
+            },
+            "required": ["id"]
+          }
+        },
+        "solutions": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "Label id."
+              },
+              "answers": {
+                "type": "array",
+                "minItems": 1,
+                "uniqueItems": true,
+                "items": {
+                  "$ref": "http://json-quiz.github.io/json-quiz/schemas/misc/keyword/schema.json"
+                },
+                "properties": {
+                  "expected": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "In case of global score mode, we need to know which text answer is the expected one (can not be based on score)"
+                  },
+                  "coords": {
+                    "type": "array",
+                    "minItems": 2,
+                    "maxItems": 2,
+                    "uniqueItems": true,
+                    "items": {
+                      "$ref": "#/definitions/coord"
+                    },
+                    "description": "Top left and bottom right coordinates for the answer. The answer has to be inside this area to be valid"
+                  }
+                },
+                "required": ["coords"]
+              }
+            },
+            "required": ["id", "answers"]
+          }
+        }
+      },
+      "required": ["image", "showAreas", "labels"]
+    }
+  ]
+}
