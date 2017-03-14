@@ -5,7 +5,7 @@
     "type": {
       "enum": ["application/x.boolean+json"]
     },
-    "id": {
+    "data": {
       "type": "string"
     }
   }

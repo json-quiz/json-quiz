@@ -6,10 +6,10 @@ describe('Boolean answer', function () {
       it('must be an object', function () {
         assert.isValid('boolean-answer');
       });
-      describe('A boolean answer id', function () {
+      describe('A boolean answer data', function () {
         it('must be an string', function () {
           assert.hasError('boolean-answer-is-not-a-string', {
-            '.id': 'should be string'
+            '.data': 'should be string'
           });
         });
       });

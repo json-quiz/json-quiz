@@ -1,4 +1,4 @@
 {
   "type": "application/x.boolean+json",
-  "id": ["not a string"]
+  "data": ["not a string"]
 }
