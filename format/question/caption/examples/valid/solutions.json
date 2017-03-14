@@ -1,0 +1,64 @@
+{
+  "id": "1",
+  "type": "application/x.caption+json",
+  "content": "Find the elephant!",
+  "penalty": 0,
+  "image": {
+    "id": "12",
+    "meta": {
+      "label": "Jumbo"
+    },
+    "type": "image/jpeg",
+    "url": "http://domain.com/images/jumbo_01.jpg",
+    "width": 800,
+    "height": 400
+  },
+  "showAreas": false,
+  "labels": [
+    {
+      "id": "1",
+      "data": "Elephant",
+      "coords": [
+        {"x": 120,"y": 30},
+        {"x": 270,"y": 80}
+      ]
+    },
+    {
+      "id": "2",
+      "coords": [
+        {"x": 470,"y": 140},
+        {"x": 620,"y": 240}
+      ]
+    }
+  ],
+  "solutions": [
+    {
+      "id": "1",
+      "answers":[
+        {
+          "text": "Elephant",
+          "caseSensitive": false,
+          "score": 2,
+          "feedback": "Bravo!"
+        },
+        {
+          "text": "Gorilla",
+          "caseSensitive": false,
+          "score": -1,
+          "feedback": "A gorilla and an elephant are very different..."
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "answers":[
+        {
+          "text": "Gorilla",
+          "caseSensitive": false,
+          "score": 1,
+          "feedback": "Yes it is!"
+        }
+      ]
+    }
+  ]
+}

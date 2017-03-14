@@ -104,14 +104,21 @@
                 "minItems": 1,
                 "uniqueItems": true,
                 "items": {
-                  "$ref": "http://json-quiz.github.io/json-quiz/schemas/misc/keyword/schema.json"
-                },
-                "properties": {
-                  "expected": {
-                    "type": "boolean",
-                    "default": false,
-                    "description": "In case of sum mode row or column or global score mode, we need to know which text answer is expected one (can not be based on score)"
-                  }
+                  "allOf": [
+                    {
+                      "$ref": "http://json-quiz.github.io/json-quiz/schemas/misc/keyword/schema.json"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "expected": {
+                          "type": "boolean",
+                          "default": false,
+                          "description": "In case of sum mode row or column or global score mode, we need to know which text answer is expected one (can not be based on score)"
+                        }
+                      }
+                    }
+                  ]
                 }
               }
             },

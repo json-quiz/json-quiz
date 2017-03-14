@@ -52,7 +52,7 @@
         "labels": {
           "type": "array",
           "uniqueItems": true,
-          "minItems": 2,
+          "minItems": 1,
           "items": {
             "type": "object",
             "properties": {
@@ -67,11 +67,11 @@
                 "items": {
                   "$ref": "#/definitions/coord"
                 },
-                "description": "Top left and bottom right coordinates for the area to draw. Only if [showAreas] is set to true"
+                "description": "Top left and bottom right coordinates for the area to draw."
               },
               "data": {
                 "type": "string",
-                "description": "Plain text data for the label. If none the label will be displayed with a text input or a dropdown list"
+                "description": "Plain text data for the label. If none the label will be displayed with a text input or a dropdown list."
               },
               "choices": {
                 "type": "array",
@@ -79,7 +79,7 @@
                 "items": {
                   "type": "string"
                 },
-                "description": "Choices available for the label"
+                "description": "Choices available for the label."
               }
             },
             "required": ["id"]
@@ -96,38 +96,24 @@
                 "type": "string",
                 "description": "Label id."
               },
+              "coord": {
+                "$ref": "#/definitions/coord",
+                "description": "Top left coordinates for the answer."
+              },
               "answers": {
                 "type": "array",
                 "minItems": 1,
                 "uniqueItems": true,
                 "items": {
                   "$ref": "http://json-quiz.github.io/json-quiz/schemas/misc/keyword/schema.json"
-                },
-                "properties": {
-                  "expected": {
-                    "type": "boolean",
-                    "default": false,
-                    "description": "In case of global score mode, we need to know which text answer is the expected one (can not be based on score)"
-                  },
-                  "coords": {
-                    "type": "array",
-                    "minItems": 2,
-                    "maxItems": 2,
-                    "uniqueItems": true,
-                    "items": {
-                      "$ref": "#/definitions/coord"
-                    },
-                    "description": "Top left and bottom right coordinates for the answer. The answer has to be inside this area to be valid"
-                  }
-                },
-                "required": ["coords"]
+                }
               }
             },
-            "required": ["id", "answers"]
+            "required": ["id", "coord", "answers"]
           }
         }
       },
-      "required": ["image", "showAreas", "labels"]
+      "required": ["image", "penalty", "showAreas", "labels"]
     }
   ]
 }

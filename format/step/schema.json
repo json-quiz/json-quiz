@@ -90,6 +90,9 @@
           },
           {
             "$ref": "http://json-quiz.github.io/json-quiz/schemas/question/boolean/schema.json"
+          },
+          {
+            "$ref": "http://json-quiz.github.io/json-quiz/schemas/question/caption/schema.json"
           }
         ]
       }
