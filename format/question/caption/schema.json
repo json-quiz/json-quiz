@@ -79,15 +79,9 @@
               "id": {
                 "type":"string"
               },
-              "coords": {
-                "type": "array",
-                "description": "Top left and bottom right coordinates for the area to draw.",
-                "minItems": 2,
-                "maxItems": 2,
-                "uniqueItems": true,
-                "items": {
-                  "$ref": "#/definitions/coord"
-                }
+              "coord": {
+                "$ref": "#/definitions/coord",
+                "description": "Top left coordinates for the area to draw."
               },
               "target": {
                 "$ref": "#/definitions/coord",
@@ -103,11 +97,11 @@
               },
               "input": {
                 "type": "boolean",
-                "description": "Flag to tell if the area as to be rendered with a text input.",
+                "description": "Flag to tell if the area has to be rendered with a text input.",
                 "default": false
               }
             },
-            "required": ["id", "coords"]
+            "required": ["id", "coord"]
           }
         },
         "solutions": {
