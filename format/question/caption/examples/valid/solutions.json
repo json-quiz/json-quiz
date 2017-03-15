@@ -13,18 +13,39 @@
     "width": 800,
     "height": 400
   },
-  "showAreas": false,
   "labels": [
+    "Elephant",
+    "Gorilla"
+  ],
+  "areas": [
     {
       "id": "1",
-      "data": "Elephant"
+      "coords": [
+        {"x": 120,"y": 30},
+        {"x": 220,"y": 130}
+      ]
     },
     {
       "id": "2",
-      "data": "Gorilla"
+      "coords": [
+        {"x": 10,"y": 30},
+        {"x": 80,"y": 130}
+      ]
     },
     {
       "id": "3",
+      "input": true,
+      "coords": [
+        {"x": 320, "y":70},
+        {"x": 420, "y":170}
+      ]
+    },
+    {
+      "id": "4",
+      "choices": [
+        "Parrot",
+        "Carrot"
+      ],
       "coords": [
         {"x": 320, "y":70},
         {"x": 420, "y":170}
@@ -34,7 +55,6 @@
   "solutions": [
     {
       "id": "1",
-      "coord": {"x": 120,"y": 30},
       "answers":[
         {
           "text": "Elephant",
@@ -52,7 +72,6 @@
     },
     {
       "id": "2",
-      "coord": {"x": 470,"y": 140},
       "answers":[
         {
           "text": "Gorilla",
@@ -64,13 +83,29 @@
     },
     {
       "id": "3",
-      "coord": {"x": 470,"y": 140},
       "answers":[
         {
           "text": "Snake",
           "caseSensitive": false,
           "score": 1,
           "feedback": "Congrats!"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "answers":[
+        {
+          "text": "Parrot",
+          "caseSensitive": false,
+          "score": 1,
+          "feedback": "Congrats!"
+        },
+        {
+          "text": "Carrot",
+          "caseSensitive": false,
+          "score": -2,
+          "feedback": "Nope a parrot is not a carrot!"
         }
       ]
     }

@@ -22,6 +22,10 @@
             "application/x.caption+json"
           ]
         },
+        "penalty": {
+          "type": "number",
+          "minimum": 0
+        },
         "image": {
           "allOf": [
             {
@@ -41,48 +45,64 @@
             }
           ]
         },
-        "showAreas": {
-          "type": "boolean",
-          "default": false
-        },
-        "penalty": {
-          "type": "number",
-          "minimum": 0
-        },
         "labels": {
           "type": "array",
+          "description": "",
           "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        },
+        "areas": {
+          "type":"array",
+          "description": "Areas to draw.",
           "minItems": 1,
+          "uniqueItems": true,
           "items": {
             "type": "object",
             "properties": {
               "id": {
-                "type": "string"
+                "type":"string"
               },
               "coords": {
                 "type": "array",
+                "description": "Top left and bottom right coordinates for the area to draw.",
                 "minItems": 2,
                 "maxItems": 2,
                 "uniqueItems": true,
                 "items": {
                   "$ref": "#/definitions/coord"
-                },
-                "description": "Top left and bottom right coordinates for the area to draw."
+                }
               },
-              "data": {
-                "type": "string",
-                "description": "Plain text data for the label. If none the label will be displayed with a text input or a dropdown list."
-              },
-              "choices": {
-                "type": "array",
-                "uniqueItems": true,
-                "items": {
-                  "type": "string"
-                },
-                "description": "Choices available for the label."
+              "content": {
+                "type":"object",
+                "description": "Content of the area. If none a text input is rendered.",
+                "oneOf": [
+                  {
+                    "properties": {
+                      "text": {
+                        "type": "string"
+                      }
+                    },
+                    "required": ["text"]
+                  },
+                  {
+                    "properties": {
+                      "choices": {
+                        "type": "array",
+                        "minItems": 2,
+                        "uniqueItems": true,
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "required": ["choices"]
+                  }
+                ]
               }
             },
-            "required": ["id"]
+            "required": ["id", "coords"]
           }
         },
         "solutions": {
@@ -94,11 +114,7 @@
             "properties": {
               "id": {
                 "type": "string",
-                "description": "Label id."
-              },
-              "coord": {
-                "$ref": "#/definitions/coord",
-                "description": "Top left coordinates for the answer."
+                "description": "Area id."
               },
               "answers": {
                 "type": "array",
@@ -109,11 +125,11 @@
                 }
               }
             },
-            "required": ["id", "coord", "answers"]
+            "required": ["id", "answers"]
           }
         }
       },
-      "required": ["image", "penalty", "showAreas", "labels"]
+      "required": ["penalty", "image", "areas"]
     }
   ]
 }
