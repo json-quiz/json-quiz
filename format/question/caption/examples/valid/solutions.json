@@ -13,31 +13,33 @@
     "width": 800,
     "height": 400
   },
+  "dimensions": {"widh": 120, "height": 60},
   "labels": [
     "Elephant",
-    "Gorilla"
+    "Gorilla",
+    "Eye of the tiger"
   ],
   "areas": [
     {
       "id": "1",
       "coords": [
-        {"x": 120,"y": 30},
-        {"x": 220,"y": 130}
+        {"x": 120, "y": 30},
+        {"x": 240, "y": 90}
       ]
     },
     {
       "id": "2",
       "coords": [
-        {"x": 10,"y": 30},
-        {"x": 80,"y": 130}
+        {"x": 10, "y": 30},
+        {"x": 130, "y": 90}
       ]
     },
     {
       "id": "3",
       "input": true,
       "coords": [
-        {"x": 320, "y":70},
-        {"x": 420, "y":170}
+        {"x": 320, "y": 70},
+        {"x": 440, "y": 130}
       ]
     },
     {
@@ -47,9 +49,17 @@
         "Carrot"
       ],
       "coords": [
-        {"x": 320, "y":70},
-        {"x": 420, "y":170}
+        {"x": 50, "y": 130},
+        {"x": 170, "y": 190}
       ]
+    },
+    {
+      "id": "5",
+      "coords": [
+        {"x": 320, "y": 200},
+        {"x": 440, "y": 260}
+      ],
+      "target": {"x": 380, "y": 300}
     }
   ],
   "solutions": [
@@ -86,7 +96,7 @@
       "answers":[
         {
           "text": "Snake",
-          "caseSensitive": false,
+          "caseSensitive": true,
           "score": 1,
           "feedback": "Congrats!"
         }
@@ -106,6 +116,17 @@
           "caseSensitive": false,
           "score": -2,
           "feedback": "Nope a parrot is not a carrot!"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "answers":[
+        {
+          "text": "Eye of the tiger",
+          "caseSensitive": false,
+          "score": 5,
+          "feedback": "Congrats!"
         }
       ]
     }

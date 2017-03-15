@@ -45,9 +45,24 @@
             }
           ]
         },
+        "dimensions": {
+          "type": "object",
+          "description": "Areas / labels dimmensions (px).",
+          "properties": {
+            "widh": {
+              "type": "number",
+              "default": 120
+            },
+            "height": {
+              "type": "number",
+              "default": 60
+            }
+          },
+          "required": ["widh", "height"]
+        },
         "labels": {
           "type": "array",
-          "description": "",
+          "description": "Items available for drag and drop.",
           "uniqueItems": true,
           "items": {
             "type": "string"
@@ -74,32 +89,22 @@
                   "$ref": "#/definitions/coord"
                 }
               },
-              "content": {
-                "type":"object",
-                "description": "Content of the area. If none a text input is rendered.",
-                "oneOf": [
-                  {
-                    "properties": {
-                      "text": {
-                        "type": "string"
-                      }
-                    },
-                    "required": ["text"]
-                  },
-                  {
-                    "properties": {
-                      "choices": {
-                        "type": "array",
-                        "minItems": 2,
-                        "uniqueItems": true,
-                        "items": {
-                          "type": "string"
-                        }
-                      }
-                    },
-                    "required": ["choices"]
-                  }
-                ]
+              "target": {
+                "$ref": "#/definitions/coord",
+                "description": "This gives the position of the associated arrow if any."
+              },
+              "choices": {
+                "type": "array",
+                "minItems": 2,
+                "uniqueItems": true,
+                "items": {
+                  "type": "string"
+                }
+              },
+              "input": {
+                "type": "boolean",
+                "description": "Flag to tell if the area as to be rendered with a text input.",
+                "default": false
               }
             },
             "required": ["id", "coords"]
@@ -129,7 +134,7 @@
           }
         }
       },
-      "required": ["penalty", "image", "areas"]
+      "required": ["penalty", "image", "dimensions", "areas"]
     }
   ]
 }
