@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "allOf": [
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "The answer mime-type",
+          "enum": [
+            "application/x.selection+json"
+          ]
+        }
+      }
+    },
+    {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "array",
+              "items": {
+                 "type": "object",
+                 "properties": {
+                   "selectionId": {
+                     "description": "The selection id",
+                     "type": "string"
+                   },
+                   "colorId": {
+                     "description": "The color id",
+                     "type": "string"
+                   }
+                 }
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "object",
+              "properties": {
+                "positions": {
+                  "type": "array",
+                  "items": {
+                     "type": "integer",
+                     "description": "The text positions pointed by the user"
+                  },
+                  "tries": {
+                    "type": "integer"
+                  }
+                }
+              }
+
+
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "array",
+              "items": {
+                "description": "The selectionIds selected by the user",
+                 "type": "string"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -29,6 +29,8 @@
       doc: sort-question
     - title: Open question
       doc: open-question
+    - title: Selection question
+      doc: selection-question
     - title: Grid question
       doc: grid-question
     - title: Order question

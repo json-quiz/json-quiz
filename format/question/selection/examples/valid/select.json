@@ -1,0 +1,25 @@
+{
+  "id": "1",
+  "type": "application/x.selection+json",
+  "content": "Question ?",
+  "text": "Lorem ipsum sit amet.",
+  "mode": "select",
+  "selections": [
+    {
+      "id": "select1",
+      "begin": 0,
+      "end": 4
+    },
+    {
+      "id": "select2",
+      "begin": 5,
+      "end": 10
+    }
+  ],
+  "solutions": [
+    {
+      "selectionId": "select1",
+      "score": 1
+    }
+  ]
+}

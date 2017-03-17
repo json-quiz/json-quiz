@@ -1,0 +1,222 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "allOf": [
+    {
+      "$ref": "http://json-quiz.github.io/json-quiz/schemas/question/base/schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "The question mime-type",
+          "enum": ["application/x.selection+json"]
+        },
+        "text": {
+          "description": "The question text",
+          "type": "string"
+        }
+      }
+    },
+    {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "description": "The question mode (highlight, find or select)",
+              "enum": ["highlight"]
+            },
+            "penalty": {
+              "type": "number",
+              "description": "The default penalty for wrong answers",
+              "minimum": 0
+            },
+            "colors": {
+              "description": "Colors used for the text highlights",
+              "type": "array",
+              "minItems": 2,
+              "uniqueItems": true,
+              "items": {
+                 "type": "object",
+                 "properties": {
+                   "id": {
+                     "description": "The color id",
+                     "type": "string"
+                   },
+                   "code": {
+                     "description": "Hexadecimal color code eg: #FFFFFF",
+                     "type": "string"
+                   }
+                 }
+              },
+              "required": ["id", "code"]
+            },
+            "selections": {
+              "description": "The list of clickable elements in the text",
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "description": "The selection id",
+                    "type": "string"
+                  },
+                  "begin": {
+                    "description": "The beginning position of the text selection",
+                    "type": "integer"
+                  },
+                  "end": {
+                    "description": "The ending position of the text selection",
+                    "type": "integer"
+                  }
+                },
+                "required": ["id", "begin", "end"]
+              }
+            },
+            "solutions": {
+              "description": "The list of possible solutions",
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {
+                "type": "object",
+                "properties": {
+                  "selectionId": {
+                    "description": "The selection id",
+                    "type": "string"
+                  },
+                  "answers": {
+                    "description": "The list of possible highlights for a clickable element",
+                    "type": "array",
+                    "minItems": 1,
+                    "uniqueItems": true,
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "colorId": {
+                          "description": "The color id",
+                          "type": "string"
+                        },
+                        "score": {
+                          "description": "The score given by the highlight",
+                          "type": "number"
+                        }
+                      },
+                      "required": ["score", "colorId"]
+                    }
+                  }
+                },
+                "required": ["selectionId", "answers"]
+              }
+            }
+          },
+          "required": ["mode", "selections"]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "description": "The question mode (highlight, find or select)",
+              "enum": ["find"]
+            },
+            "tries": {
+              "description": "The maximum amount of clicks/tries given for the question",
+              "type": "integer",
+              "minimum": 1
+            },
+            "penalty": {
+              "type": "number",
+              "description": "The default penalty for wrong answers",
+              "minimum": 0
+            },
+            "solutions": {
+              "description": "The list of possible solutions",
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {
+                "type": "object",
+                "properties": {
+                  "selectionId": {
+                    "description": "The selection id",
+                    "type": "string"
+                  },
+                  "begin": {
+                    "description": "The beginning position of the text selection",
+                    "type": "integer"
+                  },
+                  "end": {
+                    "description": "The ending position of the text selection",
+                    "type": "integer"
+                  },
+                  "score": {
+                    "description": "The score given by the selection",
+                    "type": "number"
+                  }
+                },
+                "required": ["selectionId", "begin", "end"]
+              }
+            }
+          },
+          "required": ["mode"]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "enum": ["select"],
+              "description": "The question mode (highlight, find or select)"
+            },
+            "selections": {
+              "description": "The list of clickable elements in the text",
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "description": "The selection id",
+                    "type": "string"
+                  },
+                  "begin": {
+                    "description": "The beginning position of the text selection",
+                    "type": "integer"
+                  },
+                  "end": {
+                    "description": "The ending position of the text selection",
+                    "type": "integer"
+                  }
+                },
+                "required": ["id", "begin", "end"]
+              }
+            },
+            "solutions": {
+              "description": "The list of possible solutions",
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {
+                "type": "object",
+                "properties": {
+                  "selectionId": {
+                    "description": "The selection id",
+                    "type": "string"
+                  },
+                  "score": {
+                    "description": "The score given by the selection",
+                    "type": "number"
+                  }
+                },
+                "required": ["selectionId"]
+              }
+            }
+          },
+          "required": ["mode", "selections"]
+        }
+      ]
+    }
+  ]
+}

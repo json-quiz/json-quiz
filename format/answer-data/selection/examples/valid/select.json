@@ -1,0 +1,4 @@
+{
+  "type": "application/x.selection+json",
+  "data": ["selectionId1", "selectionId2"]
+}

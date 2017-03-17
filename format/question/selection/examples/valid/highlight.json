@@ -1,0 +1,39 @@
+{
+  "id": "1",
+  "type": "application/x.selection+json",
+  "content": "Question ?",
+  "text": "Lorem ipsum sit amet.",
+  "mode": "highlight",
+  "colors": [
+    {
+      "id": "color1",
+      "code": "#0000FF"
+    },
+    {
+      "id": "color2",
+      "code": "#B0E0E6"
+    }
+  ],
+  "selections": [
+    {
+      "id": "select1",
+      "begin": 0,
+      "end": 4
+    }
+  ],
+  "solutions": [
+    {
+      "selectionId": "select1",
+      "answers": [
+        {
+          "score": 1,
+          "colorId": "color1"
+        },
+        {
+          "score": -1,
+          "colorId": "color2"
+        }
+      ]
+    }
+  ]
+}
