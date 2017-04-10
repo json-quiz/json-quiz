@@ -1,13 +1,16 @@
 {
   "type": "application/x.selection+json",
-  "data": [
-    {
-      "selectionId": "selection1",
-      "colorId": "color1"
-    },
-    {
-      "selectionId": "selection2",
-      "colorId": "color2"
-    }
-  ]
+  "data": {
+    "mode": "highlight",
+    "highlights": [
+      {
+        "selectionId": "selection1",
+        "colorId": "color1"
+      },
+      {
+        "selectionId": "selection2",
+        "colorId": "color2"
+      }
+    ]
+  }
 }

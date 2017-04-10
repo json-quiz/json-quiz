@@ -18,19 +18,18 @@
           "type": "object",
           "properties": {
             "data": {
-              "type": "array",
-              "items": {
-                 "type": "object",
-                 "properties": {
-                   "selectionId": {
-                     "description": "The selection id",
+              "type": "object",
+              "properties": {
+                "mode": {
+                  "enum": ["select"]
+                },
+                "selections": {
+                  "type": "array",
+                  "items": {
+                    "description": "The selectionIds selected by the user",
                      "type": "string"
-                   },
-                   "colorId": {
-                     "description": "The color id",
-                     "type": "string"
-                   }
-                 }
+                  }
+                }
               }
             }
           }
@@ -41,6 +40,41 @@
             "data": {
               "type": "object",
               "properties": {
+                "mode": {
+                  "enum": ["highlight"]
+                },
+                "highlights": {
+                  "type": "array",
+                  "items": {
+                     "type": "object",
+                     "properties": {
+                       "selectionId": {
+                         "description": "The selection id",
+                         "type": "string"
+                       },
+                       "colorId": {
+                         "description": "The color id",
+                         "type": "string"
+                       }
+                     },
+                     "required": ["selectionId", "colorId"]
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "object",
+              "properties": {
+                "mode": {
+                  "enum": [
+                    "find"
+                  ]
+                },
                 "positions": {
                   "type": "array",
                   "items": {
@@ -51,21 +85,8 @@
                     "type": "integer"
                   }
                 }
-              }
-
-
-            }
-          }
-        },
-        {
-          "type": "object",
-          "properties": {
-            "data": {
-              "type": "array",
-              "items": {
-                "description": "The selectionIds selected by the user",
-                 "type": "string"
-              }
+              },
+              "required": ["positions", "tries"]
             }
           }
         }

@@ -55,6 +55,8 @@
       doc: words-answer
     - title: Open answer
       doc: open-answer
+    - title: Selection answer
+      doc: selection-answer
     - title: Grid answer
       doc: grid-answer
     - title: Order answer

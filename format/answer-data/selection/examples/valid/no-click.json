@@ -2,7 +2,7 @@
   "type": "application/x.selection+json",
   "data": {
     "mode": "find",
-    "positions": [4, 8, 15, 16, 23, 42],
-    "tries": 77
+    "positions": [],
+    "tries": 0
   }
 }
