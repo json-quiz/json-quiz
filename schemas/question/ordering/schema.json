@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "allOf": [
+    {
+      "$ref": "http://json-quiz.github.io/json-quiz/schemas/question/base/schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "enum": ["application/x.ordering+json"]
+        },
+        "penalty": {
+          "type": "number",
+          "minimum": 0
+        },
+        "mode": {
+          "enum": ["inside", "beside"],
+          "default": "inside",
+          "description": "Should the user reorder items inside a container or drag them from one container to another."
+        },
+        "direction": {
+          "enum": ["vertical", "horizontal"],
+          "default": "vertical",
+          "description": "Should items be displayed in an horizontal or vertical direction."
+        },
+        "items": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "http://json-quiz.github.io/json-quiz/schemas/content/schema.json"
+          }
+        },
+        "solutions": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "properties": {
+              "itemId": {
+                "type": "string"
+              },
+              "position": {
+                "type": "number",
+                "description": "If none then the solution item is an odd. If set then the items must be put in the right position."
+              },
+              "score": {
+                "type": "number"
+              },
+              "feedback": {
+                "type": "string"
+              }
+            },
+            "required": ["itemId", "score"]
+          }
+        }
+      },
+      "required": ["penalty", "items", "mode", "direction"]
+    }
+  ]
+}

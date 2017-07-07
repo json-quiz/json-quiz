@@ -1,17 +1,17 @@
 ---
-title: Set answer
+title: ordering answer
 layout: spec
 ---
 
-# Set answer
+# ordering answer
 
 ## Schema
 
-* A set answer:
+* An ordering answer:
 
   * must be an object
 
-  * A set answer data:
+  * An ordering answer data:
 
     * must be an array
 
@@ -23,28 +23,30 @@ layout: spec
 
       * must have a *itemId* property
 
-      * must have a *setId* property
-
       * The *itemId* property:
 
         * must be a string
 
-      * The *setId* property:
+      * The *position* property:
 
-        * must be a string
+        * must be a number
 
 ## Examples
 
-### Set answer
+### Ordering answer
 
 {% highlight json %}
 
 {
-  "type": "application/x.set+json",
+  "type": "application/x.ordering+json",
   "data": [
     {
       "itemId": "1",
-      "setId": "2"
+      "position": 1
+    },
+    {
+      "itemId": "2",
+      "position": 2
     }
   ]
 }

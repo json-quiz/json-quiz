@@ -9,7 +9,11 @@ layout: spec
 
 * A graphic answer:
 
-  * must have positive coordinates
+  * must be an object
+
+  * A graphic answer:
+
+    * must have positive coordinates
 
 ## Examples
 
@@ -17,16 +21,19 @@ layout: spec
 
 {% highlight json %}
 
-[
-  {
-    "x": 153,
-    "y": 427
-  },
-  {
-    "x": 801,
-    "y": 79
-  }
-]
+{
+  "type": "application/x.graphic+json",
+  "data": [
+    {
+      "x": 153,
+      "y": 427
+    },
+    {
+      "x": 801,
+      "y": 79
+    }
+  ]
+}
 
 
 {% endhighlight %}

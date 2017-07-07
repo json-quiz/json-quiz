@@ -60,6 +60,21 @@
           "description": "Number of steps to use when a user pass the quiz. If 0, all the steps are used",
           "default": 0
         },
+        "showOverview": {
+          "type": "boolean",
+          "description": "Show overview to users or directly start the quiz if false",
+          "default": true
+        },
+        "showEndPage": {
+          "type": "boolean",
+          "description": "Display an end page when the user has finished the quiz",
+          "default": false
+        },
+        "endMessage": {
+          "type": "string",
+          "description": "A message to display at the end of the quiz",
+          "default": null
+        },
         "showMetadata": {
           "type": "boolean",
           "description": "Display detail information about the exercise",
@@ -89,6 +104,12 @@
           "type": "boolean",
           "description": "Display immediate feedback about his answer to the user",
           "default": false
+        },
+        "totalScoreOn": {
+          "type": "number",
+          "minimum": 0,
+          "description": "If this value is greater than 0 we should compute the score based on the value, else it will be computed based on the sum of all questions score",
+          "default": 0
         }
       }
     },

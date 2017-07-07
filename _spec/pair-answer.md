@@ -9,19 +9,23 @@ layout: spec
 
 * A pair answer:
 
-  * must be an array
+  * must be an object
 
-  * Each pair:
+  * A pair answer data:
 
     * must be an array
 
-    * must be unique
+    * Each pair:
 
-    * Each item:
-
-      * must be a string
+      * must be an array
 
       * must be unique
+
+      * Each item:
+
+        * must be a string
+
+        * must be unique
 
 ## Examples
 
@@ -29,10 +33,13 @@ layout: spec
 
 {% highlight json %}
 
-[
-  ["123", "456"],
-  ["759", "895"]
-]
+{
+  "type": "application/x.pair+json",
+  "data": [
+    ["123", "456"],
+    ["759", "895"]
+  ]
+}
 
 
 {% endhighlight %}

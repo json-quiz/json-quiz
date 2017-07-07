@@ -68,7 +68,8 @@ layout: spec
 {
   "id": "123",
   "questionId": "1",
-  "tries": 2
+  "tries": 2,
+  "type": "application/x.choice+json"
 }
 
 
@@ -81,7 +82,8 @@ layout: spec
 {
   "id": "123",
   "questionId": "1",
-  "score": 0
+  "score": 0,
+  "type": "application/x.choice+json"
 }
 
 
@@ -95,7 +97,8 @@ layout: spec
   "id": "123",
   "questionId": "1",
   "score": 1,
-  "feedback": "this really is a bad score dude !"
+  "feedback": "this really is a bad score dude !",
+  "type": "application/x.choice+json"
 }
 
 
@@ -113,7 +116,8 @@ layout: spec
       "id": "1",
       "value": "Lorem"
     }
-  ]
+  ],
+  "type": "application/x.choice+json"
 }
 
 
@@ -126,7 +130,8 @@ layout: spec
 {
   "id": "123",
   "questionId": "1",
-  "data": ["1", "2"]
+  "data": ["1", "2"],
+  "type": "application/x.choice+json"
 }
 
 
@@ -147,7 +152,8 @@ layout: spec
       "value": "Lorem"
     }
   ],
-  "data": ["1", "2"]
+  "data": ["1", "2"],
+  "type": "application/x.choice+json"
 }
 
 

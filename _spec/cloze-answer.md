@@ -9,25 +9,29 @@ layout: spec
 
 * A cloze answer:
 
-  * must be an array
+  * must be an object
 
-  * Each answer:
+  * A cloze answer data:
 
-    * must be an object
+    * must be an array
 
-    * must be unique
+    * Each answer:
 
-    * must have a *holeId* property
+      * must be an object
 
-    * must have a *answerText* property
+      * must be unique
 
-    * The *holeId* property:
+      * must have a *holeId* property
 
-      * must be a string
+      * must have a *answerText* property
 
-    * The *answerText* property:
+      * The *holeId* property:
 
-      * must be a string
+        * must be a string
+
+      * The *answerText* property:
+
+        * must be a string
 
 ## Examples
 
@@ -35,16 +39,19 @@ layout: spec
 
 {% highlight json %}
 
-[
-  {
-    "holeId": "41",
-    "answerText": "ipsum"
-  },
-  {
-    "holeId": "62",
-    "answerText": "amet"
-  }
-]
+{
+  "type": "application/x.cloze+json",
+  "data": [
+    {
+      "holeId": "41",
+      "answerText": "ipsum"
+    },
+    {
+      "holeId": "62",
+      "answerText": "amet"
+    }
+  ]
+}
 
 
 {% endhighlight %}

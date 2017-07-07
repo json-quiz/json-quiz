@@ -7,9 +7,13 @@ layout: spec
 
 ## Schema
 
-* An open answer:
+* A open answer:
 
-  * must satisfy the [content](content.html) schema
+  * must be an object
+
+  * An open answer data:
+
+    * must satisfy the [content](content.html) schema
 
 ## Examples
 
@@ -18,8 +22,7 @@ layout: spec
 {% highlight json %}
 
 {
-  "id": "123",
-  "type": "text/html",
+  "type": "application/x.open+json",
   "data": "Lorem ipsum dolor sit amet"
 }
 

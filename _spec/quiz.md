@@ -174,12 +174,15 @@ layout: spec
     "randomOrder": "once",
     "randomPick": "never",
     "pick": 0,
+    "showOverview": true,
+    "showEndPage": true,
     "showMetadata": true,
     "showStatistics": false,
     "showFullCorrection": true,
     "showCorrectionAt": "validation",
     "showScoreAt": "correction",
-    "showFeedback": true
+    "showFeedback": true,
+    "totalScoreOn": 0
   },
   "steps": [
     {
@@ -213,6 +216,7 @@ layout: spec
     }
   ]
 }
+
 
 {% endhighlight %}
 

@@ -9,25 +9,29 @@ layout: spec
 
 * A match answer:
 
-  * must be an array
+  * must be an object
 
-  * Each answer:
+  * A match answer data:
 
-    * must be an object
+    * must be an array
 
-    * must be unique
+    * Each answer:
 
-    * must have a *firstId* property
+      * must be an object
 
-    * must have a *secondId* property
+      * must be unique
 
-    * The *firstId* property:
+      * must have a *firstId* property
 
-      * must be a string
+      * must have a *secondId* property
 
-    * The *secondId* property:
+      * The *firstId* property:
 
-      * must be a string
+        * must be a string
+
+      * The *secondId* property:
+
+        * must be a string
 
 ## Examples
 
@@ -35,12 +39,16 @@ layout: spec
 
 {% highlight json %}
 
-[
-  {
-    "firstId": "1",
-    "secondId": "2"
-  }
-]
+{
+  "type": "application/x.match+json",
+  "data": [
+    {
+      "firstId": "1",
+      "secondId": "2"
+    }
+  ]
+}
+
 
 {% endhighlight %}
 

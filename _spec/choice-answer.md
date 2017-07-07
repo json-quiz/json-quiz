@@ -9,13 +9,17 @@ layout: spec
 
 * A choice answer:
 
-  * must be an array
+  * must be an object
 
-  * Each answer:
+  * A choice answer data:
 
-    * must be a string
+    * must be an array
 
-    * must be unique
+    * Each answer:
+
+      * must be a string
+
+      * must be unique
 
 ## Examples
 
@@ -23,9 +27,10 @@ layout: spec
 
 {% highlight json %}
 
-[
-  "41", "42"
-]
+{
+  "type": "application/x.choice+json",
+  "data": ["41", "42"]
+}
 
 
 {% endhighlight %}

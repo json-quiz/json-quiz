@@ -9,7 +9,11 @@ layout: spec
 
 * A words answer:
 
-  * must be a string
+  * must be an object
+
+  * A words answer data:
+
+    * must be a string
 
 ## Examples
 
@@ -17,7 +21,11 @@ layout: spec
 
 {% highlight json %}
 
-"Lorem ipsum dolor sit amet"
+{
+  "type": "application/x.words+json",
+  "data": "Lorem ipsum dolor sit amet"
+}
+
 
 {% endhighlight %}
 

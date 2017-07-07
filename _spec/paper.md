@@ -142,11 +142,13 @@ layout: spec
     {
       "id": "123",
       "questionId": "1",
+      "type": "application/x.open+json",
       "data": "Lorem ipsum"
     },
     {
       "id": "1234",
       "questionId": "2",
+      "type": "application/x.choice+json",
       "data": ["1", "2"]
     }
   ]
@@ -251,11 +253,13 @@ layout: spec
     {
       "id": "123",
       "questionId": "1",
+      "type": "application/x.open+json",
       "data": "Lorem ipsum"
     },
     {
       "id": "1234",
       "questionId": "2",
+      "type": "application/x.choice+json",
       "data": ["1", "2"]
     }
   ]

@@ -29,6 +29,12 @@
       doc: sort-question
     - title: Open question
       doc: open-question
+    - title: Selection question
+      doc: selection-question
+    - title: Grid question
+      doc: grid-question
+    - title: Order question
+      doc: order-question
 
 - title: Answers
   doc: answer
@@ -49,6 +55,12 @@
       doc: words-answer
     - title: Open answer
       doc: open-answer
+    - title: Selection answer
+      doc: selection-answer
+    - title: Grid answer
+      doc: grid-answer
+    - title: Order answer
+      doc: order-answer
 
 - title: Quiz
   docs:

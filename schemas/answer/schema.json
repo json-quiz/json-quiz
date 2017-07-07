@@ -1,43 +1,57 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "type": "object",
-  "properties": {
-    "id": {
-      "type": "string",
-      "description": "The ID of the answer"
+  "allOf": [
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "The ID of the answer"
+        },
+        "type": {
+          "type": "string",
+          "pattern": "^application/x\\.[^/]+\\+json$"
+        },
+        "questionId": {
+          "type": "string",
+          "description": "The ID of the question that is answered"
+        },
+        "tries": {
+          "type": "number",
+          "minimum": 0,
+          "description": "The number of answers submitted for the question and the current user attempt",
+          "default": 0
+        },
+        "score": {
+          "type": "number",
+          "description": "The score obtained by the user for his answer"
+        },
+        "feedback": {
+          "type": "string",
+          "description": "A custom feedback written by a quiz creator",
+          "default": null
+        },
+        "usedHints": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "http://json-quiz.github.io/json-quiz/schemas/hint/schema.json"
+          }
+        },
+        "data": {
+          "type": ["null", "string", "number", "boolean", "object", "array"]
+        }
+      },
+      "required": ["id", "questionId", "type"]
     },
-    "questionId": {
-      "type": "string",
-      "description": "The ID of the question that is answered"
-    },
-    "tries": {
-      "type": "number",
-      "minimum": 0,
-      "description": "The number of answers submitted for the question and the current user attempt",
-      "default": 0
-    },
-    "score": {
-      "type": "number",
-      "description": "The score obtained by the user for his answer"
-    },
-    "feedback": {
-      "type": "string",
-      "description": "A custom feedback written by a quiz creator",
-      "default": null
-    },
-    "usedHints": {
-      "type": "array",
-      "uniqueItems": true,
-      "items": {
-        "$ref": "http://json-quiz.github.io/json-quiz/schemas/hint/schema.json"
-      }
-    },
-    "data": {
+    {
       "description": "The data submitted by the user as his answer",
-      "default": null,
       "oneOf": [
         {
           "$ref": "http://json-quiz.github.io/json-quiz/schemas/answer-data/choice/schema.json"
+        },
+        {
+          "$ref": "http://json-quiz.github.io/json-quiz/schemas/answer-data/open/schema.json"
         },
         {
           "$ref": "http://json-quiz.github.io/json-quiz/schemas/answer-data/cloze/schema.json"
@@ -56,9 +70,20 @@
         },
         {
           "$ref": "http://json-quiz.github.io/json-quiz/schemas/answer-data/graphic/schema.json"
+        },
+        {
+          "$ref": "http://json-quiz.github.io/json-quiz/schemas/answer-data/grid/schema.json"
+        },
+        {
+          "$ref": "http://json-quiz.github.io/json-quiz/schemas/answer-data/ordering/schema.json"
+        },
+        {
+          "$ref": "http://json-quiz.github.io/json-quiz/schemas/answer-data/selection/schema.json"
+	},
+	{
+          "$ref": "http://json-quiz.github.io/json-quiz/schemas/answer-data/boolean/schema.json"
         }
       ]
     }
-  },
-  "required": ["id", "questionId"]
+  ]
 }

@@ -3,9 +3,7 @@
   "type": "object",
   "properties": {
     "type": {
-      "enum": [
-        "application/x.cloze+json"
-      ]
+      "enum": ["application/x.grid+json"]
     },
     "data": {
       "type": "array",
@@ -13,17 +11,14 @@
       "items": {
         "type": "object",
         "properties": {
-          "holeId": {
+          "cellId": {
             "type": "string"
           },
-          "answerText": {
+          "text": {
             "type": "string"
           }
         },
-        "required": [
-          "holeId",
-          "answerText"
-        ]
+        "required": ["cellId", "text"]
       }
     }
   }
