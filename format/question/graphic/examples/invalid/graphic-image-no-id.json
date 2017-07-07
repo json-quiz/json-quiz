@@ -4,6 +4,7 @@
   "content": "Question ?",
   "width":800,
   "height":400,
+  "pointerMode": "pointer",
   "image": {
     "label": "Charlie",
     "url": "images/charlie_01.jpg"

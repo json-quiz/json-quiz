@@ -2,6 +2,7 @@
   "id": "1",
   "type": "application/x.graphic+json",
   "content": "Where is Charlie ?",
+  "pointerMode": "pointer",
   "image": {
     "id": "12",
     "url": "images/charlie_01.jpg",

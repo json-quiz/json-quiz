@@ -2,6 +2,7 @@
   "id": "1",
   "type": "application/x.graphic+json",
   "content": "Question ?",
+  "pointerMode": "pointer",
   "image": {
     "id": "12",
     "label": "Charlie",

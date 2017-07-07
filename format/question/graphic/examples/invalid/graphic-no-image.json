@@ -2,5 +2,6 @@
   "id": "1",
   "type": "application/x.graphic+json",
   "content": "Question ?",
-  "pointers":2
+  "pointers":2,
+  "pointerMode": "pointer"
 }

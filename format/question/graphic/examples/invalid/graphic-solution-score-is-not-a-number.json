@@ -4,6 +4,7 @@
   "content": "Where is Charlie ?",
   "width":800,
   "height":400,
+  "pointerMode": "pointer",
   "image": {
     "id": "12",
     "label": "Charlie",
