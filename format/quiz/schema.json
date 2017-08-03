@@ -14,7 +14,7 @@
     "meta": {
       "$ref": "http://json-quiz.github.io/json-quiz/schemas/metadata/schema.json"
     },
-    "protectUpdate": {
+    "protectQuestion": {
       "type": "boolean",
       "default": false,
       "description": "Protects the question from collaborative update"
