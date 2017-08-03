@@ -17,7 +17,7 @@
     "protectUpdate": {
       "type": "boolean",
       "default": false,
-      "description": "Protects the question from collaborative update",
+      "description": "Protects the question from collaborative update"
     },
     "parameters": {
       "type": "object",
