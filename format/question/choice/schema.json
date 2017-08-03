@@ -18,6 +18,11 @@
           "type": "boolean",
           "default": false
         },
+        "numbering": {
+          "enum": ["none", "litteral", "numeric"],
+          "description": "The question numbering",
+          "default": "none"
+        },
          "choices": {
           "type": "array",
           "minItems": 2,

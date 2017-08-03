@@ -110,6 +110,11 @@
           "minimum": 0,
           "description": "If this value is greater than 0 we should compute the score based on the value, else it will be computed based on the sum of all questions score",
           "default": 0
+        },
+        "numbering": {
+          "enum": ["none", "litteral", "numeric"],
+          "description": "The question numbering",
+          "default": "none"
         }
       }
     },
