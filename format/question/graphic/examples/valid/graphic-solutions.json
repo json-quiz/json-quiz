@@ -13,6 +13,7 @@
     "height": 400
   },
   "pointers": 1,
+  "pointerMode": "pointer",
   "solutions": [
     {
       "area": {

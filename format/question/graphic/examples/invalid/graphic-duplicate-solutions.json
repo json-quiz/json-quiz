@@ -2,6 +2,7 @@
   "id": "1",
   "type": "application/x.graphic+json",
   "content": "Where is Charlie ?",
+  "pointerMode": "pointer",
   "width":800,
   "height":400,
   "document": {

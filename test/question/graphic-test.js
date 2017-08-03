@@ -157,6 +157,11 @@ describe('Graphic question', function () {
           '.image': 'property .image is required'
         });
       });
+      it('must have a *pointerMode* property', function () {
+        assert.hasError('graphic-no-pointer-mode', {
+          '.pointerMode': 'property .pointerMode is required'
+        });
+      });
       it('must have a *pointers* property', function () {
         assert.hasError('graphic-no-pointers', {
           '.pointers': 'property .pointers is required'

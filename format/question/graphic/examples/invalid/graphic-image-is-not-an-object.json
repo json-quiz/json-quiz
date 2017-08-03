@@ -4,5 +4,6 @@
   "content": "Question ?",
   "width":800,
   "height":400,
+  "pointerMode": "pointer",
   "image": "not an object"
 }
