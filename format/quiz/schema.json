@@ -16,7 +16,8 @@
     },
     "protectUpdate": {
       "type": "boolean",
-      "default": false
+      "default": false,
+      "description": "Protects the question from collaborative update",
     },
     "parameters": {
       "type": "object",
