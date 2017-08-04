@@ -48,6 +48,18 @@
           "description": "The number of times a user can pass the quiz. If 0, there is no limit",
           "default": 0
         },
+        "maxAttempsPerDay": {
+          "type": "number",
+          "minimum": 0,
+          "description": "The number of times a user can pass the quiz per day. If 0, there is no limit. It is limited by max Attemps",
+          "default": 0
+        },
+        "maxPaper": {
+          "type": "number",
+          "minimum": 0,
+          "description": "The maximum amount of paper a quizz can have. If 0, there is no limit.",
+          "default": 0
+        },
         "randomOrder": {
           "enum": ["once", "never", "always"],
           "description": "Randomize order of steps in the quiz",
