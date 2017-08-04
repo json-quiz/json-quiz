@@ -36,11 +36,6 @@
     },
     "license": {
       "type": "string"
-    },
-    "protectQuestion": {
-      "type": "boolean",
-      "default": false,
-      "description": "Protects the question from collaborative update"
     }
   }
 }

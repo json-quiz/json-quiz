@@ -20,7 +20,7 @@
         },
         "numbering": {
           "enum": ["none", "litteral", "numeric"],
-          "description": "The question numbering",
+          "description": "The choice numbering",
           "default": "none"
         },
          "choices": {

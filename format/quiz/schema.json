@@ -12,7 +12,11 @@
       "type": "string"
     },
     "meta": {
-      "$ref": "http://json-quiz.github.io/json-quiz/schemas/metadata/schema.json"
+      "allOf": [
+        {
+          "$ref": "http://json-quiz.github.io/json-quiz/schemas/metadata/schema.json"
+        }
+      ]
     },
     "parameters": {
       "type": "object",
@@ -115,6 +119,11 @@
           "enum": ["none", "litteral", "numeric"],
           "description": "The question numbering",
           "default": "none"
+        },
+        "mandatoryQuestions": {
+          "type": "boolean",
+          "default": false,
+          "description": "It is mandatory to answer the questions to continue the quizz"
         }
       }
     },
