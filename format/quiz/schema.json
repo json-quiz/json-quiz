@@ -12,7 +12,11 @@
       "type": "string"
     },
     "meta": {
-      "$ref": "http://json-quiz.github.io/json-quiz/schemas/metadata/schema.json"
+      "allOf": [
+        {
+          "$ref": "http://json-quiz.github.io/json-quiz/schemas/metadata/schema.json"
+        }
+      ]
     },
     "parameters": {
       "type": "object",
@@ -42,6 +46,18 @@
           "type": "number",
           "minimum": 0,
           "description": "The number of times a user can pass the quiz. If 0, there is no limit",
+          "default": 0
+        },
+        "maxAttempsPerDay": {
+          "type": "number",
+          "minimum": 0,
+          "description": "The number of times a user can pass the quiz per day. If 0, there is no limit. It is limited by max Attemps",
+          "default": 0
+        },
+        "maxPaper": {
+          "type": "number",
+          "minimum": 0,
+          "description": "The maximum amount of paper a quizz can have. If 0, there is no limit.",
           "default": 0
         },
         "randomOrder": {
@@ -110,6 +126,16 @@
           "minimum": 0,
           "description": "If this value is greater than 0 we should compute the score based on the value, else it will be computed based on the sum of all questions score",
           "default": 0
+        },
+        "numbering": {
+          "enum": ["none", "litteral", "numeric"],
+          "description": "The question numbering",
+          "default": "none"
+        },
+        "mandatoryQuestions": {
+          "type": "boolean",
+          "default": false,
+          "description": "It is mandatory to answer the questions to continue the quizz"
         }
       }
     },

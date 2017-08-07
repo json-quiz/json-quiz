@@ -21,7 +21,26 @@
       "description": "Supplementary information about the question"
     },
     "meta": {
-      "$ref": "http://json-quiz.github.io/json-quiz/schemas/metadata/schema.json"
+      "allOf": [
+        {
+          "$ref": "http://json-quiz.github.io/json-quiz/schemas/metadata/schema.json"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "protectQuestion": {
+              "type": "boolean",
+              "default": false,
+              "description": "Protects the question from collaborative update"
+            },
+            "mandatory": {
+              "type": "boolean",
+              "default": false,
+              "description": "It is mandatory to answer the question to continue the quizz"
+            }
+          }
+        }
+      ]
     },
     "objects": {
       "type": "array",
