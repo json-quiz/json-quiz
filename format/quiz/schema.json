@@ -48,7 +48,7 @@
           "description": "The number of times a user can pass the quiz. If 0, there is no limit",
           "default": 0
         },
-        "maxAttempsPerDay": {
+        "maxAttemptsPerDay": {
           "type": "number",
           "minimum": 0,
           "description": "The number of times a user can pass the quiz per day. If 0, there is no limit. It is limited by max Attemps",
