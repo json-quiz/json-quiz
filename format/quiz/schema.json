@@ -54,7 +54,7 @@
           "description": "The number of times a user can pass the quiz per day. If 0, there is no limit. It is limited by max Attemps",
           "default": 0
         },
-        "maxPaper": {
+        "maxPapers": {
           "type": "number",
           "minimum": 0,
           "description": "The maximum amount of paper a quizz can have. If 0, there is no limit.",
