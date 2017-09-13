@@ -49,6 +49,13 @@
         "$ref": "http://json-quiz.github.io/json-quiz/schemas/content/schema.json"
       }
     },
+    "tags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
     "resources": {
       "type": "array",
       "uniqueItems": true,
