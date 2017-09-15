@@ -28,9 +28,10 @@
     "showScoreAt": "correction",
     "showFeedback": true,
     "totalScoreOn": 0,
-    "pick": 0,
-    "randomOrder": "never",
-    "randomPick": "never"
+    "randomTags": {
+      "pick": [["tag1", 2], ["tag2", 3]],
+      "pageSize": 3
+    }
   },
   "steps": [
     {

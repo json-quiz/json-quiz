@@ -96,7 +96,8 @@ describe('Quiz', function () {
     assert.areValid([
       'content-and-question-steps',
       'quiz-metadata',
-      'with-parameters'
+      'with-parameters',
+      'with-tag-picking'
     ]);
   });
 });
