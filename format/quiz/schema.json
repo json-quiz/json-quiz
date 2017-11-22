@@ -167,7 +167,7 @@
                 "type": {
                   "enum": ["tags"]
                 },
-                "randomOrder": {
+                "randomPick": {
                   "enum": ["once", "always"],
                   "default": "always"
                 },
