@@ -17,8 +17,6 @@
     "interruptible": true,
     "duration": 0,
     "maxAttempts": 5,
-    "randomOrder": "once",
-    "randomPick": "never",
     "showOverview": true,
     "showEndPage": true,
     "showMetadata": true,
@@ -27,11 +25,14 @@
     "showCorrectionAt": "validation",
     "showScoreAt": "correction",
     "showFeedback": true,
-    "totalScoreOn": 0,
-    "randomTags": {
-      "pick": [["tag1", 2], ["tag2", 3]],
-      "pageSize": 3
-    }
+    "totalScoreOn": 0
+  },
+  "picking": {
+    "type": "tags",
+    "randomOrder": "always",
+    "randomPick": "always",
+    "pick": [["tag1", 2], ["tag2", 3]],
+    "pageSize": 3
   },
   "steps": [
     {

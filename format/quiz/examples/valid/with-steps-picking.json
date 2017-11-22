@@ -27,6 +27,12 @@
     "showFeedback": true,
     "totalScoreOn": 0
   },
+  "picking": {
+    "type": "standard",
+    "pick": 0,
+    "randomOrder": "once",
+    "randomPick": "once"
+  },
   "steps": [
     {
       "id": "1",

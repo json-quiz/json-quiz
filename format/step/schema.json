@@ -28,23 +28,25 @@
           "minimum": 0,
           "description": "The number of times a user can try the step. If 0, there is no limit",
           "default": 0
-        },
-        "randomOrder": {
-          "enum": ["once", "never", "always"],
-          "description": "Randomize order of items in the step",
-          "default": "never"
-        },
-        "randomPick": {
-          "enum": ["once", "never", "always"],
-          "description": "Pick a random sub set of items in the step",
-          "default": "never"
-        },
-        "pick": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Number of items to use when a user try the step. If 0, all the items are used",
-          "default": 0
         }
+      }
+    },
+    "picking": {
+      "randomOrder": {
+        "enum": ["once", "never", "always"],
+        "description": "Randomize order of items in the step",
+        "default": "never"
+      },
+      "randomPick": {
+        "enum": ["once", "never", "always"],
+        "description": "Pick a random sub set of items in the step",
+        "default": "never"
+      },
+      "pick": {
+        "type": "number",
+        "minimum": 0,
+        "description": "Number of items to use when a user try the step. If 0, all the items are used",
+        "default": 0
       }
     },
     "items": {

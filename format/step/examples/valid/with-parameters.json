@@ -1,10 +1,13 @@
 {
   "id": "1",
   "parameters": {
-    "maxAttempts": 0,
+    "maxAttempts": 0
+  },
+  "picking": {
+    "type": "steps",
+    "pick": 0,
     "randomOrder": "once",
-    "randomPick": "once",
-    "pick": 1
+    "randomPick": "once"
   },
   "items": [
     {

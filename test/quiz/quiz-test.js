@@ -97,7 +97,8 @@ describe('Quiz', function () {
       'content-and-question-steps',
       'quiz-metadata',
       'with-parameters',
-      'with-tag-picking'
+      'with-tag-picking',
+      'with-steps-picking'
     ]);
   });
 });
