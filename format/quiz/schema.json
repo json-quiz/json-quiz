@@ -75,6 +75,11 @@
           "description": "A message to display at the end of the quiz",
           "default": null
         },
+        "endNavigation": {
+          "type": "boolean",
+          "description": "Display navigation shortcuts on end page",
+          "default": true
+        },
         "showMetadata": {
           "type": "boolean",
           "description": "Display detail information about the exercise",

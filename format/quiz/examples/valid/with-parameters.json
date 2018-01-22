@@ -25,7 +25,8 @@
     "showCorrectionAt": "validation",
     "showScoreAt": "correction",
     "showFeedback": true,
-    "totalScoreOn": 0
+    "totalScoreOn": 0,
+    "endNavigation": true
   },
   "steps": [
     {
