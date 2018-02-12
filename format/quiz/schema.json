@@ -70,6 +70,11 @@
           "description": "Display an end page when the user has finished the quiz",
           "default": false
         },
+        "showEndConfirm": {
+          "type": "boolean",
+          "description": "Display a confirm dialog before submitting the user attempt",
+          "default": true
+        },
         "endMessage": {
           "type": "string",
           "description": "A message to display at the end of the quiz",
