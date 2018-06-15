@@ -110,6 +110,54 @@
             }
           },
           "required": ["type", "max"]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "enum": ["rules"]
+            },
+            "noWrongChoice": {
+              "type": "boolean",
+              "default": false
+            },
+            "rules": {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": false,
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string"
+                  },
+                  "source": {
+                    "type": "string"
+                  },
+                  "count": {
+                    "type": "number"
+                  },
+                  "countMin": {
+                    "type": "number"
+                  },
+                  "countMax": {
+                    "type": "number"
+                  },
+                  "points": {
+                    "type": "number"
+                  },
+                  "target": {
+                    "type": "string"
+                  }
+                },
+                "required": ["id", "type", "source", "points", "target"]
+              }
+            }
+          },
+          "required": ["type", "rules"]
         }
       ]
     }
