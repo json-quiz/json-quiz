@@ -22,8 +22,8 @@
       "type": "object",
       "properties": {
         "type": {
-          "enum": ["formative", "evaluative", "summative"],
-          "description": "Hide the name of the users who have passed the quiz in the results",
+          "enum": ["conceptualization", "formative", "evaluative", "summative", "survey", "custom"],
+          "description": "The type of the quiz",
           "default": "summative"
         },
         "anonymizeAttempts": {
